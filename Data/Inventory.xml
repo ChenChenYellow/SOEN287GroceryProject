@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <product>
+        <aisle>Biscuits and Chips</aisle>
+        <id>1</id>
+        <name>Layers Chips</name>
+        <price>3</price>
+        <unit>bag(200g)</unit>
+        <quantiy>150</quantiy>
+        <image></image>
+        <description>Just regular chips</description>
+    </product>
+    <product>
+        <aisle>Dry Food</aisle>
+        <id>2</id>
+        <name>Instant Noodles</name>
+        <price>1</price>
+        <unit>bag(150g)</unit>
+        <quantiy>200</quantiy>
+        <image></image>
+        <description>ragualr noodle</description>
+    </product>
+    <product>
+        <aisle>Biscuits and Chips</aisle>
+        <id>2</id>
+        <name>No Name Chips</name>
+        <price>1</price>
+        <unit>bag(150g)</unit>
+        <quantiy>250</quantiy>
+        <image></image>
+        <description>cheap chips</description>
+    </product>
+</inventory>
