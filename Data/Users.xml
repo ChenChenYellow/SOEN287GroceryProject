@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <email>joe@gmail.com</email>
+        <firstname>Joe</firstname>
+        <lastname>Jack</lastname>
+        <password>JoePassword</password>
+        <paymentmethod>VISA</paymentmethod>
+        <cardnumber>4000500060007000</cardnumber>
+        <nameonthecard>Joe Jack</nameonthecard>
+        <expiringdate>07/22</expiringdate>
+        <securitynumber>123</securitynumber>
+    </user>
+    <user>
+        <email>bob@gmail.com</email>
+        <firstname>Bob</firstname>
+        <lastname>Bill</lastname>
+        <password>BobPassword</password>
+        <paymentmethod>Master</paymentmethod>
+        <cardnumber>4000500060007000</cardnumber>
+        <nameonthecard>Bob Billy</nameonthecard>
+        <expiringdate>01/25</expiringdate>
+        <securitynumber>456</securitynumber>
+    </user>
+</users>
