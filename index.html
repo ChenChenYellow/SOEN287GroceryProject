@@ -5,6 +5,18 @@
     <title>This is the index page</title>
 </head>
 <body>
-
+<div id="errorMessage"></div>
+<form action="./index.html" method="POST" id="form1">
+    <div>
+        <label for="email">Email</label>
+        <input id="inputEmail" name="email" type="text"/>
+    </div>
+    <div>
+        <label for="firstname">First Name</label>
+        <input id="inputFirstName" name="firstName" type="text"/>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<script src="./Scripts/formHandling.js"></script>
 </body>
 </html>
