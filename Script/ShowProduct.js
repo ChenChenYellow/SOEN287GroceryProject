@@ -66,4 +66,15 @@ window.addEventListener("load", async(event) => {
     p.classList.add('pt-2', 'pb-2', 'pl-4');
     p.style.fontFamily = 'Calibri, sans-serif';
     p.innerHTML = '$' + productInfo['price'] + '/' + productInfo['unit'];
+
+    row = document.createElement('div');
+    col.appendChild(row);
+    row.classList.add('row');
+    let button = document.createElement('button');
+    row.appendChild(button);
+    button.classList.add('ml-4');
+    button.classList.add('btn', 'btn-success');
+    button.innerHTML = 'Add to cart';
+
+
 })
