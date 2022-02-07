@@ -13,15 +13,11 @@ function readAislesXML() {
         })
         .then(function (data){
             const queryString = window.location.search;
-            console.log(queryString);
             const urlParams = new URLSearchParams(queryString);
-            console.log(urlParams)
             const aisleName = urlParams.get("aislename");
-            console.log(aisleName);
             const ret = data["product"].filter((x)=>{
                 return x["aisle"] == aisleName;
             });
-            console.log(ret);
             return ret;
         })
 }

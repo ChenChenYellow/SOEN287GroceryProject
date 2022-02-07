@@ -13,15 +13,11 @@ function readProductXML() {
         })
         .then(function (data){
             const queryString = window.location.search;
-            console.log(queryString);
             const urlParams = new URLSearchParams(queryString);
-            console.log(urlParams)
             const id = urlParams.get("id");
-            console.log(id);
             const ret = data["product"].filter((x)=>{
                 return x["id"] == id;
             })[0];
-            console.log(ret);
             return ret;
         })
 }
