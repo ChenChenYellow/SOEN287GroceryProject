@@ -36,7 +36,7 @@ window.addEventListener("load", async(event) => {
             col.classList.add('col-sm-2', 'border');
             let a = document.createElement('a');
             col.appendChild(a);
-            a.href = "Product.html?id="+products[i]['id'];
+            a.href = "P3_Product_YCH.html?id="+products[i]['id'];
             let p = document.createElement('p');
             a.appendChild(p);
             p.innerHTML = products[i]['name'];
