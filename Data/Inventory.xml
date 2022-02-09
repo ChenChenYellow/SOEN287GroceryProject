@@ -2,7 +2,7 @@
 <inventory>
     <product>
         <aisle>biscuit_and_chips</aisle>
-        <id>1</id>
+        <id>0</id>
         <name>Layers Chips</name>
         <price>3</price>
         <unit>bag(200g)</unit>
@@ -12,7 +12,7 @@
     </product>
     <product>
         <aisle>dry_food</aisle>
-        <id>2</id>
+        <id>1</id>
         <name>Instant Noodles</name>
         <price>1</price>
         <unit>bag(150g)</unit>
