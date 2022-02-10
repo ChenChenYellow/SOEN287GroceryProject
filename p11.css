@@ -74,3 +74,20 @@ td:last-child {
 th:last-child {
   text-align: right;
 }
+.addbtn {
+  padding: 0.5rem 2rem;
+  border-radius: 20%;
+  background-color: #14213d;
+  color: whitesmoke;
+  margin-bottom: 0.2rem;
+  font-family: inherit;
+  font-weight: 600;
+}
+.addbtn:hover {
+  transform: translateY(-0.2rem);
+  background-color: #b7e4c7;
+  transition: ease 0.25s;
+  cursor: pointer;
+  box-shadow: 10px 5px grey;
+  color: black;
+}
