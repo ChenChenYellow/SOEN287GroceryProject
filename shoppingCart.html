@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      table, tbody, tr, th, td {
+        border: 1px;
+        border-collapse: collapse;
+        text-align: left;
+      }
+      div.itemList {
+        float: left;
+      }
+      div.itemSummary {
+        float: left;
+        padding-left: 125px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navMenu">
+        <ul>
+          <li class="navItem"><a href="#">Home</a></li>
+          <li class="navItem"><a href="#">Products</a></li>
+          <li class="navItem"><a href="#">About</a></li>
+          <li class="navItem"><a href="#">My Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Shopping Cart</h1>
+      <div class="itemList">
+        <h2>My Item(s):</h2>
+        <h3>
+          <ul>
+            <li>Product 1</li>
+            <button type="button">Remove</button>
+            <li>Product 2</li>
+            <button type="button">Remove</button>
+            <li>Product 3</li>
+            <button type="button">Remove</button>
+            <li>Product 4</li>
+            <button type="button">Remove</button>
+          </ul>
+        </h3>
+      </div class="itemList">
+      <div class="itemSummary">
+        <h2>Summary of Items</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td class="productName">Product 1</td>
+              <td>3x</td>
+              <td class="price">$5.99</td>
+            </tr>
+            <tr>
+              <td class="productName">Product 2</td>
+              <td>1x</td>
+              <td class="price">$2.99</td>
+            </tr>
+            <tr>
+              <td class="productName">Product 3</td>
+              <td>2x</td>
+              <td class="price">$8.99</td>
+            </tr>
+            <tr>
+              <td class="productName">Product 4</td>
+              <td>1x</td>
+              <td class="price">$1.99</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tr>
+            <th>Subtotal of item(s):</th>
+            <td>$40.93</td>
+          </tr>
+          <tr>
+            <th>QST:</th>
+            <td>$4.08</td>
+          </tr>
+          <tr>
+            <th>GST:</th>
+            <td>$2.05</td>
+          </tr>
+          <tr>
+            <th>Total Price:</th>
+            <td><b>$47.06</b></td>
+          </tr>
+        </table>
+      </div class="itemSummary">
+    </main>
+  </body>
+</html>
