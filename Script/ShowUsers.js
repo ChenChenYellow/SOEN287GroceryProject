@@ -176,7 +176,5 @@ window.addEventListener("load", async (event) => {
         button.id = 'buttonDelete' + i;
         button.innerHTML = "Delete";
         cardbody.appendChild(button);
-
-
     }
 })
