@@ -1,10 +1,10 @@
-class BackStoreHeader extends HTMLElement{
-    constructor(){
-        super();
-    }
+class BackStoreHeader extends HTMLElement {
+  constructor() {
+    super()
+  }
 
-    connectedCallback(){
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -17,8 +17,7 @@ class BackStoreHeader extends HTMLElement{
                 <a class="nav-link" href="#">Orders</a>
               </li>
             </ul>
-        </nav>`;
-    }
-
+        </nav>`
+  }
 }
-customElements.define('header-component', BackStoreHeader);
+customElements.define('header-component', BackStoreHeader)

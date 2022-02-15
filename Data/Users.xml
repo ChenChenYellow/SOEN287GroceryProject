@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <users>
     <user>
+        <id>0</id>
         <email>joe@gmail.com</email>
         <firstname>Joe</firstname>
         <lastname>Jack</lastname>
@@ -10,8 +11,15 @@
         <nameonthecard>Joe Jack</nameonthecard>
         <expiringdate>07/22</expiringdate>
         <securitynumber>123</securitynumber>
+        <streetnumber></streetnumber>
+        <street></street>
+        <postalcode></postalcode>
+        <city></city>
+        <province></province>
+        <country></country>
     </user>
     <user>
+        <id>1</id>
         <email>bob@gmail.com</email>
         <firstname>Bob</firstname>
         <lastname>Bill</lastname>
