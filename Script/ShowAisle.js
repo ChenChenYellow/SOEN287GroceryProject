@@ -25,28 +25,35 @@ function readAislesXML() {
 window.addEventListener("load", async(event) => {
     const products = await readAislesXML();
     let container = document.getElementById('mainContainer');
-    container.classList.add('container-fluid');
+    let cardColumns = document.createElement('div');
+    container.appendChild(cardColumns);
+    cardColumns.classList.add('card-columns');
     for (let i = 0; i < products.length; i++){
-        let row = document.createElement('div');
-        container.appendChild(row);
-        row.classList.add('row');
-
-        for (let j = i + 5; i < products.length || i < j; i++){
-            let col = document.createElement('div');
-            row.appendChild(col);
-            col.classList.add('col-lg-2', 'border');
-            let a = document.createElement('a');
-            col.appendChild(a);
-            a.href = "P3_Product_YCH.html?id="+products[i]['id'];
-            let p = document.createElement('p');
-            a.appendChild(p);
-            p.innerHTML = products[i]['name'];
-            let img = document.createElement('img');
-            a.appendChild(img);
-            img.src = 'Data/' + products[i]['image'];
-            img.classList.add('img-fluid');
-            img.alt = "Image no available";
+        let card = document.createElement('div');
+        cardColumns.appendChild(card);
+        card.classList.add('shadow', 'card');
+        card.onmouseover = function (){
+            this.style.backgroundColor = 'rgb(240,240,240)';
         }
-
+        card.onmouseleave = function (){
+            this.style.backgroundColor = 'rgb(250,250,250)';
+        }
+        let cardBody = document.createElement('div');
+        card.appendChild(cardBody);
+        cardBody.classList.add('card-body');
+        let a = document.createElement('a');
+        cardBody.appendChild(a);
+        a.href = "P3_Product_YCH.html?id="+products[i]['id'];
+        a.classList.add('text-decoration-none', 'stretched-link');
+        a.style.color = 'inherit';
+        let h5 = document.createElement('h5');
+        h5.innerHTML = products[i]['name'];
+        h5.classList.add('card-title')
+        cardBody.appendChild(h5);
+        let img = document.createElement('img');
+        card.appendChild(img);
+        img.src = 'Data/' + products[i]['image'];
+        img.classList.add('card-img-bottom');
+        img.alt = "Image no available";
     }
 })
