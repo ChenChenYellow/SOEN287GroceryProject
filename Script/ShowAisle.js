@@ -25,6 +25,7 @@ function readAislesXML() {
 window.addEventListener("load", async(event) => {
     const products = await readAislesXML();
     let container = document.getElementById('mainContainer');
+    container.classList.add('container-fluid');
     for (let i = 0; i < products.length; i++){
         let row = document.createElement('div');
         container.appendChild(row);
