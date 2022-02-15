@@ -30,7 +30,7 @@ window.addEventListener("load", async(event) => {
         container.appendChild(row);
         row.classList.add('row');
 
-        for (let j = i + 3; i < products.length || i < j; i++){
+        for (let j = i + 5; i < products.length || i < j; i++){
             let col = document.createElement('div');
             row.appendChild(col);
             col.classList.add('col-sm-2', 'border');
