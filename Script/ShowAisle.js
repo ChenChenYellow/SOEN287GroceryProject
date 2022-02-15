@@ -33,7 +33,7 @@ window.addEventListener("load", async(event) => {
         for (let j = i + 5; i < products.length || i < j; i++){
             let col = document.createElement('div');
             row.appendChild(col);
-            col.classList.add('col-sm-2', 'border');
+            col.classList.add('col-lg-2', 'border');
             let a = document.createElement('a');
             col.appendChild(a);
             a.href = "P3_Product_YCH.html?id="+products[i]['id'];
