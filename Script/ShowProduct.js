@@ -30,7 +30,7 @@ window.addEventListener('load', async (event) => {
   col.classList.add('col-lg-6')
   let image = document.createElement('img')
   col.appendChild(image)
-  image.classList.add('pt-3', 'pb-3', 'mx-auto')
+  image.classList.add('pt-3', 'pb-3', 'mx-auto', 'mw-100')
   image.src = 'Data/' + productInfo['image']
 
   col = document.createElement('div')
@@ -52,6 +52,7 @@ window.addEventListener('load', async (event) => {
   h3.classList.add('pb-2', 'pl-4')
   h3.style.fontFamily = 'Calibri, sans-serif'
   h3.innerHTML = productInfo['name']
+  document.getElementById('title').innerHTML = h3.innerHTML;
 
   row = document.createElement('div')
   col.appendChild(row)
@@ -77,7 +78,7 @@ window.addEventListener('load', async (event) => {
   let button = document.createElement('button')
   row.appendChild(button)
   button.classList.add('ml-4')
-  button.classList.add('btn', 'btn-Φoutline-success')
+  button.classList.add('btn', 'btn-outline-success')
   button.innerHTML = 'Add to cart'
   button.style.fontFamily = 'Calibri, sans-serif'
 })

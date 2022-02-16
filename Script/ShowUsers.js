@@ -33,6 +33,10 @@ window.addEventListener('load', async (event) => {
   th.innerHTML = 'Detail'
   let tableBody = document.createElement('tbody')
   table.appendChild(tableBody)
+
+  let labels = ['First Name', 'Last Name', 'Password', 'Payment Method', 'Card Number', 'Name on the Card', 'Expiring Date', 'Security Number', 'Street Number', 'Street Name', 'Postal Code', 'City', 'Province', 'Country'];
+  let keys = ['firstname', 'lastname', 'password', 'paymentmethod', 'cardnumber', 'nameonthecard', 'expiringdate', 'securitynumber', 'streetnumber', 'streetname', 'postalcode', 'city', 'province', 'country'];
+
   for (let i = 0; i < users['user'].length; i++) {
     let user = users['user'][i]
     tr = document.createElement('tr')
@@ -87,85 +91,17 @@ window.addEventListener('load', async (event) => {
     let tableDetailBody = document.createElement('tbody')
     tabledetail.appendChild(tableDetailBody)
 
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'First Name'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['firstname']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Last Name'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['lastname']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Password'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['password']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Payment Method'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['paymentmethod']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Card Number'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['cardnumber']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Name on the Card'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['nameonthecard']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Expiring Date'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['expiringdate']
-
-    tr = document.createElement('tr')
-    tableDetailBody.appendChild(tr)
-    th = document.createElement('th')
-    tr.appendChild(th)
-    th.scope = 'row'
-    th.innerHTML = 'Security Number'
-    td = document.createElement('td')
-    tr.appendChild(td)
-    td.innerHTML = user['securitynumber']
+    for(let j = 0; j < labels.length; j++){      
+      tr = document.createElement('tr')
+      tableDetailBody.appendChild(tr)
+      th = document.createElement('th')
+      tr.appendChild(th)
+      th.scope = 'row'
+      th.innerHTML = labels[j]
+      td = document.createElement('td')
+      tr.appendChild(td)
+      td.innerHTML = user[keys[j]]
+    }
 
     cardBodyContainerRow = document.createElement('div')
     cardBodyContainerRow.classList.add('row');

@@ -11,12 +11,12 @@
         <nameonthecard>Joe Jack</nameonthecard>
         <expiringdate>07/22</expiringdate>
         <securitynumber>123</securitynumber>
-        <streetnumber></streetnumber>
-        <street></street>
-        <postalcode></postalcode>
-        <city></city>
-        <province></province>
-        <country></country>
+        <streetnumber>111</streetnumber>
+        <streetname>St Catherine</streetname>
+        <postalcode>H1H 4Y4</postalcode>
+        <city>Montreal</city>
+        <province>Quebec</province>
+        <country>Canada</country>
     </user>
     <user>
         <id>1</id>
@@ -29,5 +29,29 @@
         <nameonthecard>Bob Billy</nameonthecard>
         <expiringdate>01/25</expiringdate>
         <securitynumber>456</securitynumber>
+        <streetnumber>444</streetnumber>
+        <streetname>Wall St</streetname>
+        <postalcode>123456</postalcode>
+        <city>New York</city>
+        <province>New York</province>
+        <country>US</country>
+    </user>
+    <user>
+        <id>2</id>
+        <email>zoe@gmail.com</email>
+        <firstname>Zoe</firstname>
+        <lastname>Zoey</lastname>
+        <password>ZoePassword</password>
+        <paymentmethod>VISA</paymentmethod>
+        <cardnumber>7777888899990000</cardnumber>
+        <nameonthecard>Zoe Zoey</nameonthecard>
+        <expiringdate>07/23</expiringdate>
+        <securitynumber>893</securitynumber>
+        <streetnumber>1001</streetnumber>
+        <streetname>Boul Maisonneuve</streetname>
+        <postalcode>H8H 4Z4</postalcode>
+        <city>Montreal</city>
+        <province>Quebec</province>
+        <country>Canada</country>
     </user>
 </users>

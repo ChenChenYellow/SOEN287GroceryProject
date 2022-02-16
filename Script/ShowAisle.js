@@ -36,6 +36,7 @@ window.addEventListener('load', async (event) => {
     words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1)
   }
   aisleNameH1.innerHTML = words.join(' ')
+  document.getElementById('title').innerHTML = aisleNameH1.innerHTML;
   let cardContainer = document.getElementById('cardContainer')
   let cardRow = document.createElement('div')
   cardContainer.appendChild(cardRow)
