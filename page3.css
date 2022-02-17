@@ -153,8 +153,8 @@ a {
   line-height: 3rem;
   margin-top: 3rem;
 }
-@media screen and (min-width: 992px) {
-  .Quantity-modifier {
-    display: flex;
+@media screen and (max-width: 900px) {
+  nav a {
+    display: none;
   }
 }
