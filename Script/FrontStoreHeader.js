@@ -8,7 +8,7 @@ class FrontStoreHeader extends HTMLElement {
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="P1_index_YCH.html">Home</a>
+                <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Aisles</a>
