@@ -135,9 +135,13 @@ img {
 .product:hover .product-btn {
   opacity: 1;
 }
-@media screen and (max-width: 900px) {
-  nav a {
+@media screen and (max-width: 720px) {
+  header nav {
     display: none;
+  }
+  .product-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media screen and (min-width: 992px) {
