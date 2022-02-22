@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: aliceblue;
+}
 header {
   background: #caf0f8;
   padding-bottom: 2rem;
@@ -38,10 +42,6 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
-body {
-  font-family: "Quicksand", sans-serif;
-  background-color: aliceblue;
-}
 .container {
   margin: 6rem auto;
   margin-right: 10rem;
@@ -79,13 +79,15 @@ td a {
   font-size: 1rem;
 }
 td button {
+  padding: 0 1rem;
   background: none;
-
+  border: none;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 td button:hover {
   transform: scale(1.05);
-  color: burlywood;
+  color: greenyellow;
   transition: ease 0.25s;
   cursor: pointer;
 }
@@ -109,4 +111,21 @@ td:last-child {
 }
 th:last-child {
   text-align: right;
+}
+.addbtn {
+  padding: 0.5rem 2rem;
+  border-radius: 20%;
+  background-color: #14213d;
+  color: whitesmoke;
+  margin-bottom: 0.2rem;
+  font-family: inherit;
+  font-weight: 600;
+}
+.addbtn:hover {
+  transform: translateY(-0.2rem);
+  background-color: #b7e4c7;
+  transition: ease 0.25s;
+  cursor: pointer;
+  box-shadow: 10px 5px grey;
+  color: black;
 }
