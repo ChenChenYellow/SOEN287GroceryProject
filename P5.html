@@ -21,41 +21,43 @@
   <body>
     <header-component></header-component>
     <div class="container-fluid bg-light">
-      <div class="container">
-        <div class="row">
-          <h1 class="text-center col-lg-12">Sign in</h1>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <label>Email</label>
+      <form action="/index.html" method="post">
+        <div class="container">
+          <div class="row">
+            <h1 class="text-center col-lg-12">Sign In</h1>
           </div>
-          <div class="col-lg-6">
-            <input type="email" id="inputEmail" />
+          <div class="row">
+            <div class="col-lg-6">
+              <label>Email</label>
+            </div>
+            <div class="col-lg-6">
+              <input type="email" id="inputEmail" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label>Password</label>
+            </div>
+            <div class="col-lg-6">
+              <input type="password" id="inputPassword" />
+            </div>
+          </div>
+          <div class="row">
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+            >
+              Submit
+            </button>
+            <button
+              class="btn btn-outline-warning"
+              type="reset"
+            >
+              Reset
+            </button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <label>Password</label>
-          </div>
-          <div class="col-lg-6">
-            <input type="password" id="inputPassword" />
-          </div>
-        </div>
-        <div class="row">
-          <button
-            class="btn btn-outline-success"
-            onclick="location.href = 'index.html'"
-          >
-            Sign In
-          </button>
-          <button
-            class="btn btn-outline-warning"
-            onclick="location.href = 'index.html'"
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
+      </form>
     </div>
   </body>
 </html>
