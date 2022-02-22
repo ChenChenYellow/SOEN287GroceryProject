@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<inventory>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>0</id>
+        <name>Layers Chips</name>
+        <price>3</price>
+        <unit>bag(200g)</unit>
+        <quantiy>150</quantiy>
+        <image>lays_chips.jpg</image>
+        <description>Just regular chips</description>
+    </product>
+    <product>
+        <aisle>dry_food</aisle>
+        <id>1</id>
+        <name>Instant Noodles</name>
+        <price>1</price>
+        <unit>bag(150g)</unit>
+        <quantiy>200</quantiy>
+        <image />
+        <description>ragualr noodle</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>2</id>
+        <name>No Name Chips</name>
+        <price>1</price>
+        <unit>bag(150g)</unit>
+        <quantiy>250</quantiy>
+        <image>no_name_chips.jpg</image>
+        <description>cheap chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>3</id>
+        <name>No Name Chips</name>
+        <price>2</price>
+        <unit>bag(150g)</unit>
+        <quantiy>250</quantiy>
+        <image>no_name_chips.jpg</image>
+        <description>cheap chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>4</id>
+        <name>Tomatoes Chips</name>
+        <price>1</price>
+        <unit>bag(100g)</unit>
+        <quantiy>250</quantiy>
+        <image>tomatoes_chips.jpg</image>
+        <description>Tomatoes flavor chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>5</id>
+        <name>BBQ Chips</name>
+        <price>10</price>
+        <unit>bag(200g)</unit>
+        <quantiy>250</quantiy>
+        <image>bbq_chips.jpg</image>
+        <description>BBQ flavor chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>6</id>
+        <name>Pickles Chips</name>
+        <price>10</price>
+        <unit>bag(200g)</unit>
+        <quantiy>250</quantiy>
+        <image>pickles_chips.jpg</image>
+        <description>Pickles flavor chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>7</id>
+        <name>Durian Chips</name>
+        <price>100</price>
+        <unit>bag(200g)</unit>
+        <quantiy>250</quantiy>
+        <image>durian_chips.jpg</image>
+        <description>Durian flavor chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>8</id>
+        <name>Pizza Chips</name>
+        <price>10</price>
+        <unit>bag(200g)</unit>
+        <quantiy>250</quantiy>
+        <image>pizza_chips.jpg</image>
+        <description>Pizza flavor chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>9</id>
+        <name>Cucumber Chips</name>
+        <price>10</price>
+        <unit>bag(300g)</unit>
+        <quantiy>250</quantiy>
+        <image>cucumber_chips.jpg</image>
+        <description>Cucumber flavor chips</description>
+    </product>
+    <product>
+        <aisle>biscuit_and_chips</aisle>
+        <id>10</id>
+        <name>Potatoes Chips</name>
+        <price>5</price>
+        <unit>bag(300g)</unit>
+        <quantiy>250</quantiy>
+        <image>potatoes_chips.jpg</image>
+        <description>Potatoes flavor chips</description>
+    </product>
+</inventory>
