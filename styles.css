@@ -1,63 +1,285 @@
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.wrapper{
+    width:100%;
+    height:55px;
+}
+header{
+    background:url(https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+    height: 100vh;
+    background-size: cover;
+}
+.navbar-home,.navbar-pages{
+    float: right;
+    list-style: none;
+
+}
+.navbar-home li,.navbar-pages li{
+    display: inline-block;
+    padding-right: 5px;
+    margin-top: 35px;
+}
+.navbar-home li a{
+    text-decoration: none;
+    color: #faedcd;
+    font-size: 28px;
+    font-weight: 900;
+    padding: 5px 12px;
+}
+.navbar-home li a:hover{
+    background-color: #a68a64;
+    border-radius: 15px;
+    color: #faedcd;
 }
 
-body{
-  background-color: #DAF0EE;
-}
-header {
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  position:relative;
+#Welcome{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background-color:#DAF0EE; */
-
+  flex-direction: column;
+  background-color: #faedcd;
+  opacity: 0.85;
+  color: black;
+  border-radius: 15px;
+  width: 75%;
+  padding:15px 20px;
+  margin: auto;
+  margin-top: 30%;
+  align-content: center;
 }
-header a{
-  color: #2C5530;
-  text-decoration: none;
-  font-size: 35px;
-  font-weight: 900;
-  margin: 0 30px;
-  padding:0 8px;
-  
+#Welcome p{
+    text-indent: 30px;
 }
-header a:hover{
-  cursor: pointer;
-  background-color: #728d96;
-  border-radius: 12px;
-  
+#Welcome h1{
+    font-size: 35px;
+    padding-bottom: 10px;
 }
 
-#main{
-  width: 100%;
-  min-height: 75vh;
-  background: url(https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80) no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#logo{
+    /* font-size:50px;
+    color:white; */
+    padding:20px;
+    float: left;    
+  }
+  #logo a{
+    font-size:50px;
+    text-decoration: none;
+    color:#a68a64;
+    font-weight: 800;
+  }
 
-}
-#main h1{
-  color: yellow;
-  font-size: 80px;
-}
 
-#more{
+  #layover{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(255,255,255,0.1));
+background-size: cover;
+    height: 100vh;
+  }
+  /* ---------------Section Content-------------- */
+  .navbar-pages li a{
+    text-decoration: none;
+    color: #a68a64;
+    font-size: 28px;
+    font-weight: 900;
+    padding: 5px 12px;
+}
+.navbar-pages li a:hover{
+  background-color: #a68a64;
+  border-radius: 15px;
+  color: #faedcd;
+}
+  #content{
+    height: 100vh;
+    /* height: fit-content; */
+    background-color: #faedcd;
+}
+#content img{
+  width: 50%;
+  }
+#content h2{
+  color:#d4a373;
+}
+#cards{
+  margin:auto;
   width: 85%;
-  display: inline-block;
-  min-height: 100vh;
-  font-size: 34px;
+  display:flex;
+margin: auto;
+margin-top:1.5%;
+justify-content: space-between;
+
+}
+
+#Hours{
+  padding:20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow:5px 10px 8px #d4a373;
+  text-align: center;
+  line-height: 150%;
+  width:30%;
+}
+
+#Hours ul{
+  list-style: none;
+}
+
+#Covid{
+display:block;
+margin:auto;
+width:85%;
+
+margin-top: 3%;
+padding:20px 35px;
+background-color: white;
+border-radius: 12px;
+box-shadow:5px 10px 8px #d4a373;
+text-align: center;
+line-height: 150%;
+}
+#Covid p{
+text-align: justify;
+text-justify:inter-word;
+line-height: 150%;
+text-indent: 30px;
+}
+
+#address{
+padding:20px;
+background-color: white;
+border-radius: 12px;
+box-shadow:5px 10px 8px #d4a373;
+text-align: center;
+line-height: 150%;
+width:25%;
+}
+
+#address li{
+text-align: center;
+list-style: none;
+font-weight: 600;
+}
+
+#students{
+padding:20px 15px;
+background-color: white;
+border-radius: 12px;
+box-shadow:5px 10px 8px #d4a373;
+text-align: center;
+line-height: 150%;
+width:33%;
+}
+#job-offer{
+  font-weight: 600;
+}
+footer{
+  background-color: #6b705c;
+  height: 35vh;
+}
+/* FOOTER FOOTER FOOTER FOOTER */
+footer{
+  display: flex;
+  flex-direction: column;
+}
+#socials{
+  display: flex;
+  flex-direction: column;
+}
+#footer-location p{
+  text-align: center;
+}
+#legal{
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-top: 4%;
+}
+#legal ul{
+  align-items: center;
+}
+#legal li{
+  list-style: none;
+}
+#legal li a,#legal li p{
+  text-decoration: none;
+  color: #faedcd;
+  text-align: center;
+}
+
+/* AISLES AISLES AISLES AISLES */
+#aisles{
+  background-color: #faedcd;
+}
+#page-presentation{
+  font-size: 40px; 
+  display: flex;
+  padding-bottom: 20px;
   justify-content: center;
-  margin-top: 50px;
-  margin-left: 100px;
-  color: #2C5530;
+  width: 100%;
+  color: #a68a64;
+}
+.aisle{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  background-color: #699e657a;
+  border-radius: 20px;
+  margin-bottom: 3%;
+  height:fit-content;
+  padding:20px 15px;
+  flex-direction:column;
+  align-items: center;
+}
+.aisle h2{
+  color:#2d6b32;
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+.aisle a{
+  color: #e6d2a1;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 200%;
+}
+.aisle img{
+  width: 30%;
+  border-radius: 20px;
+}
+.go-to-aisle{
+  background-color: #2d6b32;
+  padding:7px 8px;
+  border-radius: 10px;
+  margin-top: 10%;
+  transition: 0.4s;
+}
+.go-to-aisle:hover{
+  background-color: #0b2b0e;
+}
+
+
+@media screen and (max-width: 938px) {
+  #content{
+    height: fit-content;
+  }
+  #cards{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:90%;
+
+  }
+  #Hours,#address,#students{
+    width:80%;
+    margin-bottom:20px;
+  } 
+  .wrapper ul li{
+    padding:5px;
+    margin:0;  
+}
+
+}
+
+/* SPECIFIC AISLE  */
+.product-page{
+display: flex;
+flex-direction: column;
 }
