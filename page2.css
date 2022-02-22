@@ -8,11 +8,11 @@
 
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: aliceblue;
+  background-color: #faedcd;
 }
 
 header {
-  background: #caf0f8;
+  background: #faedcd;
   padding-bottom: 2rem;
 }
 
@@ -68,7 +68,7 @@ img {
 }
 
 .products {
-  background-color: aliceblue;
+  background-color: #faedcd;
   padding: 3.2rem 0;
 }
 .product {
@@ -76,7 +76,7 @@ img {
   position: relative;
 }
 .product-content {
-  background-color: #caf0f8;
+  background-color: #699e657a;
   padding: 3rem 0.5rem 2rem 0.5rem;
   cursor: pointer;
 }

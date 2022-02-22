@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 header {
-  background: #caf0f8;
+  background: #faedcd;
   padding-bottom: 2rem;
 }
 
@@ -50,7 +50,7 @@ nav a:hover::before {
 
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: aliceblue;
+  background-color: #faedcd;
   margin: 0;
 }
 .container {
