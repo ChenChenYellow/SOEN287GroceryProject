@@ -11,19 +11,6 @@
     />
     <link rel="stylesheet" href="PHstyle.css" />
     <title>Page 2</title>
-    <style>
-      div.productImg {
-        float: left;
-      }
-      div.productName {
-        float: bottom;
-        margin-bottom: 0px;
-      }
-      div.productPrice {
-        float: left;
-        padding-top: 0px;
-      }
-    </style>
   </head>
   <body>
     <div class="container-fluid">
@@ -43,70 +30,77 @@
         <h2>Frozen Foods</h2>
       </div>
       <div class="container">
-        <table class="table table-responsive">
-          <tr>
-            <td>
-              <button type="button" class="btn btn-outline-success">
-                <div class="productImg">
-                  <img
-                    width="200px"
-                    src="frozenpizza.png"
-                    alt="Product image unavailable"
-                  />
-                </div>
-                <div class="productName">
-                  <h4>Frozen Pizza</h4>
-                </div>
-                <div class="productPrice">$1.99</div>
-              </button>
-            </td>
-            <td>
-              <button type="button" class="btn btn-outline-success">
-                <div class="productImg">
-                  <img
-                    width="200px"
-                    src="icecream.png"
-                    alt="Product image unavailable"
-                  />
-                </div>
-                <div class="productName">
-                  <h4>Ice Cream</h4>
-                </div>
-                <div class="productPrice">$2.99</div>
-              </button>
-            </td>
-            <td>
-              <button type="button" class="btn btn-outline-success">
-                <div class="productImg">
-                  <img
-                    width="200px"
-                    src="frozenwaffles.png"
-                    alt="Product image unavailable"
-                  />
-                </div>
-                <div class="productName">
-                  <h4>Waffles</h4>
-                </div>
-                <div class="productPrice">$5.99</div>
-              </button>
-            </td>
-            <td>
-              <button type="button" class="btn btn-outline-success">
-                <div class="productImg">
-                  <img
-                    width="200px"
-                    src="frozenvegetables.png"
-                    alt="Product image unavailable"
-                  />
-                </div>
-                <div class="productName">
-                  <h4>Frozen Vegetables</h4>
-                </div>
-                <div class="productPrice">$8.99</div>
-              </button>
-            </td>
-          </tr>
-        </table>
+        <button
+          onclick="document.location='PHpage3_frozenpizza.html'"
+          type="button"
+          class="btn btn-outline-success"
+        >
+          <div class="productImg">
+            <img
+              width="200px"
+              src="frozenpizza.png"
+              alt="Product image unavailable"
+            />
+          </div>
+          <div class="productName">
+            <h4>Frozen Pizza</h4>
+          </div>
+          <div class="productPrice">$1.99</div>
+        </button>
+
+        <button
+          type="button"
+          onclick="document.location='PHpage3_icecream.html'"
+          class="btn btn-outline-success"
+        >
+          <div class="productImg">
+            <img
+              width="200px"
+              src="icecream.png"
+              alt="Product image unavailable"
+            />
+          </div>
+          <div class="productName">
+            <h4>Ice Cream</h4>
+          </div>
+          <div class="productPrice">$2.99</div>
+        </button>
+
+        <button
+          type="button"
+          onclick="document.location='PHpage3_waffles.html'"
+          class="btn btn-outline-success"
+        >
+          <div class="productImg">
+            <img
+              width="200px"
+              src="frozenwaffles.png"
+              alt="Product image unavailable"
+            />
+          </div>
+          <div class="productName">
+            <h4>Waffles</h4>
+          </div>
+          <div class="productPrice">$5.99</div>
+        </button>
+
+        <button
+          type="button"
+          onclick="document.location='PHpage3_frozenvegetables.html'"
+          class="btn btn-outline-success"
+        >
+          <div class="productImg">
+            <img
+              width="200px"
+              src="frozenvegetables.png"
+              alt="Product image unavailable"
+            />
+          </div>
+          <div class="productName">
+            <h4>Frozen Vegetables</h4>
+          </div>
+          <div class="productPrice">$8.99</div>
+        </button>
       </div>
     </main>
     <script
