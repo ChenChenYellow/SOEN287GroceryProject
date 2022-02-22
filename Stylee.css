@@ -1,0 +1,70 @@
+body{
+  margin 0;
+  padding 0;
+  background-color: #DAF0EE;
+  font-family 'Arial'
+}
+
+.signup{
+  width: 382px;
+  overflow: hidden;
+  margin: auto;
+  margin: 20 0 0 450px;
+  background: 	#DAF0EE;
+  border-radius: 15px;
+  padding: 80px;
+}
+
+
+
+h1 {
+ text-align: center;
+ color: black;
+ padding: 20px;
+}
+
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sign {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+
+label{
+  color: black;
+  font-size: 17px;
+
+}
+
+#firstname #lastname #phoneNumber #myEmail{
+  width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#myPassowrd{
+  width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#sign{
+  width: 300px;
+   height: 30px;
+   border: none;
+   border-radius: 17px;
+   padding-left: 7px;
+   color: black;
+}
