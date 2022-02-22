@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 header {
-  background: #caf0f8;
+  background: #faedcd;
   padding-bottom: 2rem;
 }
 
@@ -40,7 +40,7 @@ nav a:hover::before {
 }
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: aliceblue;
+  background-color: #faedcd;
 }
 
 table {
