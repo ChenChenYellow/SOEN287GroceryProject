@@ -42,11 +42,7 @@ body {
   font-family: "Quicksand", sans-serif;
   background-color: aliceblue;
 }
-.container {
-  margin: 6rem auto;
-  margin-right: 10rem;
-  margin-left: 10rem;
-}
+
 table {
   width: 100%;
   border-collapse: collapse;
