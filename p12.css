@@ -42,11 +42,7 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
-.container {
-  margin: 6rem auto;
-  margin-right: 10rem;
-  margin-left: 10rem;
-}
+
 table {
   width: 100%;
   border-collapse: collapse;
