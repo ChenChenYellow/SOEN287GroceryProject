@@ -1,0 +1,53 @@
+.background-image-top {
+  background-image: url("../Data/background_image.jpg");
+  opacity: 0.8;
+}
+.background-light{
+    background-color: #ffffff;
+    opacity: 0.95;
+}
+.background-brown{
+    background-color: #ffe2bd;
+}
+
+.main-color,
+.brand,
+.brand:hover {
+  color: #fda22a;
+}
+.second-color,
+.navbar-link,
+.navbar-link:hover {
+  color: #f7a130;
+}
+.color-black{
+    color:black;
+}
+
+.xx-large-font-size,
+.brand {
+  font-size: xx-large;
+}
+.x-large-font-size,
+.navbar-link {
+  font-size: x-large;
+}
+.small-font-size{
+  font-size: small;
+}
+
+.xx-bold,
+.brand,
+.navbar-link {
+  font-weight: 800;
+}
+.bold{
+  font-weight: 700;
+}
+
+.text-decoration-none,
+.brand,
+.brand:hover,
+.navbar-link:hover {
+  text-decoration: none;
+}
