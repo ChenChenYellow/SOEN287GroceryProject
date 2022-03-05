@@ -24,14 +24,15 @@ function readProductXML() {
 
 window.addEventListener('load', async (event) => {
   const productInfo = await readProductXML()
+  console.log(productInfo)
   let row = document.getElementById('mainRow')
   let col = document.createElement('div')
   row.appendChild(col)
-  col.classList.add('col-lg-6')
+  col.classList.add('col-lg-4')
   let image = document.createElement('img')
   col.appendChild(image)
-  image.classList.add('pt-3', 'pb-3', 'mx-auto', 'mw-100')
-  image.src = 'Data/' + productInfo['image']
+  image.classList.add('py-3', 'mx-auto', 'mw-100')
+  image.src = '/Data/' + productInfo['image']
 
   col = document.createElement('div')
   row.appendChild(col)
@@ -77,8 +78,7 @@ window.addEventListener('load', async (event) => {
   row.classList.add('row')
   let button = document.createElement('button')
   row.appendChild(button)
-  button.classList.add('ml-4')
-  button.classList.add('btn', 'btn-outline-success')
+  button.classList.add('btn', 'btn-outline-success', 'ml-4')
   button.innerHTML = 'Add to cart'
   button.style.fontFamily = 'Calibri, sans-serif'
 })

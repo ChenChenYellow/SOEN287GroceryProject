@@ -37,6 +37,7 @@ window.addEventListener('load', async (event) => {
   }
   aisleNameH1.innerHTML = words.join(' ')
   document.getElementById('title').innerHTML = aisleNameH1.innerHTML;
+
   let cardContainer = document.getElementById('cardContainer')
   let cardRow = document.createElement('div')
   cardContainer.appendChild(cardRow)
@@ -44,7 +45,7 @@ window.addEventListener('load', async (event) => {
   for (let i = 0; i < products.length; i++) {
     let card = document.createElement('div')
     cardRow.appendChild(card)
-    card.classList.add('shadow', 'card', 'col-lg-2', 'mb-4')
+    card.classList.add('shadow', 'card', 'col-lg-2', 'mx-1', 'my-2')
     card.onmouseover = function () {
       this.style.backgroundColor = 'rgb(235,235,235)'
     }
@@ -54,16 +55,16 @@ window.addEventListener('load', async (event) => {
     card.style.transition = 'all 0.4s'
     let img = document.createElement('img')
     card.appendChild(img)
-    img.src = 'Data/' + products[i]['image']
-    img.classList.add('card-img-top')
-    img.alt = 'Image no available'
+    img.src = '/Data/' + products[i]['image']
+    img.classList.add('card-img-top','mt-2')
+    img.alt = 'Image not available'
 
     let cardBody = document.createElement('div')
     card.appendChild(cardBody)
     cardBody.classList.add('card-body', 'd-flex', 'flex-column')
     let a = document.createElement('a')
     cardBody.appendChild(a)
-    a.href = 'P3_Product_YCH.html?id=' + products[i]['id']
+    a.href = '/Product.html?id=' + products[i]['id']
     a.classList.add('text-decoration-none', 'stretched-link')
     a.style.color = 'inherit'
     let hr = document.createElement('hr')
