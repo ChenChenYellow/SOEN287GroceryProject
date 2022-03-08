@@ -6,11 +6,57 @@
         <name>Layers Chips</name>
         <price>3</price>
         <quantiy>150</quantiy>
-        <image>lays_chips.jpg</image>
+        <image>lays_original_235.jpg</image>
         <description>Just regular chips</description>
         <options>
             <label>flavor</label>
-            <option></option>
+            <option>
+                <description>BBQ</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>165g bag</description>
+                        <price>1</price>
+                        <image>lays_bbq_165.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2</price>
+                        <image>lays_bbq_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>3</price>
+                        <image>lays_bbq_255.jpg</image>
+                    </option>
+                </options>
+            </option>
+            <option>
+                <description>Original</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2</price>
+                        <image>lays_original_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>3</price>
+                        <image>lays_original_255.jpg</image>
+                    </option>
+                    <option>
+                        <description>368.5g bag</description>
+                        <price>3.5</price>
+                        <image>lays_original_368.jpg</image>
+                    </option>
+                    <option>
+                        <description>415g bag</description>
+                        <price>4</price>
+                        <image>lays_original_415.jpg</image>
+                    </option>
+                </options>
+            </option>
         </options>
     </product>
     <product>
