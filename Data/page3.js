@@ -36,7 +36,3 @@ modvalue.addEventListener("keyup",(e)=> {
     localStorage.setItem("value",modvalue.value);
 })
 
-//addcart
-function addedtocart(){
-    alert("added to cart")
-}
