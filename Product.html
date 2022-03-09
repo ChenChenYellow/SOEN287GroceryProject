@@ -30,11 +30,16 @@
         </div>
       </div>
       <div class="row">
-        <form class="container" id="form1" method="get">
+        <form class="container" id="form1">
           <div class="row">
-            <button type="submit" class="btn btn-outline-secondary" value="abc" name="flavor">abc</button>      
-            <button type="submit" class="btn btn-outline-secondary" value="def" name="flavor">def</button>      
-            <button type="submit" class="btn btn-outline-secondary" value="cdc" name="flavor">cdc</button>      
+            <button type="submit" class="btn btn-outline-secondary" value="abc" name="flavor" onclick="this.form.submitted_name=this.name; this.form.submitted_value=this.value">abc</button>      
+            <button type="submit" class="btn btn-outline-secondary" value="def" name="flavor" onclick="this.form.submitted_name=this.name; this.form.submitted_value=this.value">def</button>      
+            <button type="submit" class="btn btn-outline-secondary active" value="cdc" name="flavor" onclick="this.form.submitted_name=this.name; this.form.submitted_value=this.value">cdc</button>      
+          </div>
+          <div class="row">
+            <button type="submit" class="btn btn-outline-secondary" value="abc" name="size" onclick="this.form.submitted_name=this.name; this.form.submitted_value=this.value">abc</button>      
+            <button type="submit" class="btn btn-outline-secondary" value="def" name="size" onclick="this.form.submitted_name=this.name; this.form.submitted_value=this.value">def</button>      
+            <button type="submit" class="btn btn-outline-secondary active" value="cdc" name="size" onclick="this.form.submitted_name=this.name; this.form.submitted_value=this.value">cdc</button>      
           </div>
         </form>
       </div>

@@ -23,9 +23,20 @@ function readProductXML() {
 }
 
 let form1 = document.getElementById('form1')
-form1.addEventListener('submit', (event) => {
-  //event.preventDefault() //no we don't need that, we need the page to reload //or not
+form1.addEventListener('submit', (e) => {
+  e.preventDefault() //no we don't need that, we need the page to reload //or not
   console.log('submit')
+  var data = new FormData()
+  var items = form1.querySelectorAll(".active")
+  console.log(items)
+  for (const item of items){
+    data.append(item.name, item.value)
+  }
+  for (const [name,value] of data) {
+    console.log(name,value)
+  }
+  console.log(data)
+  console.log(e.target.submitted_value)
 })
 
 window.addEventListener("load", async (event) => {
