@@ -22,6 +22,12 @@ function readProductXML() {
     });
 }
 
+let form1 = document.getElementById('form1')
+form1.addEventListener('submit', (event) => {
+  //event.preventDefault() //no we don't need that, we need the page to reload //or not
+  console.log('submit')
+})
+
 window.addEventListener("load", async (event) => {
   const productInfo = await readProductXML();
   console.log(productInfo);
@@ -102,19 +108,9 @@ function fetchOptions(options, col) {
   let p = document.createElement('p')
   row.appendChild(p)
   p.innerHTML = options['label']
-
-  row = document.createElement('div')
-  col.appendChild(row)
-  let ul = document.createElement("ul");
-  row.appendChild(ul);
-  ul.classList.add("nav", "nav-pills");
-
+  
   let optionArray = options['option']
   for(let i = 0; i < optionArray.length; i++){
-    console.log(optionArray[i]['description'])
-    let li = document.createElement('li')
-    ul.appendChild(li)
-    li.classList.add('nav-item')
-    let a 
+
   }
 }
