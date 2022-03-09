@@ -11,6 +11,10 @@
     />
     <title>Shopping Cart</title>
     <style>
+      ul {
+        list-style-type: none;
+        padding-inline-start: 0%;
+      }
       table,
       tbody,
       tr,
@@ -27,7 +31,32 @@
         float: left;
         padding-left: 125px;
       }
+
+      input[type="number"] {
+        width: 35%;
+      }
+
+      img {
+        width: 80%;
+        border-radius: 3%;
+      }
+
+      .price {
+        padding-left: 40px;
+      }
+
+      .subtotal,
+      .qst,
+      .gst,
+      .totalPrice {
+        padding-left: 100px;
+      }
+
+      .individualQty {
+        padding-left: 60px;
+      }
     </style>
+    <script src="cartCode.js" async></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -42,82 +71,175 @@
         </ul>
       </nav>
     </div>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="inCartItems col-md-8">
+          <h1>Shopping Cart</h1>
+          <h3>My Item(s):</h3>
+          <ul class="itemList">
             <br />
-            <h1>Shopping Cart</h1>
-            <h3>My Item(s):</h3>
-            <ul>
-              <h4><li>Waffles</li></h4>
-              <button type="button" class="btn btn-danger btn-sm">
-                Remove
-              </button>
-              <h4><li>Ice Cream</li></h4>
-              <button type="button" class="btn btn-danger btn-sm">
-                Remove
-              </button>
-              <h4><li>Frozen Vegetables</li></h4>
-              <button type="button" class="btn btn-danger btn-sm">
-                Remove
-              </button>
-              <h4><li>Frozen Pizza</li></h4>
-              <button type="button" class="btn btn-danger btn-sm">
-                Remove
-              </button>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <br />
-            <h2>Summary of Items</h2>
-            <br />
-            <table>
-              <tbody>
-                <tr>
-                  <td class="productName">Waffles</td>
-                  <td>3x</td>
-                  <td class="price">$5.99</td>
-                </tr>
-                <tr>
-                  <td class="productName">Ice Cream</td>
-                  <td>1x</td>
-                  <td class="price">$2.99</td>
-                </tr>
-                <tr>
-                  <td class="productName">Frozen Vegetables</td>
-                  <td>2x</td>
-                  <td class="price">$8.99</td>
-                </tr>
-                <tr>
-                  <td class="productName">Frozen Pizza</td>
-                  <td>1x</td>
-                  <td class="price">$1.99</td>
-                </tr>
-              </tbody>
-            </table>
-            <table>
+            <div class="row">
+              <div class="chosenItem col-sm-4">
+                <h4><li>Waffles</li></h4>
+                <img src="frozenwaffles.png" alt="" />
+              </div>
+              <div class="itemControls col-sm-3">
+                <br />
+                <p></p>
+                <h5 class="itemCost">$5.99/ea</h5>
+                <form class="quantity" action="#">
+                  <label for="qty1">Qty:</label>
+                  <input
+                    class="qtyValue"
+                    type="number"
+                    onchange="newTotal()"
+                    id="qty1"
+                    value="1"
+                    min="1"
+                  />
+                </form>
+                <button type="button" class="btn btn-danger btn-sm">
+                  Remove
+                </button>
+              </div>
+            </div>
+            <p><br /></p>
+            <div class="row">
+              <div class="chosenItem col-sm-4">
+                <h4><li>Ice Cream</li></h4>
+                <img src="icecream.png" alt="" />
+              </div>
+              <div class="itemControls col-sm-3">
+                <br />
+                <p></p>
+                <h5 class="itemCost">$2.99/ea</h5>
+                <form class="quantity" action="#">
+                  <label for="qty2">Qty:</label>
+                  <input
+                    class="qtyValue"
+                    type="number"
+                    onchange="newTotal()"
+                    id="qty2"
+                    value="1"
+                    min="1"
+                  />
+                </form>
+                <button type="button" class="btn btn-danger btn-sm">
+                  Remove
+                </button>
+              </div>
+            </div>
+            <p><br /></p>
+            <div class="row">
+              <div class="chosenItem col-sm-4">
+                <h4><li>Frozen Vegetables</li></h4>
+                <img src="frozenvegetables.png" alt="" />
+              </div>
+              <div class="itemControls col-sm-3">
+                <br />
+                <p></p>
+                <h5 class="itemCost">$8.99/ea</h5>
+                <form class="quantity" action="#">
+                  <label for="qty3">Qty:</label>
+                  <input
+                    class="qtyValue"
+                    type="number"
+                    onchange="newTotal()"
+                    id="qty3"
+                    value="1"
+                    min="1"
+                  />
+                </form>
+                <button type="button" class="btn btn-danger btn-sm">
+                  Remove
+                </button>
+              </div>
+            </div>
+            <p><br /></p>
+            <div class="row">
+              <div class="chosenItem col-sm-4">
+                <h4><li>Frozen Pizza</li></h4>
+                <img src="frozenpizza.png" alt="" />
+              </div>
+              <div class="itemControls col-sm-3">
+                <br />
+                <p></p>
+                <h5 class="itemCost">$1.99/ea</h5>
+                <form class="quantity" action="#">
+                  <label for="qty4">Qty:</label>
+                  <input
+                    class="qtyValue"
+                    type="number"
+                    onchange="newTotal()"
+                    id="qty4"
+                    value="1"
+                    min="1"
+                  />
+                </form>
+                <button type="button" class="btn btn-danger btn-sm">
+                  Remove
+                </button>
+              </div>
+            </div>
+            <p><br /></p>
+          </ul>
+        </div>
+        <div class="inSummary col-md-4">
+          <br />
+          <br />
+          <h2>Summary of Items</h2>
+          <br />
+          <table class="inSummaryItems">
+            <tbody>
               <tr>
-                <th>Subtotal of item(s):</th>
-                <td>$40.93</td>
+                <td class="productName">Waffles</td>
+                <td class="individualQty">1x</td>
+                <td class="price">$5.99</td>
               </tr>
               <tr>
-                <th>QST:</th>
-                <td>$4.08</td>
+                <td class="productName">Ice Cream</td>
+                <td class="individualQty">1x</td>
+                <td class="price">$2.99</td>
               </tr>
               <tr>
-                <th>GST:</th>
-                <td>$2.05</td>
+                <td class="productName">Frozen Vegetables</td>
+                <td class="individualQty">1x</td>
+                <td class="price">$8.99</td>
               </tr>
               <tr>
-                <th>Total Price:</th>
-                <td><b>$47.06</b></td>
+                <td class="productName">Frozen Pizza</td>
+                <td class="individualQty">1x</td>
+                <td class="price">$1.99</td>
               </tr>
-            </table>
-          </div>
+            </tbody>
+          </table>
+          <br />
+          <table class="inSummaryPrices">
+            <tr>
+              <th>Subtotal of item(s):</th>
+              <td class="subtotal">$19.96</td>
+            </tr>
+            <tr>
+              <th>QST:</th>
+              <td class="qst">$1.99</td>
+            </tr>
+            <tr>
+              <th>GST:</th>
+              <td class="gst">$1.00</td>
+            </tr>
+            <tr>
+              <th>Total Price:</th>
+              <td><b class="totalPrice">$22.95</b></td>
+            </tr>
+          </table>
+          <br />
+          <button type="button" class="btn btn-success btn-lg btn-block">
+            Buy Items
+          </button>
         </div>
       </div>
-    </main>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
