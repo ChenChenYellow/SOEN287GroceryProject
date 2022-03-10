@@ -153,6 +153,30 @@ a {
   line-height: 3rem;
   margin-top: 3rem;
 }
+
+.more-Text {
+  display: none;
+}
+.text.show-more .more-Text {
+  display: flex;
+}
+
+.b-left {
+  margin-right: 20%;
+  width: 4rem;
+  height: 2.5rem;
+}
+.b-right {
+  margin-left: 20%;
+  width: 4rem;
+  height: 2.5rem;
+}
+
+.q-modifier {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
 @media screen and (max-width: 1000px) {
   header nav {
     display: none;

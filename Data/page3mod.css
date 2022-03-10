@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 header {
-  background: #caf0f8;
+  background: #faedcd;
   padding-bottom: 2rem;
 }
 
@@ -46,7 +46,7 @@ nav a:hover::before {
 
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: aliceblue;
+  background-color: #faedcd;
   margin: 0;
 }
 .container {
@@ -175,9 +175,6 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
-  header nav {
-    display: none;
-  }
   .container {
     display: block;
   }

@@ -25,14 +25,5 @@ function increment(){
     document.getElementById("quantity").innerText=data;
 }
 
-//save value on refresh
-let quantity= document.getElementById("quantity");
-if (sessionStorage.getItem("autosave")){
-    quantity.value=sessionStorage.getItem("autosave");
-}
 
-quantity.value=localStorage.getItem("value");
-modvalue.addEventListener("keyup",(e)=> {
-    localStorage.setItem("value",modvalue.value);
-})
 
