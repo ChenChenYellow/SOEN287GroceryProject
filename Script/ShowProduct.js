@@ -22,26 +22,88 @@ function readProductXML() {
     });
 }
 
-let form1 = document.getElementById('form1')
+/*let form1 = document.getElementById('form1')
 form1.addEventListener('submit', (e) => {
   e.preventDefault() //no we don't need that, we need the page to reload //or not
   console.log('submit')
   var data = new FormData()
   var items = form1.querySelectorAll(".active")
-  console.log(items)
-  for (const item of items){
+  for (const item of items) {
     data.append(item.name, item.value)
   }
-  for (const [name,value] of data) {
-    console.log(name,value)
+  for (const [name, value] of data) {
+    console.log(name, value)
   }
-  console.log(data)
   console.log(e.target.submitted_value)
-})
+  console.log(e.target.submitted_name)
+  document.getElementById('description').innerHTML = e.target.submitted_name + " " + e.target.submitted_value
+})*/
+
+function fetchOptions(options, containerID) {
+  let container = document.getElementById(containerID)
+  let row = document.createElement("div");
+  container.appendChild(row);
+  row.classList.add("row");
+  let p = document.createElement('p')
+  row.appendChild(p)
+  let labelValue = options['label']
+  p.innerHTML = labelValue
+
+
+  let optionArray = options['option']
+  for (let i = 0; i < optionArray.length; i++) {
+    let descriptionValue = optionArray[i]['description']
+    let button = document.createElement('button')
+    row.appendChild(button)
+    button.innerHTML = descriptionValue
+    button.type = 'submit'
+    button.classList.add('btn', 'btn-outline-secondary')
+    button.name = labelValue
+    button.value = descriptionValue
+    if (!container.selectedProperties.hasOwnProperty(labelValue)) {
+      container.selectedProperties[labelValue] = descriptionValue
+    }
+    if (container.selectedProperties[labelValue] == descriptionValue) {
+      button.classList.add('active')
+    }
+    button.onclick = () => {
+      container.selectedProperties[labelValue] = descriptionValue
+    }
+  }
+  if (optionArray[0].hasOwnProperty('options')) {
+    fetchOptions(optionArray[0]['options'], containerID)
+  }
+}
+
+function fetchSelectedOptionProductData(productInfo, selectedProperties) {
+  let selectedOption = productInfo
+  console.log(selectedOption)
+  let i = 0;
+  while (selectedOption.hasOwnProperty('options')) {
+    let options = selectedOption['options']
+    let label = options['label']
+    for (let i = 0; i < options['option'].length; i++) {
+      if (selectedProperties[label] == options['option'][i]['description']) {
+        console.log(true)
+        selectedOption = options['option'][i]
+        console.log(selectedOption)
+      } else {
+        console.log(false)
+        console.log(selectedProperties[label])
+        console.log(options['option'][i]['description'])
+      }
+    }
+    i++;
+    if (i > 2) {
+      break;
+    }
+  }
+  console.log(selectedOption)
+}
 
 window.addEventListener("load", async (event) => {
   const productInfo = await readProductXML();
-  console.log(productInfo);
+  console.log(productInfo)
 
   let row = document.getElementById("titleRow");
   let col = document.createElement("div");
@@ -51,6 +113,7 @@ window.addEventListener("load", async (event) => {
   row = document.createElement("div");
   col.appendChild(row);
   row.classList.add("row");
+
   let h3 = document.createElement("h3");
   row.appendChild(h3);
   h3.classList.add("pb-2", "pl-4");
@@ -59,9 +122,37 @@ window.addEventListener("load", async (event) => {
   document.getElementById("title").innerHTML = h3.innerHTML;
 
   if (productInfo.hasOwnProperty("options")) {
-    console.log("abc");
+    row = document.createElement("div");
+    col.appendChild(row);
+    row.classList.add("row");
+
+    let form = document.createElement('form')
+    row.appendChild(form)
+    form.classList.add('container')
+    form.id = 'formProperties'
+    form.selectedProperties = {}
+
     let options = productInfo["options"];
-    fetchOptions(options, col);
+    fetchOptions(options, form.id);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault() //no we don't need that, we need the page to reload //or not
+      /*var data = new FormData()
+      var items = e.target.querySelectorAll(".active")
+      for (const item of items) {
+        data.append(item.name, item.value)
+      }
+      for (const [name, value] of data) {
+        console.log(name, value)
+      }*/
+
+      console.log(e.target.selectedProperties)
+      while (e.target.firstChild) {
+        e.target.removeChild(e.target.lastChild)
+      }
+      fetchOptions(options, form.id);
+      //fetchSelectedOptionProductData(productInfo, e.target.selectedProperties)
+    })
   }
 
   row = document.getElementById("mainRow");
@@ -87,6 +178,7 @@ window.addEventListener("load", async (event) => {
   row = document.createElement("div");
   col.appendChild(row);
   row.classList.add("row");
+
   let p = document.createElement("p");
   row.appendChild(p);
   p.classList.add("pt-2", "pb-2", "pl-4");
@@ -96,11 +188,22 @@ window.addEventListener("load", async (event) => {
   row = document.createElement("div");
   col.appendChild(row);
   row.classList.add("row");
+
   p = document.createElement("p");
   row.appendChild(p);
   p.classList.add("pt-2", "pb-2", "pl-4");
   p.style.fontFamily = "Calibri, sans-serif";
-  p.innerHTML = "$" + productInfo["price"] + " / " + productInfo["unit"];
+  p.id = 'textDescriptionProperties'
+
+
+  row = document.createElement("div");
+  col.appendChild(row);
+  row.classList.add("row");
+  p = document.createElement("p");
+  row.appendChild(p);
+  p.classList.add("pt-2", "pb-2", "pl-4");
+  p.style.fontFamily = "Calibri, sans-serif";
+  p.id = 'textPrice'
 
   row = document.createElement("div");
   col.appendChild(row);
@@ -112,16 +215,3 @@ window.addEventListener("load", async (event) => {
   button.style.fontFamily = "Calibri, sans-serif";
 });
 
-function fetchOptions(options, col) {
-  let row = document.createElement("div");
-  col.appendChild(row);
-  row.classList.add("row");
-  let p = document.createElement('p')
-  row.appendChild(p)
-  p.innerHTML = options['label']
-  
-  let optionArray = options['option']
-  for(let i = 0; i < optionArray.length; i++){
-
-  }
-}
