@@ -9,7 +9,7 @@ class FrontStoreHeader extends HTMLElement {
     <a class="brand my-2 mx-4" href="index.html">FRESHCO</a>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item mx-4">
-        <a class="navbar-link" href="#">Shopping Cart</a>
+        <a class="navbar-link" href="\cart.html">Shopping Cart</a>
       </li>
       <li class="nav-item mx-4">
         <a class="navbar-link" href="#">Your Orders</a>

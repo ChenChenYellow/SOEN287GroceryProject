@@ -22,23 +22,6 @@ function readProductXML() {
     });
 }
 
-/*let form1 = document.getElementById('form1')
-form1.addEventListener('submit', (e) => {
-  e.preventDefault() //no we don't need that, we need the page to reload //or not
-  console.log('submit')
-  var data = new FormData()
-  var items = form1.querySelectorAll(".active")
-  for (const item of items) {
-    data.append(item.name, item.value)
-  }
-  for (const [name, value] of data) {
-    console.log(name, value)
-  }
-  console.log(e.target.submitted_value)
-  console.log(e.target.submitted_name)
-  document.getElementById('description').innerHTML = e.target.submitted_name + " " + e.target.submitted_value
-})*/
-
 function fetchOptions(options, containerID) {
   let container = document.getElementById(containerID);
   let row = document.createElement("div");
@@ -116,7 +99,6 @@ function fetchSelectedOptionProductData(productInfo, selectedProperties) {
       }
     }
   }
-  console.log(selectedOption);
   let image = document.getElementById("imageProduct");
   image.src = "/Data/" + selectedOption["image"];
   let description = document.getElementById("textDescriptionProperties");
@@ -127,7 +109,6 @@ function fetchSelectedOptionProductData(productInfo, selectedProperties) {
 
 window.addEventListener("load", async (event) => {
   const productInfo = await readProductXML();
-  console.log(productInfo);
 
   let row = document.getElementById("titleRow");
   let colTitle = document.createElement("div");
@@ -205,8 +186,38 @@ window.addEventListener("load", async (event) => {
   form.classList.add("container", "mx-2");
   form.id = "formAddToCart";
   form.addEventListener("submit", (e) => {
-    e.preventDefault()
+    e.preventDefault();
     //Here we add item & quantity to cart
+    let cart = sessionStorage.getItem("ShoppingCart");
+    if (cart == null) {
+      cart = [];
+    } else {
+      cart = JSON.parse(cart);
+    }
+
+    let itemID = productInfo["id"];
+    let item = { specifications: { id: itemID } };
+    let formProperties = document.getElementById("formProperties");
+    for (const key of Object.keys(formProperties.selectedProperties)) {
+      if (key != "price") {
+        item["specifications"][key] = formProperties.selectedProperties[key];
+      }
+    }
+    let quantity = parseInt(form.quantity);
+    item["quantity"] = quantity;
+
+    let itemExist = false;
+    for (let i = 0; i < cart.length; i++) {
+      if (_.isEqual(cart[i]["specifications"], item["specifications"])) {
+        cart[i]["quantity"] = cart[i]["quantity"] + item["quantity"];
+        itemExist = true;
+        break;
+      }
+    }
+    if (!itemExist) {
+      cart.push(item);
+    }
+    sessionStorage.setItem("ShoppingCart", JSON.stringify(cart));
   });
 
   row = document.createElement("div");
@@ -235,8 +246,6 @@ window.addEventListener("load", async (event) => {
     formAddToCart.total = total;
     let textTotal = document.getElementById("textTotal");
     textTotal.innerHTML = total + "$";
-    console.log("Quantity " + formAddToCart.quantity);
-    console.log("Total " + formAddToCart.total);
   });
 
   row = document.createElement("div");
@@ -288,7 +297,6 @@ window.addEventListener("load", async (event) => {
         e.target.removeChild(e.target.lastChild);
       }
       fetchOptions(options, form.id);
-      console.log(e.target.selectedProperties);
       fetchSelectedOptionProductData(productInfo, e.target.selectedProperties);
     });
   }
