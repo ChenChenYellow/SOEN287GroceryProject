@@ -24,7 +24,6 @@
       type="text/javascript"
       defer
     ></script>
-    <script type="module" src="Script/ShowAisle.js"></script>
     <link rel="stylesheet" href="/Styles/FrontStoreStyle.css" />
   </head>
   <body>
@@ -35,22 +34,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="container">
-          <div class="row py-4">
-            <div class="col-lg-12">
-              <h1 id="aisleName"></h1>
+        <div class="container" id="cartContainer" >
+            <div class="row">
+                <h2 class="col-lg-12 my-2">Shopping Cart</h3>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div id="cardContainer"></div>
+            <div class="row">
+                <hr width="15%" class="ml-3" />
             </div>
-          </div>
-          <div class="row">
-            <form id="mainForm">
-              <!--Need to use sessionStorage-->
-            </form>
-          </div>
         </div>
       </div>
     </div>

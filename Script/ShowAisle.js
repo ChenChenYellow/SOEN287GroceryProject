@@ -64,7 +64,7 @@ window.addEventListener('load', async (event) => {
     cardBody.classList.add('card-body', 'd-flex', 'flex-column')
     let a = document.createElement('a')
     cardBody.appendChild(a)
-    a.href = '/Product.html?id=' + products[i]['id']
+    a.href = '/product.html?id=' + products[i]['id']
     a.classList.add('text-decoration-none', 'stretched-link')
     a.style.color = 'inherit'
     let hr = document.createElement('hr')
