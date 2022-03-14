@@ -24,35 +24,45 @@ window.addEventListener("load", async (event) => {
   cart = JSON.parse(cart);
 
   console.log(cart);
-  if(cart == null){
-    return
+  if (cart == null) {
+    return;
   }
 
   let cartContainer = document.getElementById("cartContainer");
+
   for (let i = 0; i < cart.length; i++) {
     let specifications = cart[i]["specifications"];
+    let quantity = cart[i]["quantity"];
     let productInfo = await readSpecificProductFromInventoryXML(specifications);
-    console.log(productInfo);
+
+    let itemInfo = {};
+    itemInfo["id"] = specifications["id"];
+    itemInfo["name"] = productInfo["name"];
+    itemInfo["quantity"] = quantity;
+
     while (productInfo.hasOwnProperty("options")) {
       let optionLabel = productInfo["options"]["label"];
       let optionDescription = null;
       for (const key of Object.keys(specifications)) {
-        console.log(key);
-        console.log(optionLabel);
-        console.log(key == optionLabel);
         if (key == optionLabel) {
           optionDescription = specifications[key];
           break;
         }
       }
-      console.log(optionDescription);
+
       let optionArray = productInfo["options"]["option"];
       for (let j = 0; j < optionArray.length; j++) {
         if (optionArray[i]["description"] == optionDescription) {
+          itemInfo[optionLabel] = optionDescription;
           productInfo = optionArray[i];
           break;
         }
       }
     }
+    itemInfo["price"] = productInfo["price"];
+    console.log(itemInfo);
+
+    let row = document.createElement("div");
+    cartContainer.appendChild(row);
   }
 });
