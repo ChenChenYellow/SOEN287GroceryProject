@@ -557,3 +557,55 @@ footer {
     width: 100%;
   }
 }
+
+/* HAMBURGER MENU TEST */
+#hamburger-menu-home,
+#hamburger-menu {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+@media screen and (max-width: 1000px) {
+  #hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #hamburger-menu span {
+    background-color: #a68a64;
+    /* background-color: #faedcd; */
+  }
+  .navbar-pages {
+    display: none;
+  }
+}
+@media screen and (max-width: 1062px) {
+  .navbar-home {
+    display: none;
+  }
+  #hamburger-menu-home {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #hamburger-menu-home span {
+    background-color: #faedcd;
+  }
+}
