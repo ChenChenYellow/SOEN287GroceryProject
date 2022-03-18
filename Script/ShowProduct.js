@@ -218,6 +218,8 @@ window.addEventListener("load", async (event) => {
       cart.push(item);
     }
     sessionStorage.setItem("ShoppingCart", JSON.stringify(cart));
+    console.log(cart);
+    console.log(sessionStorage.getItem("ShoppingCart"));
   });
 
   row = document.createElement("div");
