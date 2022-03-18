@@ -19,8 +19,6 @@ function readSpecificProductFromInventoryXML(specifications) {
     });
 }
 
-function getSubtotal() {}
-
 async function getAllSubtotal() {
   let cart = sessionStorage.getItem("ShoppingCart");
   cart = JSON.parse(cart);
@@ -85,11 +83,18 @@ window.addEventListener("load", async (event) => {
   let cart = sessionStorage.getItem("ShoppingCart");
   cart = JSON.parse(cart);
 
-  if (cart == null) {
+  let cartContainer = document.getElementById("cartContainer");
+
+  if (cart == null || cart.length == 0) {
+    let row = document.createElement("div");
+    cartContainer.appendChild(row);
+    row.classList.add("row", 'my-4');
+
+    let emptyMessage = document.createElement("h6");
+    row.appendChild(emptyMessage);
+    emptyMessage.innerHTML = "No Item in Cart";
     return;
   }
-
-  let cartContainer = document.getElementById("cartContainer");
 
   for (let i = 0; i < cart.length; i++) {
     let specifications = cart[i]["specifications"];
@@ -258,6 +263,32 @@ window.addEventListener("load", async (event) => {
           break;
       }
     }
+
+    row = document.createElement("div");
+    divItemProperties.appendChild(row);
+    row.classList.add("row");
+
+    let buttonRemove = document.createElement("button");
+    row.appendChild(buttonRemove);
+    buttonRemove.classList.add("btn", "btn-outline-warning");
+    buttonRemove.innerHTML = "Remove Item";
+    buttonRemove.addEventListener("click", (e) => {
+      for (let j = 0; j < cart.length; j++) {
+        let cartSpecifications = cart[j]["specifications"];
+        let isFound = true;
+        for (const key of Object.keys(cartSpecifications)) {
+          if (cartSpecifications[key] != itemInfo[key]) {
+            isFound = false;
+            break;
+          }
+        }
+        if (isFound) {
+          cart.splice(j, 1);
+          sessionStorage.setItem("ShoppingCart", JSON.stringify(cart));
+          break;
+        }
+      }
+    });
   }
 
   let row = document.createElement("div");

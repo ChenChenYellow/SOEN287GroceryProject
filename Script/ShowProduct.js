@@ -56,19 +56,36 @@ function fetchOptions(options, containerID) {
     button.classList.add("btn", "btn-outline-secondary");
     button.name = labelValue;
     button.value = descriptionValue;
-    if (!container.selectedProperties.hasOwnProperty(labelValue)) {
-      container.selectedProperties[labelValue] = descriptionValue;
-    }
-    if (container.selectedProperties[labelValue] == descriptionValue) {
-      button.classList.add("active");
-      activeOptionExist = true;
-      activeOption = i;
-    }
     button.onclick = () => {
       container.selectedProperties[labelValue] = descriptionValue;
+      let storedOptions = localStorage.getItem("StoredOptions");
+      storedOptions = JSON.parse(storedOptions);
+      storedOptions[labelValue] = descriptionValue;
+      localStorage.setItem("StoredOptions", JSON.stringify(storedOptions));
     };
+
+    if (activeOptionExist) {
+      continue;
+    }
+    let storedOptions = localStorage.getItem("StoredOptions");
+    storedOptions = JSON.parse(storedOptions);
+    console.log(storedOptions);
+    if (storedOptions == null) {
+      storedOptions = {};
+      localStorage.setItem("StoredOptions", JSON.stringify(storedOptions));
+    }
+    if (storedOptions.hasOwnProperty(labelValue)) {
+      if (storedOptions[labelValue] == descriptionValue) {
+        console.log("storedOptions[labelValue] == descriptionValue");
+        button.classList.add("active");
+        container.selectedProperties[labelValue] = descriptionValue;
+        activeOptionExist = true;
+        activeOption = i;
+      }
+    }
   }
   if (!activeOptionExist) {
+    console.log("activeOptionNotExist");
     activeOptionExist = true;
     activeOption = 0;
     let descriptionValue = optionArray[activeOption]["description"];
@@ -83,7 +100,12 @@ function fetchOptions(options, containerID) {
   } else {
     container.selectedProperties["price"] = optionArray[activeOption]["price"];
     let inputQuantity = document.getElementById("inputQuantity");
-    inputQuantity.value = 1;
+    let storedQuantity = localStorage.getItem("StoredQuantity");
+    if (storedQuantity == null) {
+      storedQuantity = 1;
+    }
+    storedQuantity = parseInt(storedQuantity);
+    inputQuantity.value = storedQuantity;
     inputQuantity.dispatchEvent(new Event("input", { bubbles: true }));
   }
 }
@@ -241,6 +263,7 @@ window.addEventListener("load", async (event) => {
     let formProperties = document.getElementById("formProperties");
     let price = formProperties.selectedProperties["price"];
     let quantity = e.target.value;
+    localStorage.setItem("StoredQuantity", quantity);
     let total = price * quantity;
     total = Math.round(total * 100) / 100;
     let formAddToCart = document.getElementById("formAddToCart");
