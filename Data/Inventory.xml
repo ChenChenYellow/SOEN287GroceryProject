@@ -10,27 +10,6 @@
         <options>
             <label>flavor</label>
             <option>
-                <description>BBQ</description>
-                <options>
-                    <label>size</label>
-                    <option>
-                        <description>165g bag</description>
-                        <price>1</price>
-                        <image>lays_bbq_165.jpg</image>
-                    </option>
-                    <option>
-                        <description>235g bag</description>
-                        <price>2</price>
-                        <image>lays_bbq_235.jpg</image>
-                    </option>
-                    <option>
-                        <description>255g bag</description>
-                        <price>3</price>
-                        <image>lays_bbq_255.jpg</image>
-                    </option>
-                </options>
-            </option>
-            <option>
                 <description>Original</description>
                 <options>
                     <label>size</label>
@@ -56,6 +35,58 @@
                     </option>
                 </options>
             </option>
+            <option>
+                <description>BBQ</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>165g bag</description>
+                        <price>1</price>
+                        <image>lays_bbq_165.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2</price>
+                        <image>lays_bbq_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>3</price>
+                        <image>lays_bbq_255.jpg</image>
+                    </option>
+                </options>
+            </option>
+            <option>
+                <description>Ketchup</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>40g bag</description>
+                        <price>0.4</price>
+                        <image>lays_ketchup_40.jpg</image>
+                    </option>
+                    <option>
+                        <description>66g bag</description>
+                        <price>0.66</price>
+                        <image>lays_ketchup_66.jpg</image>
+                    </option>
+                    <option>
+                        <description>180g bag</description>
+                        <price>1.8</price>
+                        <image>lays_ketchup_180.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2.35</price>
+                        <image>lays_ketchup_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>270g bag</description>
+                        <price>2.7</price>
+                        <image>lays_ketchup_270.jpg</image>
+                    </option>
+                </options>
+            </option>
         </options>
     </product>
     <product>
@@ -72,44 +103,39 @@
                     <label>size</label>
                     <option>
                         <description>80g bag</description>
-                        <price>1</price>
+                        <price>0.8</price>
                         <image>doritos_nacho_cheese_80.jpg</image>
                     </option>
                     <option>
                         <description>235g bag</description>
-                        <price>2.25</price>
+                        <price>2.35</price>
                         <image>doritos_nacho_cheese_235.jpg</image>
                     </option>
                     <option>
+                        <description>255g bag</description>
+                        <price>2.55</price>
+                        <image>doritos_nacho_cheese_255.jpg</image>
+                    </option>
+                    <option>
                         <description>370 bag</description>
-                        <price>4.5</price>
+                        <price>3.7</price>
                         <image>doritos_nacho_cheese_370.jpg</image>
                     </option>
                 </options>
             </option>
             <option>
-                <description>Original</description>
+                <description>Cool Ranch</description>
                 <options>
                     <label>size</label>
                     <option>
                         <description>235g bag</description>
-                        <price>2</price>
-                        <image>lays_original_235.jpg</image>
+                        <price>2.35</price>
+                        <image>doritos_cool_ranch_235.jpg</image>
                     </option>
                     <option>
                         <description>255g bag</description>
-                        <price>3</price>
-                        <image>lays_original_255.jpg</image>
-                    </option>
-                    <option>
-                        <description>370.5g bag</description>
-                        <price>3.5</price>
-                        <image>lays_original_368.jpg</image>
-                    </option>
-                    <option>
-                        <description>415g bag</description>
-                        <price>4</price>
-                        <image>lays_original_415.jpg</image>
+                        <price>2.55</price>
+                        <image>doritos_cool_ranch_255.jpg</image>
                     </option>
                 </options>
             </option>
