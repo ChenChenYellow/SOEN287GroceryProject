@@ -5,7 +5,6 @@
         <id>0</id>
         <name>Layers Chips</name>
         <price>3</price>
-        <quantiy>150</quantiy>
         <image>lays_original_235.jpg</image>
         <description>Just regular chips</description>
         <options>
@@ -60,103 +59,60 @@
         </options>
     </product>
     <product>
-        <aisle>dry_food</aisle>
+        <aisle>biscuit_and_chips</aisle>
         <id>1</id>
-        <name>Instant Noodles</name>
-        <price>1</price>
-        <unit>bag(150g)</unit>
-        <quantiy>200</quantiy>
-        <image />
-        <description>ragualr noodle</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>2</id>
-        <name>No Name Chips</name>
-        <price>1</price>
-        <unit>bag(150g)</unit>
-        <quantiy>250</quantiy>
-        <image>no_name_chips.jpg</image>
-        <description>cheap chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>3</id>
-        <name>No Name Chips</name>
-        <price>2</price>
-        <unit>bag(150g)</unit>
-        <quantiy>250</quantiy>
-        <image>no_name_chips.jpg</image>
-        <description>cheap chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>4</id>
-        <name>Tomatoes Chips</name>
-        <price>1</price>
-        <unit>bag(100g)</unit>
-        <quantiy>250</quantiy>
-        <image>tomatoes_chips.jpg</image>
-        <description>Tomatoes flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>5</id>
-        <name>BBQ Chips</name>
-        <price>10</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>bbq_chips.jpg</image>
-        <description>BBQ flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>6</id>
-        <name>Pickles Chips</name>
-        <price>10</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>pickles_chips.jpg</image>
-        <description>Pickles flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>7</id>
-        <name>Durian Chips</name>
-        <price>100</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>durian_chips.jpg</image>
-        <description>Durian flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>8</id>
-        <name>Pizza Chips</name>
-        <price>10</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>pizza_chips.jpg</image>
-        <description>Pizza flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>9</id>
-        <name>Cucumber Chips</name>
-        <price>10</price>
-        <unit>bag(300g)</unit>
-        <quantiy>250</quantiy>
-        <image>cucumber_chips.jpg</image>
-        <description>Cucumber flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>10</id>
-        <name>Potatoes Chips</name>
-        <price>5</price>
-        <unit>bag(300g)</unit>
-        <quantiy>250</quantiy>
-        <image>potatoes_chips.jpg</image>
-        <description>Potatoes flavor chips</description>
+        <name>Doritos Chips</name>
+        <image>doritos_nacho_cheese_235.jpg</image>
+        <description>Doritos Chips</description>
+        <options>
+            <label>flavor</label>
+            <option>
+                <description>Nacho Cheese</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>80g bag</description>
+                        <price>1</price>
+                        <image>doritos_nacho_cheese_80.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2.25</price>
+                        <image>doritos_nacho_cheese_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>370 bag</description>
+                        <price>4.5</price>
+                        <image>doritos_nacho_cheese_370.jpg</image>
+                    </option>
+                </options>
+            </option>
+            <option>
+                <description>Original</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2</price>
+                        <image>lays_original_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>3</price>
+                        <image>lays_original_255.jpg</image>
+                    </option>
+                    <option>
+                        <description>370.5g bag</description>
+                        <price>3.5</price>
+                        <image>lays_original_368.jpg</image>
+                    </option>
+                    <option>
+                        <description>415g bag</description>
+                        <price>4</price>
+                        <image>lays_original_415.jpg</image>
+                    </option>
+                </options>
+            </option>
+        </options>
     </product>
 </inventory>
