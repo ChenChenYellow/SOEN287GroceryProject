@@ -265,7 +265,7 @@ window.addEventListener("load", async (event) => {
     let quantity = e.target.value;
     localStorage.setItem("StoredQuantity", quantity);
     let total = price * quantity;
-    total = Math.round(total * 100) / 100;
+    total = parseFloat(total).toFixed(2);
     let formAddToCart = document.getElementById("formAddToCart");
     formAddToCart.quantity = quantity;
     formAddToCart.total = total;

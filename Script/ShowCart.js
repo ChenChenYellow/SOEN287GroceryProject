@@ -216,7 +216,7 @@ window.addEventListener("load", async (event) => {
 
           let price = document.createElement("h6");
           row.appendChild(price);
-          price.innerHTML = "$ " + value;
+          price.innerHTML = "$ " + parseFloat(value).toFixed(2);
           break;
         case "quantity":
           row = document.createElement("div");
@@ -236,7 +236,7 @@ window.addEventListener("load", async (event) => {
             itemInfo["subtotal"] = itemInfo["quantity"] * itemInfo["price"];
             sessionStorage.setItem("ShoppingCart", JSON.stringify(cart));
             let subtotal = document.getElementById("textSubtotal" + i);
-            subtotal.innerHTML = "$ " + itemInfo["subtotal"];
+            subtotal.innerHTML = "$ " + parseFloat(itemInfo["subtotal"]).toFixed(2);
 
             refreshSubtoalTPSTVQTotal();
           });
@@ -248,7 +248,7 @@ window.addEventListener("load", async (event) => {
 
           let subtotal = document.createElement("h6");
           row.appendChild(subtotal);
-          subtotal.innerHTML = "$ " + value;
+          subtotal.innerHTML = "$ " + parseFloat(value).toFixed(2);
           subtotal.id = "textSubtotal" + i;
           break;
         default:
