@@ -44,6 +44,10 @@ function fetchOptions(options, containerID) {
     labelValue[0].toUpperCase() + labelValue.substring(1);
 
   let optionArray = options["option"];
+  if (!Array.isArray(optionArray)) {
+    optionArray = [optionArray];
+  }
+  console.log(optionArray);
   let activeOptionExist = false;
   let activeOption = 0;
   for (let i = 0; i < optionArray.length; i++) {
@@ -115,22 +119,26 @@ function fetchSelectedOptionProductData(productInfo, selectedProperties) {
   while (selectedOption.hasOwnProperty("options")) {
     let options = selectedOption["options"];
     let label = options["label"];
-    for (let i = 0; i < options["option"].length; i++) {
-      if (selectedProperties[label] == options["option"][i]["description"]) {
-        selectedOption = options["option"][i];
+    let optionArray = options["option"];
+    if (!Array.isArray(optionArray)) {
+      optionArray = [optionArray];
+    }
+    for (let i = 0; i < optionArray.length; i++) {
+      if (selectedProperties[label] == optionArray[i]["description"]) {
+        selectedOption = optionArray[i];
       }
     }
   }
   let image = document.getElementById("imageProduct");
   image.src = "/Data/" + selectedOption["image"];
-  let description = document.getElementById("textDescriptionProperties");
-  description.innerHTML = selectedOption["description"];
   let price = document.getElementById("textPrice");
-  price.innerHTML = selectedOption["price"] + "$ per unit";
+  price.innerHTML =
+    "$" + parseFloat(selectedOption["price"]).toFixed(2) + " per unit";
 }
 
 window.addEventListener("load", async (event) => {
   const productInfo = await readProductXML();
+  console.log(productInfo);
 
   let row = document.getElementById("titleRow");
   let colTitle = document.createElement("div");
@@ -183,11 +191,26 @@ window.addEventListener("load", async (event) => {
   col.appendChild(row);
   row.classList.add("row");
 
+  let button = document.createElement("button");
+  row.appendChild(button);
+  button.classList.add("btn", "btn-outline-primary", 'mx-4');
+  button.type = "button";
+  button.setAttribute("data-toggle", "collapse");
+  button.setAttribute("data-target", "#collapseMoreDescription");
+  button.ariaExpanded = "false";
+  button.setAttribute("aria-controls", "collapseMoreDescription");
+  button.innerHTML = "More Description"
+
+  row = document.createElement("div");
+  col.appendChild(row);
+  row.classList.add("row");
+
   p = document.createElement("p");
   row.appendChild(p);
-  p.classList.add("py-2", "px-4");
+  p.classList.add("py-2", "px-4", "collapse");
   p.style.fontFamily = "Calibri, sans-serif";
-  p.id = "textDescriptionProperties";
+  p.id = "collapseMoreDescription";
+  p.innerHTML = productInfo["more_description"];
 
   row = document.createElement("div");
   col.appendChild(row);
@@ -287,7 +310,7 @@ window.addEventListener("load", async (event) => {
   total.classList.add("col-lg-3", "py-2");
   total.id = "textTotal";
 
-  let button = document.createElement("button");
+  button = document.createElement("button");
   row.appendChild(button);
   button.classList.add(
     "btn",

@@ -48,6 +48,9 @@ async function getAllSubtotal() {
       }
 
       let optionArray = productInfo["options"]["option"];
+      if(!Array.isArray(optionArray)){
+        optionArray = [optionArray]
+      }
       for (let j = 0; j < optionArray.length; j++) {
         if (optionArray[j]["description"] == optionDescription) {
           itemInfo[optionLabel] = optionDescription;
@@ -117,6 +120,9 @@ window.addEventListener("load", async (event) => {
       }
 
       let optionArray = productInfo["options"]["option"];
+      if(!Array.isArray(optionArray)){
+        optionArray = [optionArray]
+      }
       for (let j = 0; j < optionArray.length; j++) {
         if (optionArray[j]["description"] == optionDescription) {
           itemInfo[optionLabel] = optionDescription;

@@ -7,6 +7,7 @@
         <price>3</price>
         <image>lays_original_235.jpg</image>
         <description>Just regular chips</description>
+        <more_description>Wherever celebrations and good times happen, the LAY'S® brand will be there just as it has been for more than 75 years. With flavors almost as rich as our history, we have a chip or crisp flavor guaranteed to bring a smile on your face.</more_description>
         <options>
             <label>flavor</label>
             <option>
@@ -95,6 +96,9 @@
         <name>Doritos Chips</name>
         <image>doritos_nacho_cheese_235.jpg</image>
         <description>Doritos Chips</description>
+        <more_description>DORITOS® isn’t just a chip. It’s fuel for disruption — our flavors ignite adventure and inspire action. With every crunch, we aim to redefine culture and support those who are boldly themselves.
+
+            Are you ready? If so, crunch on.</more_description>
         <options>
             <label>flavor</label>
             <option>
@@ -138,6 +142,75 @@
                         <image>doritos_cool_ranch_255.jpg</image>
                     </option>
                 </options>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>nuts</aisle>
+        <id>2</id>
+        <name>Peanuts</name>
+        <image>peanuts.jpg</image>
+        <description>Just peanuts</description>
+        <more_description>The peanut (Arachis hypogaea) also known as the groundnut,[2] goober (US),[3] pindar (US)[3] or monkey nut (UK), is a legume crop grown mainly for its edible seeds. It is widely grown in the tropics and subtropics, being important to both small and large commercial producers.</more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>100 grams</description>
+                <price>1.25</price>
+                <image>peanuts.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>nuts</aisle>
+        <id>3</id>
+        <name>Almond</name>
+        <image>almond.jpg</image>
+        <description>Just almond</description>
+        <more_description>The almond (Prunus amygdalus, syn. Prunus dulcis) is a species of tree native to west Asia. Ancient remains of almonds were discovered in the Levant area.[4] The almond is also the name of the edible and widely cultivated seed of this tree.</more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>100 grams</description>
+                <price>2.60</price>
+                <image>almond.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>fruit_and_vegetables</aisle>
+        <id>4</id>
+        <name>Orange</name>
+        <image>orange.jpg</image>
+        <description>Just Orange</description>
+        <more_description>An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis,[1] which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. </more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>bag of 5 lb</description>
+                <price>6.5</price>
+                <image>orange.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>fruit_and_vegetables</aisle>
+        <id>5</id>
+        <name>Onion</name>
+        <image>onion_3_lb.jpg</image>
+        <description>Just Onion</description>
+        <more_description>The onion (Allium cepa L., from Latin cepa meaning "onion"), also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium.</more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>bag of 3 lb</description>
+                <price>4</price>
+                <image>onion_3_lb.jpg</image>
+            </option>
+            <option>
+                <description>bag of 10 lb</description>
+                <price>9.5</price>
+                <image>onion_10_lb.jpg</image>
             </option>
         </options>
     </product>
