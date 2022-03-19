@@ -88,7 +88,7 @@ window.addEventListener("load", async (event) => {
   if (cart == null || cart.length == 0) {
     let row = document.createElement("div");
     cartContainer.appendChild(row);
-    row.classList.add("row", 'my-4');
+    row.classList.add("row", "my-4");
 
     let emptyMessage = document.createElement("h6");
     row.appendChild(emptyMessage);
@@ -288,6 +288,7 @@ window.addEventListener("load", async (event) => {
           break;
         }
       }
+      window.location.reload();
     });
   }
 
