@@ -1,31 +1,53 @@
 class FrontStoreHeader extends HTMLElement {
   constructor() {
-    super()
+    super();
   }
 
   connectedCallback() {
     this.innerHTML = `
-        <nav class="navbar navbar-expand-sm bg-light navbar-light">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="brand my-2 mx-4" href="index_phase_ii.html">FRESHCO</a>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-4">
+                <a class="navbar-link" href="\cart.html">Shopping Cart</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">Aisles</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="P2_Aisle_YCH.html?aislename=biscuit_and_chips">Biscuits and Chips</a>
-                    <a class="dropdown-item" href="P2_Aisle_YCH.html?aislename=dry_food">Dry Food</a>
-                    <a class="dropdown-item" href="P2_Aisle_YCH.html?aislename=milk_and_cheese">Milk and Cheese</a>
+              <li class="nav-item mx-4">
+                <a class="navbar-link" href="#">Your Orders</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a
+                  class="navbar-link"
+                  href="#collapseAisles"
+                  id="linkDropdownAisles"
+                  data-toggle="collapse"
+                  aria-controls="collapseAisles"
+                  aria-expanded="false"
+                  >Aisles</a
+                >
+                <div
+                  class="collapse text-left"
+                  aria-labelledby="linkDropdownAisles"
+                  id="collapseAisles"
+                >
+                  <a
+                    class="dropdown-item navbar-collapsed-item"
+                    href="aisle.html?aislename=biscuit_and_chips"
+                    >Biscuits and Chips</a
+                  >
+                  <a
+                    class="dropdown-item navbar-collapsed-item"
+                    href="aisle.html?aislename=nuts"
+                    >Nuts</a
+                  >
+                  <a
+                    class="dropdown-item navbar-collapsed-item"
+                    href="aisle.html?aislename=fruit_and_vegetables"
+                    >Fruits and Vegetables</a
+                  >
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Shopping Cart</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Your Orders</a>
-              </li>
             </ul>
-        </nav>`
+          </nav>`;
   }
 }
-customElements.define('header-component', FrontStoreHeader)
+customElements.define("header-component", FrontStoreHeader);
