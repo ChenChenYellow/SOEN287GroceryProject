@@ -6,6 +6,11 @@
 body {
   background-color: #699e657a;
 }
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 30px;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -20,4 +25,5 @@ form button {
 form input,
 textarea {
   padding: 7px 5px;
+  width: 50%;
 }
