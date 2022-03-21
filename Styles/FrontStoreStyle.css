@@ -17,8 +17,12 @@
 }
 .second-color,
 .navbar-link,
-.navbar-link:hover {
+.navbar-link:hover{
   color: #f7a130;
+}
+.third-color,
+.navbar-collapsed-item{
+  color:#534700
 }
 .color-black{
     color:black;
@@ -41,7 +45,8 @@
 .navbar-link {
   font-weight: 800;
 }
-.bold{
+.bold,
+.navbar-collapsed-item{
   font-weight: 700;
 }
 
