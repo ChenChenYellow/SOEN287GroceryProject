@@ -55,7 +55,7 @@ window.addEventListener('load', async (event) => {
     card.style.transition = 'all 0.4s'
     let img = document.createElement('img')
     card.appendChild(img)
-    img.src = '/Data/' + products[i]['image']
+    img.src = './Data/' + products[i]['image']
     img.classList.add('card-img-top','mt-2')
     img.alt = 'Image not available'
 
@@ -64,7 +64,7 @@ window.addEventListener('load', async (event) => {
     cardBody.classList.add('card-body', 'd-flex', 'flex-column')
     let a = document.createElement('a')
     cardBody.appendChild(a)
-    a.href = '/product.html?id=' + products[i]['id']
+    a.href = './product.html?id=' + products[i]['id']
     a.classList.add('text-decoration-none', 'stretched-link')
     a.style.color = 'inherit'
     let hr = document.createElement('hr')

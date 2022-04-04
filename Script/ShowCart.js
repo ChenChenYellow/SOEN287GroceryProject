@@ -64,22 +64,22 @@ async function getAllSubtotal() {
 
     subtotal += itemInfo["subtotal"];
   }
-  return parseFloat(subtotal).toFixed(2);
+  return subtotal;
 }
 
 async function refreshSubtoalTPSTVQTotal() {
   let subtotal = await getAllSubtotal();
   let textSubtotal = document.getElementById("textSubtotal");
-  textSubtotal.innerHTML = "$ " + subtotal;
-  let tps = parseFloat(0.05 * subtotal).toFixed(2);
+  textSubtotal.innerHTML = "$ " + parseFloat(subtotal).toFixed(2);
+  let tps = 0.05 * subtotal;
   let textTPS = document.getElementById("textTPS");
-  textTPS.innerHTML = "$ " + tps;
-  let tvq = parseFloat(0.09975 * subtotal).toFixed(2);
+  textTPS.innerHTML = "$ " + parseFloat(tps).toFixed(2);
+  let tvq = 0.09975 * subtotal;
   let textTVQ = document.getElementById("textTVQ");
-  textTVQ.innerHTML = "$ " + tvq;
-  let total = parseFloat(subtotal + tps + tvq).toFixed(2);
+  textTVQ.innerHTML = "$ " + parseFloat(tvq).toFixed(2);
+  let total = subtotal + tps + tvq;
   let textTotal = document.getElementById("textTotal");
-  textTotal.innerHTML = "$ " + total;
+  textTotal.innerHTML = "$ " + parseFloat(total).toFixed(2);
 }
 
 window.addEventListener("load", async (event) => {
@@ -212,7 +212,7 @@ window.addEventListener("load", async (event) => {
 
           let image = document.createElement("img");
           row.appendChild(image);
-          image.src = "/Data/" + value;
+          image.src = "./Data/" + value;
           image.classList.add("img-fluid");
           break;
         case "price":

@@ -130,7 +130,7 @@ function fetchSelectedOptionProductData(productInfo, selectedProperties) {
     }
   }
   let image = document.getElementById("imageProduct");
-  image.src = "/Data/" + selectedOption["image"];
+  image.src = "./Data/" + selectedOption["image"];
   let price = document.getElementById("textPrice");
   price.innerHTML =
     "$" + parseFloat(selectedOption["price"]).toFixed(2) + " per unit";
@@ -163,7 +163,7 @@ window.addEventListener("load", async (event) => {
   let image = document.createElement("img");
   col.appendChild(image);
   image.classList.add("py-3", "mx-auto", "mw-100");
-  image.src = "/Data/" + productInfo["image"];
+  image.src = "./Data/" + productInfo["image"];
   image.id = "imageProduct";
 
   col = document.createElement("div");
@@ -288,12 +288,11 @@ window.addEventListener("load", async (event) => {
     let quantity = e.target.value;
     localStorage.setItem("StoredQuantity", quantity);
     let total = price * quantity;
-    total = parseFloat(total).toFixed(2);
     let formAddToCart = document.getElementById("formAddToCart");
     formAddToCart.quantity = quantity;
     formAddToCart.total = total;
     let textTotal = document.getElementById("textTotal");
-    textTotal.innerHTML = total + "$";
+    textTotal.innerHTML = parseFloat(total).toFixed(2) + "$";
   });
 
   row = document.createElement("div");
