@@ -6,7 +6,7 @@ class FrontStoreHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="brand my-2 mx-4" href="\index_phase_ii.html">FRESHCO</a>
+            <a class="brand my-2 mx-4" href="\index_phase_II.html">FRESHCO</a>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-4">
                 <a class="navbar-link" href="\cart.html">Shopping Cart</a>
