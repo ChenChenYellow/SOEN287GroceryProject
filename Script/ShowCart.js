@@ -212,7 +212,7 @@ window.addEventListener("load", async (event) => {
 
           let image = document.createElement("img");
           row.appendChild(image);
-          image.src = "/Data/" + value;
+          image.src = "./Data/" + value;
           image.classList.add("img-fluid");
           break;
         case "price":
