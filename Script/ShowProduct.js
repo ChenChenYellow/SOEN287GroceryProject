@@ -288,12 +288,11 @@ window.addEventListener("load", async (event) => {
     let quantity = e.target.value;
     localStorage.setItem("StoredQuantity", quantity);
     let total = price * quantity;
-    total = parseFloat(total).toFixed(2);
     let formAddToCart = document.getElementById("formAddToCart");
     formAddToCart.quantity = quantity;
     formAddToCart.total = total;
     let textTotal = document.getElementById("textTotal");
-    textTotal.innerHTML = total + "$";
+    textTotal.innerHTML = parseFloat(total).toFixed(2) + "$";
   });
 
   row = document.createElement("div");
