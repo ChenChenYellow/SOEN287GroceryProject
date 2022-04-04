@@ -79,7 +79,7 @@ async function refreshSubtoalTPSTVQTotal() {
   textTVQ.innerHTML = "$ " + parseFloat(tvq).toFixed(2);
   let total = subtotal + tps + tvq;
   let textTotal = document.getElementById("textTotal");
-  textTotal.innerHTML = "$ " + totalparseFloat(total).toFixed(2);
+  textTotal.innerHTML = "$ " + parseFloat(total).toFixed(2);
 }
 
 window.addEventListener("load", async (event) => {
