@@ -7,13 +7,12 @@
     <title>Login form</title>
   </head>
   <body>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page5.css" />
     <div class="container">
+      <!--Sign in form-->
       <form class="form" id="login">
         <h1 class="form__title">Login</h1>
-        <div class="form__message form__message--error">
-          Incorrect username/password combination.
-        </div>
+        <div class="form__message form__message--error"></div>
         <div class="form__input-group">
           <input
             type="text"
@@ -42,6 +41,60 @@
           >
         </p>
       </form>
+      <!--Create account form-->
+      <form class="form form--hidden" id="createAccount">
+        <h1 class="form__title">Create Account</h1>
+        <div class="form__message form__message--error"></div>
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="Username"
+          />
+          <div class="form__input-error-message"></div>
+        </div>
+
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="Email Address"
+          />
+          <div class="form__input-error-message"></div>
+        </div>
+
+        <div class="form__input-group">
+          <input
+            type="password"
+            class="form__input"
+            autofocus
+            placeholder="Password"
+          />
+          <div class="form__input-error-message"></div>
+        </div>
+
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="Confirm password"
+          />
+          <div class="form__input-error-message"></div>
+        </div>
+
+        <button class="form__button" type="submit">Submit</button>
+        <button class="form__button" type="submit">Reset</button>
+
+        <p class="form__text">
+          <a href="" id="linkLogin" class="form__link"
+            >Already have an account? Sign in</a
+          >
+        </p>
+      </form>
     </div>
+    <script src="page5.js"></script>
   </body>
 </html>
