@@ -1,113 +1,238 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <inventory>
     <product>
         <aisle>biscuit_and_chips</aisle>
         <id>0</id>
         <name>Layers Chips</name>
         <price>3</price>
-        <unit>bag(200g)</unit>
-        <quantiy>150</quantiy>
-        <image>lays_chips.jpg</image>
+        <image>lays_original_235.jpg</image>
         <description>Just regular chips</description>
+        <more_description>Wherever celebrations and good times happen, the LAY'S® brand will be there just as it has been for more than 75 years. With flavors almost as rich as our history, we have a chip or crisp flavor guaranteed to bring a smile on your face.</more_description>
+        <options>
+            <label>flavor</label>
+            <option>
+                <description>Original</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2</price>
+                        <image>lays_original_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>3</price>
+                        <image>lays_original_255.jpg</image>
+                    </option>
+                    <option>
+                        <description>368.5g bag</description>
+                        <price>3.5</price>
+                        <image>lays_original_368.jpg</image>
+                    </option>
+                    <option>
+                        <description>415g bag</description>
+                        <price>4</price>
+                        <image>lays_original_415.jpg</image>
+                    </option>
+                </options>
+            </option>
+            <option>
+                <description>BBQ</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>165g bag</description>
+                        <price>1</price>
+                        <image>lays_bbq_165.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2</price>
+                        <image>lays_bbq_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>3</price>
+                        <image>lays_bbq_255.jpg</image>
+                    </option>
+                </options>
+            </option>
+            <option>
+                <description>Ketchup</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>40g bag</description>
+                        <price>0.4</price>
+                        <image>lays_ketchup_40.jpg</image>
+                    </option>
+                    <option>
+                        <description>66g bag</description>
+                        <price>0.66</price>
+                        <image>lays_ketchup_66.jpg</image>
+                    </option>
+                    <option>
+                        <description>180g bag</description>
+                        <price>1.8</price>
+                        <image>lays_ketchup_180.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2.35</price>
+                        <image>lays_ketchup_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>270g bag</description>
+                        <price>2.7</price>
+                        <image>lays_ketchup_270.jpg</image>
+                    </option>
+                </options>
+            </option>
+        </options>
     </product>
     <product>
-        <aisle>dry_food</aisle>
+        <aisle>biscuit_and_chips</aisle>
         <id>1</id>
-        <name>Instant Noodles</name>
-        <price>1</price>
-        <unit>bag(150g)</unit>
-        <quantiy>200</quantiy>
-        <image />
-        <description>ragualr noodle</description>
+        <name>Doritos Chips</name>
+        <image>doritos_nacho_cheese_235.jpg</image>
+        <description>Doritos Chips</description>
+        <more_description>DORITOS® isn’t just a chip. It’s fuel for disruption — our flavors ignite adventure and inspire action. With every crunch, we aim to redefine culture and support those who are boldly themselves.
+
+            Are you ready? If so, crunch on.</more_description>
+        <options>
+            <label>flavor</label>
+            <option>
+                <description>Nacho Cheese</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>80g bag</description>
+                        <price>0.8</price>
+                        <image>doritos_nacho_cheese_80.jpg</image>
+                    </option>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2.35</price>
+                        <image>doritos_nacho_cheese_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>2.55</price>
+                        <image>doritos_nacho_cheese_255.jpg</image>
+                    </option>
+                    <option>
+                        <description>370 bag</description>
+                        <price>3.7</price>
+                        <image>doritos_nacho_cheese_370.jpg</image>
+                    </option>
+                </options>
+            </option>
+            <option>
+                <description>Cool Ranch</description>
+                <options>
+                    <label>size</label>
+                    <option>
+                        <description>235g bag</description>
+                        <price>2.35</price>
+                        <image>doritos_cool_ranch_235.jpg</image>
+                    </option>
+                    <option>
+                        <description>255g bag</description>
+                        <price>2.55</price>
+                        <image>doritos_cool_ranch_255.jpg</image>
+                    </option>
+                </options>
+            </option>
+        </options>
     </product>
     <product>
-        <aisle>biscuit_and_chips</aisle>
+        <aisle>nuts</aisle>
         <id>2</id>
-        <name>No Name Chips</name>
-        <price>1</price>
-        <unit>bag(150g)</unit>
-        <quantiy>250</quantiy>
-        <image>no_name_chips.jpg</image>
-        <description>cheap chips</description>
+        <name>Peanuts</name>
+        <image>peanuts.jpg</image>
+        <description>Just peanuts</description>
+        <more_description>The peanut (Arachis hypogaea) also known as the groundnut,[2] goober (US),[3] pindar (US)[3] or monkey nut (UK), is a legume crop grown mainly for its edible seeds. It is widely grown in the tropics and subtropics, being important to both small and large commercial producers.</more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>100 grams</description>
+                <price>1.25</price>
+                <image>peanuts.jpg</image>
+            </option>
+        </options>
     </product>
     <product>
-        <aisle>biscuit_and_chips</aisle>
+        <aisle>nuts</aisle>
         <id>3</id>
-        <name>No Name Chips</name>
-        <price>2</price>
-        <unit>bag(150g)</unit>
-        <quantiy>250</quantiy>
-        <image>no_name_chips.jpg</image>
-        <description>cheap chips</description>
+        <name>Almond</name>
+        <image>almond.jpg</image>
+        <description>Just almond</description>
+        <more_description>The almond (Prunus amygdalus, syn. Prunus dulcis) is a species of tree native to west Asia. Ancient remains of almonds were discovered in the Levant area.[4] The almond is also the name of the edible and widely cultivated seed of this tree.</more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>100 grams</description>
+                <price>2.60</price>
+                <image>almond.jpg</image>
+            </option>
+        </options>
     </product>
     <product>
-        <aisle>biscuit_and_chips</aisle>
+        <aisle>fruit_and_vegetables</aisle>
         <id>4</id>
-        <name>Tomatoes Chips</name>
-        <price>1</price>
-        <unit>bag(100g)</unit>
-        <quantiy>250</quantiy>
-        <image>tomatoes_chips.jpg</image>
-        <description>Tomatoes flavor chips</description>
+        <name>Orange</name>
+        <image>orange.jpg</image>
+        <description>Just Orange</description>
+        <more_description>An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis,[1] which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. </more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>bag of 5 lb</description>
+                <price>6.5</price>
+                <image>orange.jpg</image>
+            </option>
+        </options>
     </product>
     <product>
-        <aisle>biscuit_and_chips</aisle>
+        <aisle>fruit_and_vegetables</aisle>
         <id>5</id>
-        <name>BBQ Chips</name>
-        <price>10</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>bbq_chips.jpg</image>
-        <description>BBQ flavor chips</description>
+        <name>Onion</name>
+        <image>onion_3_lb.jpg</image>
+        <description>Just Onion</description>
+        <more_description>The onion (Allium cepa L., from Latin cepa meaning "onion"), also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium.</more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>bag of 3 lb</description>
+                <price>4</price>
+                <image>onion_3_lb.jpg</image>
+            </option>
+            <option>
+                <description>bag of 10 lb</description>
+                <price>9.5</price>
+                <image>onion_10_lb.jpg</image>
+            </option>
+        </options>
     </product>
     <product>
-        <aisle>biscuit_and_chips</aisle>
+        <aisle>fruit_and_vegetables</aisle>
         <id>6</id>
-        <name>Pickles Chips</name>
-        <price>10</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>pickles_chips.jpg</image>
-        <description>Pickles flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>7</id>
-        <name>Durian Chips</name>
-        <price>100</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>durian_chips.jpg</image>
-        <description>Durian flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>8</id>
-        <name>Pizza Chips</name>
-        <price>10</price>
-        <unit>bag(200g)</unit>
-        <quantiy>250</quantiy>
-        <image>pizza_chips.jpg</image>
-        <description>Pizza flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>9</id>
-        <name>Cucumber Chips</name>
-        <price>10</price>
-        <unit>bag(300g)</unit>
-        <quantiy>250</quantiy>
-        <image>cucumber_chips.jpg</image>
-        <description>Cucumber flavor chips</description>
-    </product>
-    <product>
-        <aisle>biscuit_and_chips</aisle>
-        <id>10</id>
-        <name>Potatoes Chips</name>
-        <price>5</price>
-        <unit>bag(300g)</unit>
-        <quantiy>250</quantiy>
-        <image>potatoes_chips.jpg</image>
-        <description>Potatoes flavor chips</description>
+        <name>Potatoes</name>
+        <image>fruit_veg_potato.jpg</image>
+        <description>Just Potatoes</description>
+        <more_description>Potatoes can be eaten mashed, fried, boiled, cooked. It grows in the ground. </more_description>
+        <options>
+            <label>size</label>
+            <option>
+                <description>bag of 10 lb</description>
+                <price>4</price>
+                <image>fruit_veg_potato.jpg</image>
+            </option>
+            <option>
+                <description>bag of 10 lb</description>
+                <price>4.59</price>
+                <image>fruit_veg_potato.jpg</image>
+            </option>
+        </options>
     </product>
 </inventory>
