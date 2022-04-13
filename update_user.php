@@ -1,26 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta
-      charset="UTF-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title id="title"></title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <?php
-      $dom = new DOMDocument();
-      $dom->load("./Data/Users.xml");
-      $root = $dom -> documentElement;
-      echo $dom ->saveXML();
-    ?>
-  </body>
-</html>
+
+  <?php
+  //if (isset($_POST['id'])) {
+    echo $_POST['id'];
+    $dom = new DOMDocument();
+    $dom->load("./Data/Users.xml");
+    $root = $dom->documentElement;
+    $users = $root->getElementsByTagName('user');
+    foreach ($users as $user) {
+      $id = $user->getElementsByTagName('id')->item(0)->textContent;
+      echo $id;
+      if ($id == $_POST['id']) {
+        echo "enter";
+        $email = $user->getElementsByTagName('email')->item(0);
+        $firstName = $user->getElementsByTagName('firstname')->item(0);
+        $lastName = $user->getElementsByTagName('lastname')->item(0);
+        $password = $user->getElementsByTagName('password')->item(0);
+
+        $email->nodeValue = "hellooooo";
+        break;
+      } else {
+        echo " not enter";
+      }
+    }
+    $dom->save("./Data/Users.xml");
+    echo "DONE";
+    return "Hello";
+  //}
+  ?>
