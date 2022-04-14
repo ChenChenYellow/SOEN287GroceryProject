@@ -50,4 +50,24 @@
         <address>yyyy</address>
         <type>normal</type>
     </user>
+    <user>
+        <id>12</id>
+        <email>Jimi_H@gmail.com</email>
+        <firstname>Jimi</firstname>
+        <lastname>Hendrix</lastname>
+        <password>heyJoe</password>
+        <cardnumber>45555 444 </cardnumber>
+        <address>27 Club</address>
+        <type>normal</type>
+    </user>
+    <user>
+        <id>13</id>
+        <email>Janis_J@gmail.com</email>
+        <firstname>Janis</firstname>
+        <lastname>Joplin</lastname>
+        <password>JJ</password>
+        <cardnumber>4444 7777 8888 5555</cardnumber>
+        <address>27 CLub</address>
+        <type>normal</type>
+    </user>
 </users>

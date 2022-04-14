@@ -2,7 +2,10 @@
 if (isset($_POST['operationtype'])) {
   $operationType = $_POST["operationtype"];
   if ($operationType == "update") {
+	  
+    // Update an User
 
+    // Retrive data from POST request
     $newID = $_POST["id"];
     $newFirstName = $_POST["firstname"];
     $newLastName = $_POST["lastname"];
@@ -12,6 +15,7 @@ if (isset($_POST['operationtype'])) {
     $newAddress = $_POST["address"];
     $newType = $_POST["type"];
 
+    // Load the Users xml document
     $dom = new DOMDocument();
     $dom->load("./Data/Users.xml");
     $root = $dom->documentElement;
@@ -20,6 +24,7 @@ if (isset($_POST['operationtype'])) {
     foreach ($users as $user) {
       $id = $user->getElementsByTagName('id')->item(0)->textContent;
       if ($id == $newID) {
+        // Find the user where the id matched
         $email = $user->getElementsByTagName('email')->item(0);
         $firstName = $user->getElementsByTagName('firstname')->item(0);
         $lastName = $user->getElementsByTagName('lastname')->item(0);
@@ -28,6 +33,7 @@ if (isset($_POST['operationtype'])) {
         $address = $user->getElementsByTagName('address')->item(0);
         $type = $user->getElementsByTagName('type')->item(0);
 
+        // Assign new value to user
         $email->nodeValue = $newEmail;
         $firstName->nodeValue = $newFirstName;
         $lastName->nodeValue = $newLastName;
@@ -40,22 +46,31 @@ if (isset($_POST['operationtype'])) {
     }
 
     $dom->save("./Data/Users.xml");
+    // Go to another page
     header("Location: ./manage_users.html");
+    // Refresh script, so the another page will reload & display change
     exit();
-  } else if ($operationType == "add") {
+  } else if ($operationType == "add" || $operationType == "signup") {
 
-    $newID = $_POST["id"];
     $newFirstName = $_POST["firstname"];
     $newLastName = $_POST["lastname"];
     $newEmail = $_POST["email"];
     $newPassword = $_POST["password"];
     $newCardNumber = $_POST["cardnumber"];
     $newAddress = $_POST["address"];
-    $newType = $_POST["type"];
+    // Type will be default as 'normal'
+    $newType = "normal";
+    if (isset($_POST['type'])) {
+      $newType = $_POST["type"];
+    }
 
     $dom = new DOMDocument();
     $dom->load("./Data/Users.xml");
     $root = $dom->documentElement;
+
+    $length = $root->getElementsByTagName("user")->length;
+    $lastUser = $root->getElementsByTagName('user')->item($length - 1);
+    $newID = $lastUser->getElementsByTagName("id")->item(0)->nodeValue + 1;
 
     $newUser = new DOMElement("user");
 
@@ -72,8 +87,13 @@ if (isset($_POST['operationtype'])) {
 
 
     $dom->save("./Data/Users.xml");
-    header("Location: ./manage_users.html");
-    exit();
+    if ($operationType == "signup") {
+      header("Location: ./index_phase_II.html");
+      exit();
+    } else {
+      header("Location: ./manage_users.html");
+      exit();
+    }
   } else if ($operationType == "delete") {
     $newID = $_POST["id"];
 
@@ -99,10 +119,12 @@ if (isset($_POST['operationtype'])) {
   } else if ($operationType == "cancel") {
     header("Location: ./manage_users.html");
     exit();
+  } else if ($operationType == "abort") {
+    header("Location: ./index_phase_II.html");
+    exit();
   } else {
     echo "We have a problem";
   }
 } else {
   echo "We have a problem";
 }
-
