@@ -1,57 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <users>
     <user>
-        <id>0</id>
-        <email>joe@gmail.com</email>
-        <firstname>Joe</firstname>
-        <lastname>Jack</lastname>
-        <password>JoePassword</password>
-        <paymentmethod>VISA</paymentmethod>
-        <cardnumber>4000500060007000</cardnumber>
-        <nameonthecard>Joe Jack</nameonthecard>
-        <expiringdate>07/22</expiringdate>
-        <securitynumber>123</securitynumber>
-        <streetnumber>111</streetnumber>
-        <streetname>St Catherine</streetname>
-        <postalcode>H1H 4Y4</postalcode>
-        <city>Montreal</city>
-        <province>Quebec</province>
-        <country>Canada</country>
+        <id>7</id>
+        <email>jim_morisson@gmail.com</email>
+        <firstname>Jim</firstname>
+        <lastname>Morison</lastname>
+        <password>JMjm</password>
+        <cardnumber>1234 4567 7890 1111</cardnumber>
+        <address>Sunset Boul.</address>
+        <type>admin</type>
     </user>
     <user>
-        <id>1</id>
-        <email>bob@gmail.com</email>
-        <firstname>Bob</firstname>
-        <lastname>Bill</lastname>
-        <password>BobPassword</password>
-        <paymentmethod>Master</paymentmethod>
-        <cardnumber>4000500060007000</cardnumber>
-        <nameonthecard>Bob Billy</nameonthecard>
-        <expiringdate>01/25</expiringdate>
-        <securitynumber>456</securitynumber>
-        <streetnumber>444</streetnumber>
-        <streetname>Wall St</streetname>
-        <postalcode>123456</postalcode>
-        <city>New York</city>
-        <province>New York</province>
-        <country>US</country>
+        <id>8</id>
+        <email>a</email>
+        <firstname>s</firstname>
+        <lastname>sdfd</lastname>
+        <password>f</password>
+        <cardnumber>ds</cardnumber>
+        <address>h</address>
+        <type>normal</type>
     </user>
     <user>
-        <id>2</id>
-        <email>zoe@gmail.com</email>
-        <firstname>Zoe</firstname>
-        <lastname>Zoey</lastname>
-        <password>ZoePassword</password>
-        <paymentmethod>VISA</paymentmethod>
-        <cardnumber>7777888899990000</cardnumber>
-        <nameonthecard>Zoe Zoey</nameonthecard>
-        <expiringdate>07/23</expiringdate>
-        <securitynumber>893</securitynumber>
-        <streetnumber>1001</streetnumber>
-        <streetname>Boul Maisonneuve</streetname>
-        <postalcode>H8H 4Z4</postalcode>
-        <city>Montreal</city>
-        <province>Quebec</province>
-        <country>Canada</country>
+        <id>9</id>
+        <email>rt</email>
+        <firstname>t</firstname>
+        <lastname>y</lastname>
+        <password>u</password>
+        <cardnumber>h</cardnumber>
+        <address>fg</address>
+        <type>normal</type>
+    </user>
+    <user>
+        <id>10</id>
+        <email>iiii</email>
+        <firstname>jjjj</firstname>
+        <lastname>kkkkk</lastname>
+        <password>n</password>
+        <cardnumber>h</cardnumber>
+        <address>k</address>
+        <type>normal</type>
+    </user>
+    <user>
+        <id>11</id>
+        <email>122</email>
+        <firstname>www</firstname>
+        <lastname>eeee</lastname>
+        <password>rrrr</password>
+        <cardnumber>tttt</cardnumber>
+        <address>yyyy</address>
+        <type>normal</type>
     </user>
 </users>
