@@ -88,6 +88,7 @@ window.addEventListener("load", async (event) => {
     inputCardNumber.value = cardnumber;
     let inputAddress = document.getElementById("inputAddress");
     inputAddress.value = address;
+	
     if (type == "admin") {
       let inputTypeAdmin = document.getElementById("inputTypeAdmin");
       inputTypeAdmin.checked = true;
