@@ -6,8 +6,8 @@ function readProductXML() {
       return response.text();
     })
     .then(function (data) {
-      let parser = new DOMParser(),
-        xmlDoc = parser.parseFromString(data, "text/xml");
+      let parser = new DOMParser();
+      let xmlDoc = parser.parseFromString(data, "text/xml");
       let ret = xml2json(xmlDoc, "    ");
       return ret["inventory"];
     })
@@ -193,13 +193,13 @@ window.addEventListener("load", async (event) => {
 
   let button = document.createElement("button");
   row.appendChild(button);
-  button.classList.add("btn", "btn-outline-primary", 'mx-4');
+  button.classList.add("btn", "btn-outline-primary", "mx-4");
   button.type = "button";
   button.setAttribute("data-toggle", "collapse");
   button.setAttribute("data-target", "#collapseMoreDescription");
   button.ariaExpanded = "false";
   button.setAttribute("aria-controls", "collapseMoreDescription");
-  button.innerHTML = "More Description"
+  button.innerHTML = "More Description";
 
   row = document.createElement("div");
   col.appendChild(row);

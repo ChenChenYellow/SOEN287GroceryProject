@@ -1,26 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta
-      charset="UTF-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title id="title"></title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <?php
+<?php
+  if (isset($_POST['sent'])) {
+    $operationType = $_POST["sent"];
+    if ($operationType == "Update") {
+
+      $newID = $_POST["id"];
+      $newFirstName = $_POST["firstname"];
+      $newLastName = $_POST["lastname"];
+      $newEmail = $_POST["email"];
+      $newPassword = $_POST["password"];
+      $newCardNumber = $_POST["cardnumber"];
+      $newAddress = $_POST["address"];
+
       $dom = new DOMDocument();
       $dom->load("./Data/Users.xml");
-      $root = $dom -> documentElement;
-      echo $dom ->saveXML();
-    ?>
-  </body>
-</html>
+      $root = $dom->documentElement;
+      $users = $root->getElementsByTagName('user');
+
+      foreach ($users as $user) {
+        $id = $user->getElementsByTagName('id')->item(0)->textContent;
+        if ($id == $newID) {
+          $email = $user->getElementsByTagName('email')->item(0);
+          $firstName = $user->getElementsByTagName('firstname')->item(0);
+          $lastName = $user->getElementsByTagName('lastname')->item(0);
+          $password = $user->getElementsByTagName('password')->item(0);
+          $cardnumber = $user->getElementsByTagName('cardnumber')->item(0);
+          $address = $user->getElementsByTagName('address')->item(0);
+
+          $email->nodeValue = $newEmail;
+          $firstName->nodeValue = $newFirstName;
+          $lastName->nodeValue = $newLastName;
+          $password->nodeValue = $newPassword;
+          $cardnumber->nodeValue = $newCardNumber;
+          $address->nodeValue = $newAddress;
+          break;
+        }
+      }
+
+      $dom->save("./Data/Users.xml");
+      header("Location: ./manage_users.html");
+    } else if ($operationType == "Add") {
+
+      $newID = $_POST["id"];
+      $newFirstName = $_POST["firstname"];
+      $newLastName = $_POST["lastname"];
+      $newEmail = $_POST["email"];
+      $newPassword = $_POST["password"];
+      $newCardNumber = $_POST["cardnumber"];
+      $newAddress = $_POST["address"];
+
+      $dom = new DOMDocument();
+      $dom->load("./Data/Users.xml");
+      $root = $dom->documentElement;
+
+      $newUser = new DOMElement("user");
+
+      $root->appendChild($newUser);
+
+      $newUser->appendChild(new DOMElement("id", $newID));
+      $newUser->appendChild(new DOMElement("email", $newEmail));
+      $newUser->appendChild(new DOMElement("firstname", $newFirstName));
+      $newUser->appendChild(new DOMElement("lastname", $newLastName));
+      $newUser->appendChild(new DOMElement("password", $newPassword));
+      $newUser->appendChild(new DOMElement("cardnumber", $newCardNumber));
+      $newUser->appendChild(new DOMElement("address", $newAddress));
+
+
+      $dom->save("./Data/Users.xml");
+      header("Location: ./manage_users.html");
+    } else {
+      echo "We have a problem";
+    }
+  } else {
+    echo "We have a problem";
+  }

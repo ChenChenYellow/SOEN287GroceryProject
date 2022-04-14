@@ -20,8 +20,8 @@ window.addEventListener('load', async (event) => {
   cardContainer.appendChild(cardRow)
   cardRow.classList.add('row')
 
-  let labels = ['First Name', 'Last Name', 'Password', 'Payment Method', 'Card Number', 'Name on the Card', 'Expiring Date', 'Security Number', 'Street Number', 'Street Name', 'Postal Code', 'City', 'Province', 'Country'];
-  let keys = ['firstname', 'lastname', 'password', 'paymentmethod', 'cardnumber', 'nameonthecard', 'expiringdate', 'securitynumber', 'streetnumber', 'streetname', 'postalcode', 'city', 'province', 'country'];
+  let labels = ['First Name', 'Last Name', 'Password', 'Card Number', "Address"];
+  let keys = ['firstname', 'lastname', 'password', 'cardnumber', 'address'];
 
   for (let i = 0; i < users['user'].length; i++) {
     let user = users['user'][i]
