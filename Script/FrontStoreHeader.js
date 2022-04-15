@@ -2,6 +2,7 @@ class FrontStoreHeader extends HTMLElement {
   constructor() {
     super();
   }
+  // We create a header for the front store, and we call these codes everytime we do a <header-component>
 
   connectedCallback() {
     this.innerHTML = `
