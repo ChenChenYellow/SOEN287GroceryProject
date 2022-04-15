@@ -68,6 +68,7 @@ if (isset($_POST['operationtype'])) {
     $dom->load("./Data/Users.xml");
     $root = $dom->documentElement;
 
+    // Find the last User, and $newID is his id + 1
     $length = $root->getElementsByTagName("user")->length;
     $lastUser = $root->getElementsByTagName('user')->item($length - 1);
     $newID = $lastUser->getElementsByTagName("id")->item(0)->nodeValue + 1;
@@ -117,14 +118,18 @@ if (isset($_POST['operationtype'])) {
     header("Location: ./manage_users.html");
     exit();
   } else if ($operationType == "cancel") {
+    // Admin cancel from backstore, return to backstore
     header("Location: ./manage_users.html");
     exit();
   } else if ($operationType == "abort") {
+    // Customer cancel sign up process, return to frontstore
     header("Location: ./index_phase_II.html");
     exit();
   } else {
+    // operation type is wrong
     echo "We have a problem";
   }
 } else {
+  // We did not receive data of the request
   echo "We have a problem";
 }

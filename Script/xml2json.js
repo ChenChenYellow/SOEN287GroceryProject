@@ -1,3 +1,4 @@
+// Function copied from stackoverflow, parse xml to json
 function xml2json(xml) {
   try {
     let obj = {}

@@ -1,25 +1,35 @@
 import { xml2json } from "./xml2json.js";
 
 function readSpecificProductFromInventoryXML(specifications) {
-  return fetch("./Data/Inventory.xml")
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (data) {
-      let parser = new DOMParser(),
-        xmlDoc = parser.parseFromString(data, "text/xml");
-      let ret = xml2json(xmlDoc, "    ");
-      return ret["inventory"];
-    })
-    .then(function (data) {
-      const ret = data["product"].filter((x) => {
-        return x["id"] == specifications["id"];
-      });
-      return ret[0];
-    });
+  // We access Inventory XML
+  return (
+    fetch("./Data/Inventory.xml")
+      // The result of our access is called 'response'
+      .then(function (response) {
+        return response.text();
+      })
+      // We take the response.text(), rename it 'data'
+      .then(function (data) {
+        // We parse 'data' to json and pass it to the next block
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(data, "text/xml");
+        let ret = xml2json(xmlDoc, "    ");
+        return ret["inventory"];
+      })
+      .then(function (data) {
+        // We receive 'data' from previous block 
+        // We loop through 'data' and select all item that matches 
+        const ret = data["product"].filter((x) => {
+          return x["id"] == specifications["id"];
+        });
+        // Return the matched item
+        return ret[0];
+      })
+  );
 }
 
 async function getAllSubtotal() {
+  // sessionStorage is a json
   let cart = sessionStorage.getItem("ShoppingCart");
   cart = JSON.parse(cart);
   let subtotal = 0.0;
@@ -27,7 +37,9 @@ async function getAllSubtotal() {
     return subtotal;
   }
 
+  // We loop through every item in 'cart' and search for the corresponding item in inventory.xml
   for (let i = 0; i < cart.length; i++) {
+    // 'specifications' contains product id, and selected options
     let specifications = cart[i]["specifications"];
     let quantity = cart[i]["quantity"];
     let productInfo = await readSpecificProductFromInventoryXML(specifications);
@@ -37,6 +49,8 @@ async function getAllSubtotal() {
     itemInfo["name"] = productInfo["name"];
     itemInfo["quantity"] = quantity;
 
+    // Here we want to find the description of selected options
+    // and show it along with the product in the shopping cart
     while (productInfo.hasOwnProperty("options")) {
       let optionLabel = productInfo["options"]["label"];
       let optionDescription = null;
@@ -48,8 +62,8 @@ async function getAllSubtotal() {
       }
 
       let optionArray = productInfo["options"]["option"];
-      if(!Array.isArray(optionArray)){
-        optionArray = [optionArray]
+      if (!Array.isArray(optionArray)) {
+        optionArray = [optionArray];
       }
       for (let j = 0; j < optionArray.length; j++) {
         if (optionArray[j]["description"] == optionDescription) {
@@ -68,6 +82,7 @@ async function getAllSubtotal() {
 }
 
 async function refreshSubtoalTPSTVQTotal() {
+  // Refresh money displayed
   let subtotal = await getAllSubtotal();
   let textSubtotal = document.getElementById("textSubtotal");
   textSubtotal.innerHTML = "$ " + parseFloat(subtotal).toFixed(2);
@@ -99,6 +114,7 @@ window.addEventListener("load", async (event) => {
     return;
   }
 
+  // Loop and show all items of cart 
   for (let i = 0; i < cart.length; i++) {
     let specifications = cart[i]["specifications"];
     let quantity = cart[i]["quantity"];
@@ -120,8 +136,8 @@ window.addEventListener("load", async (event) => {
       }
 
       let optionArray = productInfo["options"]["option"];
-      if(!Array.isArray(optionArray)){
-        optionArray = [optionArray]
+      if (!Array.isArray(optionArray)) {
+        optionArray = [optionArray];
       }
       for (let j = 0; j < optionArray.length; j++) {
         if (optionArray[j]["description"] == optionDescription) {
@@ -242,7 +258,8 @@ window.addEventListener("load", async (event) => {
             itemInfo["subtotal"] = itemInfo["quantity"] * itemInfo["price"];
             sessionStorage.setItem("ShoppingCart", JSON.stringify(cart));
             let subtotal = document.getElementById("textSubtotal" + i);
-            subtotal.innerHTML = "$ " + parseFloat(itemInfo["subtotal"]).toFixed(2);
+            subtotal.innerHTML =
+              "$ " + parseFloat(itemInfo["subtotal"]).toFixed(2);
 
             refreshSubtoalTPSTVQTotal();
           });

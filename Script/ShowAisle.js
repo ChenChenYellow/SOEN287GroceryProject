@@ -1,35 +1,55 @@
 import { xml2json } from "./xml2json.js";
 
 function readAislesXML(aisleName) {
-  return fetch("./Data/Inventory.xml")
-    .then(function (response) {
-      return response.text();
+  // Request to access xml file
+  // The result of access is 'response'
+  // We pass response.text() to the next block
+  return fetch("./Data/Inventory.xml") 
+    .then(function (response) { 
+      return response.text(); 
     })
-    .then(function (data) {
-      let parser = new DOMParser();
+    // We receive response.text() and rename it 'data'
+    // We parse 'data' to a json object
+    // The json object is called 'ret'
+    // We pass the ret["inventory"] to next block
+    .then(function (data) { 
+      let parser = new DOMParser(); 
       let xmlDoc = parser.parseFromString(data, "text/xml");
-      let ret = xml2json(xmlDoc, "    ");
-      return ret["inventory"];
+      let ret = xml2json(xmlDoc, "    "); 
+      return ret["inventory"]; 
     })
-    .then(function (data) {
-      const ret = data["product"].filter((x) => {
-        return x["aisle"] == aisleName;
+    // We receive ret["inventory"] and rename it 'data'
+    // Data["product"] is an array of json, we loop through it
+    // And select all item whose "asile" match our aisle name
+    .then(function (data) { 
+      const ret = data["product"].filter((x) => { 
+        return x["aisle"] == aisleName; 
       });
-      return ret;
+      // And return those selected items
+      return ret; 
     });
 }
 
 function getAisleName() {
+  // Get the aisle name from the url
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const aisleName = urlParams.get("aislename");
   return aisleName;
 }
 
+
+// We add an event to window
+// Whenever window load, the async (event) => {} function is called
 window.addEventListener("load", async (event) => {
   const aisleName = getAisleName();
+  // readAislesXML is an async function. When it is called, it will start, and we don't need to watch him do his job.
+  // We will go to other thread, maybe scroll up and down the page, maybe click another button in the page, and readAislesXML will do its stuff in the back.
+  // await keyword means that, we will let this thread watch him. He will signal this thread when he is done. And then this thread can continue.
   const products = await readAislesXML(aisleName);
 
+  // 'products' is an array of json, containing all products of our aisle
+  // Now its time fill the data to the page using html
   let aisleNameH1 = document.getElementById("aisleName");
   let words = aisleName.toLowerCase().split("_");
   for (let i = 0; i < words.length; i++) {
@@ -64,7 +84,8 @@ window.addEventListener("load", async (event) => {
     cardBody.classList.add("card-body", "d-flex", "flex-column");
     let a = document.createElement("a");
     cardBody.appendChild(a);
-    a.href = "./product.html?id=" + products[i]["id"];
+    // When click a product, it goes to product.html with its product id in the url
+    a.href = "./product.html?id=" + products[i]["id"]; 
     a.classList.add("text-decoration-none", "stretched-link");
     a.style.color = "inherit";
     let hr = document.createElement("hr");
