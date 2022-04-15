@@ -38,8 +38,14 @@ function getAisleName() {
   return aisleName;
 }
 
+
+// We add an event to window
+// Whenever window load, the async (event) => {} function is called
 window.addEventListener("load", async (event) => {
   const aisleName = getAisleName();
+  // readAislesXML is an async function. When it is called, it will start, and we don't need to watch him do his job.
+  // We will go to other thread, maybe scroll up and down the page, maybe click another button in the page, and readAislesXML will do its stuff in the back.
+  // await keyword means that, we will let this thread watch him. He will signal this thread when he is done. And then this thread can continue.
   const products = await readAislesXML(aisleName);
 
   // 'products' is an array of json, containing all products of our aisle
