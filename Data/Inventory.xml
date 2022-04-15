@@ -214,4 +214,378 @@
             </option>
         </options>
     </product>
+    <product>
+        <aisle>fruit_and_vegetables</aisle>
+        <id>6</id>
+        <name>Potatoes</name>
+        <image>fruit_veg_potato.jpg</image>
+        <description>Just Potatoes</description>
+        <more_description>Potatoes can be eaten mashed, fried, boiled, cooked. It grows in the ground. </more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>bag of 10 lb</description>
+                <price>4.59</price>
+                <image>fruit_veg_potato.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>fruit_and_vegetables</aisle>
+        <id>7</id>
+        <name>Apples</name>
+        <image>fruit_veg_apple.jpg</image>
+        <description>Just Apples</description>
+        <more_description>Apples grow on trees. An apple a day keeps the doctor away. Can make pies, apple sauce,apple crumble and so much more. </more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>bag of 10 lb</description>
+                <price>3.99</price>
+                <image>fruit_veg_apple.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>fruit_and_vegetables</aisle>
+        <id>8</id>
+        <name>Lemons</name>
+        <image>fruit_veg_lemon.webp</image>
+        <description>Just Lemons</description>
+        <more_description>When life throws at you lemons, make lemonade! You can make an exquisite lemon meringue pie, lemonade, lemon bar and so much more! </more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>bag of 3 lb</description>
+                <price>5.99</price>
+                <image>fruit_veg_lemon.webp</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>nuts</aisle>
+        <id>9</id>
+        <name>Pistachios</name>
+        <image>nut_pistachios.jpg</image>
+        <description>Just Pistachios</description>
+        <more_description>They have a shell, they are green, sometimes with a hint of purple. They are perfect to make baklava, which is a turkish delight.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1lb bag</description>
+                <price>9.99</price>
+                <image>nut_pistachios.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>nuts</aisle>
+        <id>10</id>
+        <name>Walnuts</name>
+        <image>nut_walnut.jpg</image>
+        <description>Just Walnuts</description>
+        <more_description>They look like a brain, good for the health. Perfect complement for brownies. </more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1lb bag</description>
+                <price>9.99</price>
+                <image>nut_walnut.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>nuts</aisle>
+        <id>11</id>
+        <name>Cashew</name>
+        <image>nut_cashew.jpg</image>
+        <description>Just Cashew</description>
+        <more_description>Very good when they are salty, can be put in. There is 18g of protein per 100g. </more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1lb bag</description>
+                <price>10.99</price>
+                <image>nut_cashew.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>bakery</aisle>
+        <id>12</id>
+        <name>Tortilla Bread</name>
+        <image>bakery_tortilla.jpg</image>
+        <description>Pack of 8</description>
+        <more_description>Tortillas are used for making tacos, fajitas and other mexican specialties. </more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>Bag of 8</description>
+                <price>5.29</price>
+                <image>bakery_tortilla.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>bakery</aisle>
+        <id>13</id>
+        <name>Naan Bread</name>
+        <image>bakery_naan.jpg</image>
+        <description>Pack of 6</description>
+        <more_description>Naan bread is an asian type of bread. It is flat bread.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>Bag of 6</description>
+                <price>4.49</price>
+                <image>bakery_naan.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>bakery</aisle>
+        <id>14</id>
+        <name>Loaf of Bread</name>
+        <image>bakery_loaf.webp</image>
+        <description>Pack of 6</description>
+        <more_description>Can slice it and make any type of sandwich for yourself or the kids!</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>Bag of 6</description>
+                <price>4.49</price>
+                <image>bakery_loaf.webp</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>bakery</aisle>
+        <id>15</id>
+        <name>Blueberry Muffin</name>
+        <image>bakery_muffin.jpg</image>
+        <description>Pack of 12</description>
+        <more_description>Blueberry muffins with a big glass of milk will make your day!</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>Pack of 12</description>
+                <price>7.88</price>
+                <image>bakery_muffin.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>bakery</aisle>
+        <id>16</id>
+        <name>Banana Bread</name>
+        <image>bakery_banana_bread.jpg</image>
+        <description>Sliced</description>
+        <more_description>Made with flour, bananas, eggs, sugar, butter and vanilla.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1 pack</description>
+                <price>4.99</price>
+                <image>bakery_banana_bread.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>dairy</aisle>
+        <id>17</id>
+        <name>Eggs</name>
+        <image>dairy_egg.png</image>
+        <description>12 egg carton</description>
+        <more_description>Eggs come from chicken. They have a lot of protein.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1 carton</description>
+                <price>3.00</price>
+                <image>dairy_egg.png</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>dairy</aisle>
+        <id>18</id>
+        <name>Mozzarella Cheese</name>
+        <image>dairy_mozzarella.jpeg</image>
+        <description>1 brick of Cheese</description>
+        <more_description>Mozarella is a type of cheese. It can go on pizza.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1 brick 750g</description>
+                <price>6.47</price>
+                <image>dairy_mozzarella.jpeg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>dairy</aisle>
+        <id>19</id>
+        <name>Almond milk</name>
+        <image>dairy_almondmilk.jpeg</image>
+        <description>946 ml carton</description>
+        <more_description>Almond milk is a good replacement to regular milk for lactose intolerant people.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>946ml</description>
+                <price>4.50</price>
+                <image>dairy_almondmilk.jpeg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>dairy</aisle>
+        <id>20</id>
+        <name>Silk Cream</name>
+        <image>dairy_heavycream.jpeg</image>
+        <description>473 ml carton</description>
+        <more_description>Heavy cream is perfect to make whipped cream and ganache au chocolat.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>473ml</description>
+                <price>5.00</price>
+                <image>dairy_heavycream.jpeg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>dairy</aisle>
+        <id>21</id>
+        <name>Greek Yogurt</name>
+        <image>dairy_greekyogurt.jpeg</image>
+        <description>2lb</description>
+        <more_description>Greek yogurt is ric in protein. Can add berries to it to make it nicer and enjoy better.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>2lb/1.13kg</description>
+                <price>4.49</price>
+                <image>dairy_greekyogurt.jpeg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>dairy</aisle>
+        <id>22</id>
+        <name>Butter</name>
+        <image>dairy_butter.jpeg</image>
+        <description>1lb</description>
+        <more_description>Butter is used in so many dishes. Can be put on toasts.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>1 brick</description>
+                <price>3.00</price>
+                <image>dairy_butter.jpeg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>drinks</aisle>
+        <id>23</id>
+        <name>Pepsi</name>
+        <image>Pepsi.jpg</image>
+        <description>770 ml bottle</description>
+        <more_description>Carbonated drink. Not good for the health, but a good refresher.</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>770ml</description>
+                <price>3.50</price>
+                <image>Pepsi.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>drinks</aisle>
+        <id>24</id>
+        <name>Canada Dry</name>
+        <image>CanadaDry.jpg</image>
+        <description>770 ml bottle</description>
+        <more_description>A bottle of canada dry</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>770ml</description>
+                <price>3.50</price>
+                <image>CanadaDry.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>drinks</aisle>
+        <id>25</id>
+        <name>Coca Cola</name>
+        <image>cocacola.jpg</image>
+        <description>770 ml bottle</description>
+        <more_description>A bottle of coca cola</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>770ml</description>
+                <price>3.50</price>
+                <image>cocacola.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>drinks</aisle>
+        <id>26</id>
+        <name>Sprite</name>
+        <image>Sprite.jpg.jpg</image>
+        <description>770 ml bottle</description>
+        <more_description>A bottle of Sprite</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>770ml</description>
+                <price>3.50</price>
+                <image>Sprite.jpg.jpg</image>
+            </option>
+        </options>
+    </product>
+    <product>
+        <aisle>drinks</aisle>
+        <id>26</id>
+        <name>7Up</name>
+        <image>7up.jpg</image>
+        <description>770 ml bottle</description>
+        <more_description>A bottle of 7Up</more_description>
+        <options>
+            <label>size</label>
+            
+            <option>
+                <description>770ml</description>
+                <price>3.50</price>
+                <image>7up.jpg</image>
+            </option>
+        </options>
+    </product>
 </inventory>

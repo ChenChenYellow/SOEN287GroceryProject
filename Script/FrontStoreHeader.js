@@ -44,6 +44,21 @@ class FrontStoreHeader extends HTMLElement {
                     href="./aisle.html?aislename=fruit_and_vegetables"
                     >Fruits and Vegetables</a
                   >
+                  <a
+                    class="dropdown-item navbar-collapsed-item"
+                    href="aisle.html?aislename=bakery"
+                    >Bakery</a
+                  >
+                  <a
+                    class="dropdown-item navbar-collapsed-item"
+                    href="aisle.html?aislename=dairy"
+                    >Dairy</a
+                  >
+                  <a
+                    class="dropdown-item navbar-collapsed-item"
+                    href="aisle.html?aislename=drinks"
+                    >Drinks</a
+                  >
                 </div>
               </li>
             </ul>
