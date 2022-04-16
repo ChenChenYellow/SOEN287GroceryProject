@@ -97,7 +97,7 @@
         <description>Doritos Chips</description>
         <more_description>DORITOS® isn’t just a chip. It’s fuel for disruption — our flavors ignite adventure and inspire action. With every crunch, we aim to redefine culture and support those who are boldly themselves.
 
-            Are you ready? If so, crunch on.</more_description>
+        Are you ready? If so, crunch on.</more_description>
         <options>
             <label>flavor</label>
             <option>
@@ -222,7 +222,6 @@
         <more_description>Potatoes can be eaten mashed, fried, boiled, cooked. It grows in the ground. </more_description>
         <options>
             <label>size</label>
-            
             <option>
                 <description>bag of 10 lb</description>
                 <price>4.59</price>
@@ -239,7 +238,7 @@
         <more_description>Apples grow on trees. An apple a day keeps the doctor away. Can make pies, apple sauce,apple crumble and so much more. </more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>bag of 10 lb</description>
                 <price>3.99</price>
@@ -256,7 +255,7 @@
         <more_description>When life throws at you lemons, make lemonade! You can make an exquisite lemon meringue pie, lemonade, lemon bar and so much more! </more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>bag of 3 lb</description>
                 <price>5.99</price>
@@ -273,7 +272,7 @@
         <more_description>They have a shell, they are green, sometimes with a hint of purple. They are perfect to make baklava, which is a turkish delight.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1lb bag</description>
                 <price>9.99</price>
@@ -290,7 +289,7 @@
         <more_description>They look like a brain, good for the health. Perfect complement for brownies. </more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1lb bag</description>
                 <price>9.99</price>
@@ -307,7 +306,7 @@
         <more_description>Very good when they are salty, can be put in. There is 18g of protein per 100g. </more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1lb bag</description>
                 <price>10.99</price>
@@ -324,7 +323,7 @@
         <more_description>Tortillas are used for making tacos, fajitas and other mexican specialties. </more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>Bag of 8</description>
                 <price>5.29</price>
@@ -341,7 +340,7 @@
         <more_description>Naan bread is an asian type of bread. It is flat bread.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>Bag of 6</description>
                 <price>4.49</price>
@@ -358,7 +357,7 @@
         <more_description>Can slice it and make any type of sandwich for yourself or the kids!</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>Bag of 6</description>
                 <price>4.49</price>
@@ -375,7 +374,7 @@
         <more_description>Blueberry muffins with a big glass of milk will make your day!</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>Pack of 12</description>
                 <price>7.88</price>
@@ -392,7 +391,7 @@
         <more_description>Made with flour, bananas, eggs, sugar, butter and vanilla.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1 pack</description>
                 <price>4.99</price>
@@ -409,7 +408,7 @@
         <more_description>Eggs come from chicken. They have a lot of protein.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1 carton</description>
                 <price>3.00</price>
@@ -426,7 +425,7 @@
         <more_description>Mozarella is a type of cheese. It can go on pizza.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1 brick 750g</description>
                 <price>6.47</price>
@@ -443,7 +442,7 @@
         <more_description>Almond milk is a good replacement to regular milk for lactose intolerant people.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>946ml</description>
                 <price>4.50</price>
@@ -460,7 +459,7 @@
         <more_description>Heavy cream is perfect to make whipped cream and ganache au chocolat.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>473ml</description>
                 <price>5.00</price>
@@ -477,7 +476,7 @@
         <more_description>Greek yogurt is ric in protein. Can add berries to it to make it nicer and enjoy better.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>2lb/1.13kg</description>
                 <price>4.49</price>
@@ -494,7 +493,7 @@
         <more_description>Butter is used in so many dishes. Can be put on toasts.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>1 brick</description>
                 <price>3.00</price>
@@ -511,7 +510,7 @@
         <more_description>Carbonated drink. Not good for the health, but a good refresher.</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>770ml</description>
                 <price>3.50</price>
@@ -528,7 +527,7 @@
         <more_description>A bottle of canada dry</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>770ml</description>
                 <price>3.50</price>
@@ -545,7 +544,7 @@
         <more_description>A bottle of coca cola</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>770ml</description>
                 <price>3.50</price>
@@ -562,7 +561,7 @@
         <more_description>A bottle of Sprite</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>770ml</description>
                 <price>3.50</price>
@@ -579,7 +578,7 @@
         <more_description>A bottle of 7Up</more_description>
         <options>
             <label>size</label>
-            
+
             <option>
                 <description>770ml</description>
                 <price>3.50</price>
