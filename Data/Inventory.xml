@@ -6,7 +6,7 @@
         <name>Layers Chips</name>
         <image>lays_original_235.jpg</image>
         <description>Just regular chips</description>
-        <more_description>Wherever celebrations and good times happen, the LAY'S® brand will be there just as it has been for more than 75 years. With flavors almost as rich as our history, we have a chip or crisp flavor guaranteed to bring a smile on your face.</more_description>
+        <moredescription>Wherever celebrations and good times happen, the LAY'S® brand will be there just as it has been for more than 75 years. With flavors almost as rich as our history, we have a chip or crisp flavor guaranteed to bring a smile on your face.</moredescription>
         <options>
             <label>flavor</label>
             <option>
@@ -95,9 +95,9 @@
         <name>Doritos Chips</name>
         <image>doritos_nacho_cheese_235.jpg</image>
         <description>Doritos Chips</description>
-        <more_description>DORITOS® isn’t just a chip. It’s fuel for disruption — our flavors ignite adventure and inspire action. With every crunch, we aim to redefine culture and support those who are boldly themselves.
+        <moredescription>DORITOS® isn’t just a chip. It’s fuel for disruption — our flavors ignite adventure and inspire action. With every crunch, we aim to redefine culture and support those who are boldly themselves.
 
-        Are you ready? If so, crunch on.</more_description>
+        Are you ready? If so, crunch on.</moredescription>
         <options>
             <label>flavor</label>
             <option>
@@ -150,7 +150,7 @@
         <name>Peanuts</name>
         <image>peanuts.jpg</image>
         <description>Just peanuts</description>
-        <more_description>The peanut (Arachis hypogaea) also known as the groundnut,[2] goober (US),[3] pindar (US)[3] or monkey nut (UK), is a legume crop grown mainly for its edible seeds. It is widely grown in the tropics and subtropics, being important to both small and large commercial producers.</more_description>
+        <moredescription>The peanut (Arachis hypogaea) also known as the groundnut,[2] goober (US),[3] pindar (US)[3] or monkey nut (UK), is a legume crop grown mainly for its edible seeds. It is widely grown in the tropics and subtropics, being important to both small and large commercial producers.</moredescription>
         <options>
             <label>size</label>
             <option>
@@ -166,7 +166,7 @@
         <name>Almond</name>
         <image>almond.jpg</image>
         <description>Just almond</description>
-        <more_description>The almond (Prunus amygdalus, syn. Prunus dulcis) is a species of tree native to west Asia. Ancient remains of almonds were discovered in the Levant area.[4] The almond is also the name of the edible and widely cultivated seed of this tree.</more_description>
+        <moredescription>The almond (Prunus amygdalus, syn. Prunus dulcis) is a species of tree native to west Asia. Ancient remains of almonds were discovered in the Levant area.[4] The almond is also the name of the edible and widely cultivated seed of this tree.</moredescription>
         <options>
             <label>size</label>
             <option>
@@ -182,7 +182,7 @@
         <name>Orange</name>
         <image>orange.jpg</image>
         <description>Just Orange</description>
-        <more_description>An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis,[1] which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. </more_description>
+        <moredescription>An orange is a fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis,[1] which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. </moredescription>
         <options>
             <label>size</label>
             <option>
@@ -198,7 +198,7 @@
         <name>Onion</name>
         <image>onion_3_lb.jpg</image>
         <description>Just Onion</description>
-        <more_description>The onion (Allium cepa L., from Latin cepa meaning "onion"), also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium.</more_description>
+        <moredescription>The onion (Allium cepa L., from Latin cepa meaning "onion"), also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium.</moredescription>
         <options>
             <label>size</label>
             <option>
@@ -219,7 +219,7 @@
         <name>Potatoes</name>
         <image>fruit_veg_potato.jpg</image>
         <description>Just Potatoes</description>
-        <more_description>Potatoes can be eaten mashed, fried, boiled, cooked. It grows in the ground. </more_description>
+        <moredescription>Potatoes can be eaten mashed, fried, boiled, cooked. It grows in the ground. </moredescription>
         <options>
             <label>size</label>
             <option>
@@ -235,7 +235,7 @@
         <name>Apples</name>
         <image>fruit_veg_apple.jpg</image>
         <description>Just Apples</description>
-        <more_description>Apples grow on trees. An apple a day keeps the doctor away. Can make pies, apple sauce,apple crumble and so much more. </more_description>
+        <moredescription>Apples grow on trees. An apple a day keeps the doctor away. Can make pies, apple sauce,apple crumble and so much more. </moredescription>
         <options>
             <label>size</label>
 
@@ -252,7 +252,7 @@
         <name>Lemons</name>
         <image>fruit_veg_lemon.webp</image>
         <description>Just Lemons</description>
-        <more_description>When life throws at you lemons, make lemonade! You can make an exquisite lemon meringue pie, lemonade, lemon bar and so much more! </more_description>
+        <moredescription>When life throws at you lemons, make lemonade! You can make an exquisite lemon meringue pie, lemonade, lemon bar and so much more! </moredescription>
         <options>
             <label>size</label>
 
@@ -269,7 +269,7 @@
         <name>Pistachios</name>
         <image>nut_pistachios.jpg</image>
         <description>Just Pistachios</description>
-        <more_description>They have a shell, they are green, sometimes with a hint of purple. They are perfect to make baklava, which is a turkish delight.</more_description>
+        <moredescription>They have a shell, they are green, sometimes with a hint of purple. They are perfect to make baklava, which is a turkish delight.</moredescription>
         <options>
             <label>size</label>
 
@@ -286,7 +286,7 @@
         <name>Walnuts</name>
         <image>nut_walnut.jpg</image>
         <description>Just Walnuts</description>
-        <more_description>They look like a brain, good for the health. Perfect complement for brownies. </more_description>
+        <moredescription>They look like a brain, good for the health. Perfect complement for brownies. </moredescription>
         <options>
             <label>size</label>
 
@@ -303,7 +303,7 @@
         <name>Cashew</name>
         <image>nut_cashew.jpg</image>
         <description>Just Cashew</description>
-        <more_description>Very good when they are salty, can be put in. There is 18g of protein per 100g. </more_description>
+        <moredescription>Very good when they are salty, can be put in. There is 18g of protein per 100g. </moredescription>
         <options>
             <label>size</label>
 
@@ -320,7 +320,7 @@
         <name>Tortilla Bread</name>
         <image>bakery_tortilla.jpg</image>
         <description>Pack of 8</description>
-        <more_description>Tortillas are used for making tacos, fajitas and other mexican specialties. </more_description>
+        <moredescription>Tortillas are used for making tacos, fajitas and other mexican specialties. </moredescription>
         <options>
             <label>size</label>
 
@@ -337,7 +337,7 @@
         <name>Naan Bread</name>
         <image>bakery_naan.jpg</image>
         <description>Pack of 6</description>
-        <more_description>Naan bread is an asian type of bread. It is flat bread.</more_description>
+        <moredescription>Naan bread is an asian type of bread. It is flat bread.</moredescription>
         <options>
             <label>size</label>
 
@@ -354,7 +354,7 @@
         <name>Loaf of Bread</name>
         <image>bakery_loaf.webp</image>
         <description>Pack of 6</description>
-        <more_description>Can slice it and make any type of sandwich for yourself or the kids!</more_description>
+        <moredescription>Can slice it and make any type of sandwich for yourself or the kids!</moredescription>
         <options>
             <label>size</label>
 
@@ -371,7 +371,7 @@
         <name>Blueberry Muffin</name>
         <image>bakery_muffin.jpg</image>
         <description>Pack of 12</description>
-        <more_description>Blueberry muffins with a big glass of milk will make your day!</more_description>
+        <moredescription>Blueberry muffins with a big glass of milk will make your day!</moredescription>
         <options>
             <label>size</label>
 
@@ -388,7 +388,7 @@
         <name>Banana Bread</name>
         <image>bakery_banana_bread.jpg</image>
         <description>Sliced</description>
-        <more_description>Made with flour, bananas, eggs, sugar, butter and vanilla.</more_description>
+        <moredescription>Made with flour, bananas, eggs, sugar, butter and vanilla.</moredescription>
         <options>
             <label>size</label>
 
@@ -405,7 +405,7 @@
         <name>Eggs</name>
         <image>dairy_egg.png</image>
         <description>12 egg carton</description>
-        <more_description>Eggs come from chicken. They have a lot of protein.</more_description>
+        <moredescription>Eggs come from chicken. They have a lot of protein.</moredescription>
         <options>
             <label>size</label>
 
@@ -422,7 +422,7 @@
         <name>Mozzarella Cheese</name>
         <image>dairy_mozzarella.jpeg</image>
         <description>1 brick of Cheese</description>
-        <more_description>Mozarella is a type of cheese. It can go on pizza.</more_description>
+        <moredescription>Mozarella is a type of cheese. It can go on pizza.</moredescription>
         <options>
             <label>size</label>
 
@@ -439,7 +439,7 @@
         <name>Almond milk</name>
         <image>dairy_almondmilk.jpeg</image>
         <description>946 ml carton</description>
-        <more_description>Almond milk is a good replacement to regular milk for lactose intolerant people.</more_description>
+        <moredescription>Almond milk is a good replacement to regular milk for lactose intolerant people.</moredescription>
         <options>
             <label>size</label>
 
@@ -456,7 +456,7 @@
         <name>Silk Cream</name>
         <image>dairy_heavycream.jpeg</image>
         <description>473 ml carton</description>
-        <more_description>Heavy cream is perfect to make whipped cream and ganache au chocolat.</more_description>
+        <moredescription>Heavy cream is perfect to make whipped cream and ganache au chocolat.</moredescription>
         <options>
             <label>size</label>
 
@@ -473,7 +473,7 @@
         <name>Greek Yogurt</name>
         <image>dairy_greekyogurt.jpeg</image>
         <description>2lb</description>
-        <more_description>Greek yogurt is ric in protein. Can add berries to it to make it nicer and enjoy better.</more_description>
+        <moredescription>Greek yogurt is ric in protein. Can add berries to it to make it nicer and enjoy better.</moredescription>
         <options>
             <label>size</label>
 
@@ -490,7 +490,7 @@
         <name>Butter</name>
         <image>dairy_butter.jpeg</image>
         <description>1lb</description>
-        <more_description>Butter is used in so many dishes. Can be put on toasts.</more_description>
+        <moredescription>Butter is used in so many dishes. Can be put on toasts.</moredescription>
         <options>
             <label>size</label>
 
@@ -507,7 +507,7 @@
         <name>Pepsi</name>
         <image>Pepsi.jpg</image>
         <description>770 ml bottle</description>
-        <more_description>Carbonated drink. Not good for the health, but a good refresher.</more_description>
+        <moredescription>Carbonated drink. Not good for the health, but a good refresher.</moredescription>
         <options>
             <label>size</label>
 
@@ -524,7 +524,7 @@
         <name>Canada Dry</name>
         <image>CanadaDry.jpg</image>
         <description>770 ml bottle</description>
-        <more_description>A bottle of canada dry</more_description>
+        <moredescription>A bottle of canada dry</moredescription>
         <options>
             <label>size</label>
 
@@ -541,7 +541,7 @@
         <name>Coca Cola</name>
         <image>cocacola.jpg</image>
         <description>770 ml bottle</description>
-        <more_description>A bottle of coca cola</more_description>
+        <moredescription>A bottle of coca cola</moredescription>
         <options>
             <label>size</label>
 
@@ -558,7 +558,7 @@
         <name>Sprite</name>
         <image>Sprite.jpg.jpg</image>
         <description>770 ml bottle</description>
-        <more_description>A bottle of Sprite</more_description>
+        <moredescription>A bottle of Sprite</moredescription>
         <options>
             <label>size</label>
 
@@ -575,7 +575,7 @@
         <name>7Up</name>
         <image>7up.jpg</image>
         <description>770 ml bottle</description>
-        <more_description>A bottle of 7Up</more_description>
+        <moredescription>A bottle of 7Up</moredescription>
         <options>
             <label>size</label>
 

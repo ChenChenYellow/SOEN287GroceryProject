@@ -210,7 +210,7 @@ window.addEventListener("load", async (event) => {
   p.classList.add("py-2", "px-4", "collapse");
   p.style.fontFamily = "Calibri, sans-serif";
   p.id = "collapseMoreDescription";
-  p.innerHTML = productInfo["more_description"];
+  p.innerHTML = productInfo["moredescription"];
 
   row = document.createElement("div");
   col.appendChild(row);

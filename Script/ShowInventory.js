@@ -56,6 +56,8 @@ function loadOptions(container, product, parentPropertyList) {
       indexString = indexString + item["option"];
     }
   }
+  indexString = indexString.replaceAll(" ", "-");
+  indexString = indexString.replaceAll(".", "_");
 
   let cardBodyContainerRow = document.createElement("div");
   cardBodyContainerRow.classList.add("row");
@@ -78,6 +80,8 @@ function loadOptions(container, product, parentPropertyList) {
   for (let j = 0; j < optionList.length; j++) {
     let option = optionList[j];
     let newIndexString = indexString + option["description"];
+    newIndexString = newIndexString.replaceAll(" ", "-");
+    newIndexString = newIndexString.replaceAll(".", "_");
 
     let card = document.createElement("div");
     card.classList.add("card");
@@ -100,7 +104,7 @@ function loadOptions(container, product, parentPropertyList) {
 
     let cardBody = document.createElement("div");
     card.appendChild(cardBody);
-    cardBody.classList.add("card-body");
+    cardBody.classList.add("card-body", "py-0");
 
     let collapse = document.createElement("div");
     cardBody.appendChild(collapse);
@@ -109,20 +113,18 @@ function loadOptions(container, product, parentPropertyList) {
 
     let propertyList = JSON.parse(JSON.stringify(parentPropertyList)); // clone parent
     propertyList.push({
-      label: options["label"],
-      value: option["description"],
+      "label": options["label"].replaceAll(" ", "-"),
+      "value": option["description"].replaceAll(" ", "-"),
     });
     //console.log(propertyList);
     if (option.hasOwnProperty("options")) {
       loadOptions(collapse, option, propertyList);
     } else {
-      let cardBodyContainer = document.createElement("div");
-      cardBodyContainer.classList.add("container-fluid");
-      cardBody.appendChild(cardBodyContainer);
+      collapse.classList.add("container-fluid");
 
       let row = document.createElement("div");
       row.classList.add("row");
-      cardBodyContainer.appendChild(row);
+      collapse.appendChild(row);
 
       let labels = ["Description", "Price", "Image"];
       let keys = ["description", "price", "image"];
@@ -131,7 +133,7 @@ function loadOptions(container, product, parentPropertyList) {
 
       let form = document.createElement("form");
       form.action = "./update_inventory.html";
-      form.method = "post";
+      form.method = "get";
       form.classList.add("col-sm-6");
       row.appendChild(form);
 
@@ -221,7 +223,7 @@ window.addEventListener("load", async (e) => {
       "name",
       "image",
       "description",
-      "more_description",
+      "moredescription",
     ];
 
     //console.log(product);
@@ -244,7 +246,7 @@ window.addEventListener("load", async (e) => {
 
     loadTable(row, labels, keys, product);
 
-    let parent = [{ id: product["id"] }];
+    let parent = [{ "id": product["id"] }];
 
     if (product.hasOwnProperty("options")) {
       loadOptions(collapse, product, parent);
