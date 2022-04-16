@@ -2,6 +2,7 @@ class FrontStoreFooter extends HTMLElement {
   constructor() {
     super();
   }
+  // We create a footer for the front store, and we call these codes everytime we do a <footer-component>
 
   connectedCallback() {
     this.innerHTML = `<div class="row background-brown my-1 pt-4">
