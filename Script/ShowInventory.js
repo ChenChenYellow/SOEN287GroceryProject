@@ -13,11 +13,6 @@ function readInventoryXML() {
     });
 }
 
-<<<<<<< Updated upstream
-window.addEventListener("load", async (e) => {
-  const inventory = await readInventoryXML();
-  console.log(inventory);
-=======
 function fillFormWithHiddenInput(form, propertyList) {
   for (let k = 0; k < propertyList.length; k++) {
     const property = propertyList[k];
@@ -172,7 +167,6 @@ function loadOptions(container, product, parentPropertyList) {
 window.addEventListener("load", async (e) => {
   const inventory = await readInventoryXML();
   //console.log(inventory);
->>>>>>> Stashed changes
 
   const cardContainer = document.getElementById("cardContainer");
   let cardRow = document.createElement("div");
@@ -183,11 +177,7 @@ window.addEventListener("load", async (e) => {
 
     let card = document.createElement("div");
     cardRow.appendChild(card);
-<<<<<<< Updated upstream
-    card.classList.add("card", "col-lg-12");
-=======
     card.classList.add("card", "col-lg-12", "px-0");
->>>>>>> Stashed changes
 
     let cardHeader = document.createElement("div");
     cardHeader.classList.add("card-header");
@@ -199,19 +189,11 @@ window.addEventListener("load", async (e) => {
 
     let h5 = document.createElement("h5");
     h5.innerHTML = product["id"];
-<<<<<<< Updated upstream
-    h5.classList.add("col-lg-6");
-    header.appendChild(h5);
-
-    h5 = document.createElement("h5");
-    h5.classList.add("col-lg-6");
-=======
     h5.classList.add("col-sm-6");
     header.appendChild(h5);
 
     h5 = document.createElement("h5");
     h5.classList.add("col-sm-6");
->>>>>>> Stashed changes
     h5.innerHTML = product["name"];
     header.appendChild(h5);
 
@@ -242,70 +224,16 @@ window.addEventListener("load", async (e) => {
       "more_description",
     ];
 
-<<<<<<< Updated upstream
-    let accordion = document.createElement("div");
-    accordion.id = "accordion" + i;
-    cardBody.appendChild(accordion);
-
-    card = document.createElement("div");
-    card.classList.add("card");
-    accordion.appendChild(card);
-
-    cardHeader = document.createElement("div");
-    cardHeader.classList.add("card-header");
-    cardHeader.id = "cardheader" + i;
-    card.appendChild(cardHeader);
-
-    console.log(product);
-
-    let buttonView = document.createElement("button");
-    buttonView.classList.add("btn", "btn-outline-info");
-    buttonView.setAttribute("data-toggle", "collapse");
-    buttonView.setAttribute("data-target", "#collapse" + i);
-    buttonView.setAttribute("aria-expanded", "true");
-    buttonView.setAttribute("aria-controls", "collapse" + i);
-=======
     //console.log(product);
 
     let buttonView = document.createElement("button");
     buttonView.classList.add("btn", "btn-outline-info", "mx-0");
     buttonView.setAttribute("data-toggle", "collapse");
     buttonView.setAttribute("data-target", "#collapse" + i);
->>>>>>> Stashed changes
     buttonView.innerHTML = "View";
     cardHeader.appendChild(buttonView);
 
     let collapse = document.createElement("div");
-<<<<<<< Updated upstream
-    card.appendChild(collapse);
-    collapse.id = "collapse" + i;
-    collapse.classList.add("collapse", "hide");
-    collapse.setAttribute("aria-labelledby", "cardheader" + i);
-    collapse.setAttribute("data-parent", "#accordion" + i);
-
-    cardBody = document.createElement("div");
-    collapse.appendChild(cardBody);
-    cardBody.classList.add("card-body");
-
-    let cardBodyContainer = document.createElement("div");
-    cardBodyContainer.classList.add("container");
-    cardBody.appendChild(cardBodyContainer);
-
-    let cardBodyContainerRow = document.createElement("div");
-    cardBodyContainerRow.classList.add("row");
-    cardBodyContainer.appendChild(cardBodyContainerRow);
-
-    for (let j = 0; j < labels.length; j++) {
-      let fieldName = document.createElement("h5");
-      cardBodyContainerRow.appendChild(fieldName);
-      fieldName.classList.add("col-lg-6", "border-left");
-      fieldName.innerHTML = labels[j];
-
-      let fieldValue = document.createElement("p");
-      cardBodyContainerRow.appendChild(fieldValue);
-      fieldValue.classList.add("col-lg-6");
-      fieldValue.innerHTML = product[keys[j]];
-=======
     cardBody.appendChild(collapse);
     collapse.id = "collapse" + i;
     collapse.classList.add("collapse", "hide", "container");
@@ -320,7 +248,6 @@ window.addEventListener("load", async (e) => {
 
     if (product.hasOwnProperty("options")) {
       loadOptions(collapse, product, parent);
->>>>>>> Stashed changes
     }
   }
 });
