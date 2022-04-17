@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title id="title"></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="Script/BackStoreHeader.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script src="./Script/ShowProductProperty.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <header-component></header-component>
+    <div class="container">
+      <form action="./update_inventory.php" method="post">
+        <h2 id="textTitleUpdate" class="text-center my-4" hidden>
+          Update User
+        </h2>
+        <h2 id="textTitleAdd" class="text-center my-4" hidden>Add User</h2>
+
+        <div class="container-fluid" id="containerProperty">
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <label for="inputID">ID</label>
+            </div>
+            <div class="col-sm-6">
+              <h6 id="textID"></h6>
+              <input hidden type="text" name="id" id="inputID" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <label for="inputImage">Image</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" id="inputImage" name="image" />
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <label for="inputPrice">Price</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="number" step="0.01" id="inputPrice" name="price" />
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <button
+                id="btnUpdate"
+                type="submit"
+                value="update"
+                name="operationtype"
+                class="btn btn-outline-warning"
+              >
+                Update
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button
+                id="btnCancel"
+                type="submit"
+                value="cancel"
+                name="operationtype"
+                class="btn btn-outline-dark"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

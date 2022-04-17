@@ -48,6 +48,7 @@ window.addEventListener("load", async (event) => {
   // await keyword means that, we will let this thread watch him. He will signal this thread when he is done. And then this thread can continue.
   const products = await readAislesXML(aisleName);
 
+  console.log(products);
   // 'products' is an array of json, containing all products of our aisle
   // Now its time fill the data to the page using html
   let aisleNameH1 = document.getElementById("aisleName");

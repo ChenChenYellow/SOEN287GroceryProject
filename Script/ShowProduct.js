@@ -1,25 +1,18 @@
 import { xml2json } from "./xml2json.js";
 
-function readProductXML() {
-  return fetch("./Data/Inventory.xml")
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (data) {
-      let parser = new DOMParser();
-      let xmlDoc = parser.parseFromString(data, "text/xml");
-      let ret = xml2json(xmlDoc, "    ");
-      return ret["inventory"];
-    })
-    .then(function (data) {
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const id = urlParams.get("id");
-      const ret = data["product"].filter((x) => {
-        return x["id"] == id;
-      })[0];
-      return ret;
-    });
+async function readProductXML() {
+  const response = await fetch("./Data/Inventory.xml");
+  let parser = new DOMParser();
+  let xmlDoc = parser.parseFromString(await response.text(), "text/xml");
+  let json = xml2json(xmlDoc, "    ");
+  const inventory = json["inventory"];
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const id = urlParams.get("id");
+  const ret = inventory["product"].filter((x) => {
+    return x["id"] == id;
+  })[0];
+  return ret;
 }
 
 function fetchOptions(options, containerID) {
@@ -210,7 +203,7 @@ window.addEventListener("load", async (event) => {
   p.classList.add("py-2", "px-4", "collapse");
   p.style.fontFamily = "Calibri, sans-serif";
   p.id = "collapseMoreDescription";
-  p.innerHTML = productInfo["more_description"];
+  p.innerHTML = productInfo["moredescription"];
 
   row = document.createElement("div");
   col.appendChild(row);

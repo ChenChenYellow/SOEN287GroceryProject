@@ -81,6 +81,7 @@ window.addEventListener("load", async (event) => {
     cardHeader = document.createElement("div");
     cardHeader.classList.add("card-header");
     cardHeader.id = "cardheader" + i;
+    card.appendChild(cardHeader);
 
     let buttonView = document.createElement("button");
     buttonView.classList.add("btn", "btn-outline-info");
@@ -91,19 +92,22 @@ window.addEventListener("load", async (event) => {
     buttonView.innerHTML = "View";
     cardHeader.appendChild(buttonView);
 
-    card.appendChild(cardHeader);
+    
     let collapse = document.createElement("div");
     card.appendChild(collapse);
     collapse.id = "collapse" + i;
     collapse.classList.add("collapse", "hide");
     collapse.setAttribute("aria-labelledby", "cardheader" + i);
     collapse.setAttribute("data-parent", "#accordion" + i);
+
     cardBody = document.createElement("div");
     collapse.appendChild(cardBody);
     cardBody.classList.add("card-body");
+
     let cardBodyContainer = document.createElement("div");
     cardBodyContainer.classList.add("container");
     cardBody.appendChild(cardBodyContainer);
+
     let cardBodyContainerRow = document.createElement("div");
     cardBodyContainerRow.classList.add("row");
     cardBodyContainer.appendChild(cardBodyContainerRow);
@@ -113,6 +117,7 @@ window.addEventListener("load", async (event) => {
       cardBodyContainerRow.appendChild(fieldName);
       fieldName.classList.add("col-lg-6", "border-left");
       fieldName.innerHTML = labels[j];
+      
       let fieldValue = document.createElement("p");
       cardBodyContainerRow.appendChild(fieldValue);
       fieldValue.classList.add("col-lg-6");
@@ -125,7 +130,7 @@ window.addEventListener("load", async (event) => {
 
     let form = document.createElement("form");
     cardBodyContainerRow.appendChild(form);
-    form.action = "./user.html";
+    form.action = "./update_user.html";
     form.method = "get";
 
     let button = document.createElement("button");
