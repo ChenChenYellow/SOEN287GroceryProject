@@ -20,36 +20,9 @@
         <address>h</address>
         <type>normal</type>
     </user>
-    <user>
-        <id>9</id>
-        <email>rt</email>
-        <firstname>t</firstname>
-        <lastname>y</lastname>
-        <password>u</password>
-        <cardnumber>h</cardnumber>
-        <address>fg</address>
-        <type>normal</type>
-    </user>
-    <user>
-        <id>10</id>
-        <email>iiii</email>
-        <firstname>jjjj</firstname>
-        <lastname>kkkkk</lastname>
-        <password>n</password>
-        <cardnumber>h</cardnumber>
-        <address>k</address>
-        <type>normal</type>
-    </user>
-    <user>
-        <id>11</id>
-        <email>122</email>
-        <firstname>www</firstname>
-        <lastname>eeee</lastname>
-        <password>rrrr</password>
-        <cardnumber>tttt</cardnumber>
-        <address>yyyy</address>
-        <type>normal</type>
-    </user>
+    
+    
+    
     <user>
         <id>12</id>
         <email>Jimi_H@gmail.com</email>
@@ -70,4 +43,4 @@
         <address>27 CLub</address>
         <type>normal</type>
     </user>
-</users>
+<user><id>14</id><email>bobDylan@gmail.com</email><firstname>Bob</firstname><lastname>Dylan</lastname><password>bdbd</password><cardnumber>4444 5555 6666 7777</cardnumber><address/><type>admin</type></user></users>

@@ -4,30 +4,32 @@ function readAislesXML(aisleName) {
   // Request to access xml file
   // The result of access is 'response'
   // We pass response.text() to the next block
-  return fetch("./Data/Inventory.xml") 
-    .then(function (response) { 
-      return response.text(); 
-    })
-    // We receive response.text() and rename it 'data'
-    // We parse 'data' to a json object
-    // The json object is called 'ret'
-    // We pass the ret["inventory"] to next block
-    .then(function (data) { 
-      let parser = new DOMParser(); 
-      let xmlDoc = parser.parseFromString(data, "text/xml");
-      let ret = xml2json(xmlDoc, "    "); 
-      return ret["inventory"]; 
-    })
-    // We receive ret["inventory"] and rename it 'data'
-    // Data["product"] is an array of json, we loop through it
-    // And select all item whose "asile" match our aisle name
-    .then(function (data) { 
-      const ret = data["product"].filter((x) => { 
-        return x["aisle"] == aisleName; 
-      });
-      // And return those selected items
-      return ret; 
-    });
+  return (
+    fetch("./Data/Inventory.xml")
+      .then(function (response) {
+        return response.text();
+      })
+      // We receive response.text() and rename it 'data'
+      // We parse 'data' to a json object
+      // The json object is called 'ret'
+      // We pass the ret["inventory"] to next block
+      .then(function (data) {
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(data, "text/xml");
+        let ret = xml2json(xmlDoc, "    ");
+        return ret["inventory"];
+      })
+      // We receive ret["inventory"] and rename it 'data'
+      // Data["product"] is an array of json, we loop through it
+      // And select all item whose "asile" match our aisle name
+      .then(function (data) {
+        const ret = data["product"].filter((x) => {
+          return x["aisle"] == aisleName;
+        });
+        // And return those selected items
+        return ret;
+      })
+  );
 }
 
 function getAisleName() {
@@ -38,7 +40,6 @@ function getAisleName() {
   return aisleName;
 }
 
-
 // We add an event to window
 // Whenever window load, the async (event) => {} function is called
 window.addEventListener("load", async (event) => {
@@ -48,6 +49,7 @@ window.addEventListener("load", async (event) => {
   // await keyword means that, we will let this thread watch him. He will signal this thread when he is done. And then this thread can continue.
   const products = await readAislesXML(aisleName);
 
+  console.log(products);
   // 'products' is an array of json, containing all products of our aisle
   // Now its time fill the data to the page using html
   let aisleNameH1 = document.getElementById("aisleName");
@@ -85,7 +87,7 @@ window.addEventListener("load", async (event) => {
     let a = document.createElement("a");
     cardBody.appendChild(a);
     // When click a product, it goes to product.html with its product id in the url
-    a.href = "./product.html?id=" + products[i]["id"]; 
+    a.href = "./product.html?id=" + products[i]["id"];
     a.classList.add("text-decoration-none", "stretched-link");
     a.style.color = "inherit";
     let hr = document.createElement("hr");

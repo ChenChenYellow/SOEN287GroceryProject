@@ -1,8 +1,11 @@
 <?php
 if (isset($_POST['operationtype'])) {
   $operationType = $_POST["operationtype"];
+  $path = "./Data/Users.xml";
+  $returnToFrontStore = "Location: ./index_phase_II.html";
+  $returnToBackStore = "Location: ./manage_users.html";
   if ($operationType == "update") {
-	  
+
     // Update an User
 
     // Retrive data from POST request
@@ -17,7 +20,7 @@ if (isset($_POST['operationtype'])) {
 
     // Load the Users xml document
     $dom = new DOMDocument();
-    $dom->load("./Data/Users.xml");
+    $dom->load($path);
     $root = $dom->documentElement;
     $users = $root->getElementsByTagName('user');
 
@@ -45,9 +48,9 @@ if (isset($_POST['operationtype'])) {
       }
     }
 
-    $dom->save("./Data/Users.xml");
+    $dom->save($path);
     // Go to another page
-    header("Location: ./manage_users.html");
+    header($returnToBackStore);
     // Refresh script, so the another page will reload & display change
     exit();
   } else if ($operationType == "add" || $operationType == "signup") {
@@ -65,7 +68,7 @@ if (isset($_POST['operationtype'])) {
     }
 
     $dom = new DOMDocument();
-    $dom->load("./Data/Users.xml");
+    $dom->load($path);
     $root = $dom->documentElement;
 
     // Find the last User, and $newID is his id + 1
@@ -87,19 +90,19 @@ if (isset($_POST['operationtype'])) {
     $newUser->appendChild(new DOMElement("type", $newType));
 
 
-    $dom->save("./Data/Users.xml");
+    $dom->save($path);
     if ($operationType == "signup") {
-      header("Location: ./index_phase_II.html");
+      header($returnToFrontStore);
       exit();
     } else {
-      header("Location: ./manage_users.html");
+      header($returnToBackStore);
       exit();
     }
   } else if ($operationType == "delete") {
     $newID = $_POST["id"];
 
     $dom = new DOMDocument();
-    $dom->load("./Data/Users.xml");
+    $dom->load($path);
     $root = $dom->documentElement;
     $users = $root->getElementsByTagName('user');
     $userToDelete = new DOMElement("null");
@@ -114,16 +117,16 @@ if (isset($_POST['operationtype'])) {
 
     $userToDelete->parentNode->removeChild($userToDelete);
 
-    $dom->save("./Data/Users.xml");
-    header("Location: ./manage_users.html");
+    $dom->save($path);
+    header($returnToBackStore);
     exit();
   } else if ($operationType == "cancel") {
     // Admin cancel from backstore, return to backstore
-    header("Location: ./manage_users.html");
+    header($returnToBackStore);
     exit();
   } else if ($operationType == "abort") {
     // Customer cancel sign up process, return to frontstore
-    header("Location: ./index_phase_II.html");
+    header($returnToFrontStore);
     exit();
   } else {
     // operation type is wrong
