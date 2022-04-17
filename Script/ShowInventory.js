@@ -140,24 +140,7 @@ function loadOptions(container, product, parentPropertyList) {
       btnUpdate.value = "update";
       btnUpdate.innerHTML = "Update";
       btnUpdate.classList.add("btn", "btn-outline-warning");
-      form.appendChild(btnUpdate);
-
-      form = document.createElement("form");
-      form.action = "./update_inventory.php";
-      form.method = "post";
-      form.classList.add("col-sm-6");
-      row.appendChild(form);
-
-      fillFormWithHiddenInput(form, propertyList);
-
-      let btnDelete = document.createElement("button");
-      btnDelete.type = "submit";
-      btnDelete.name = "operationtype";
-      btnDelete.value = "delete";
-      btnDelete.innerHTML = "Delete";
-      btnDelete.classList.add("btn", "btn-outline-danger");
-      btnDelete.hidden = true;
-      form.appendChild(btnDelete);
+      form.appendChild(btnUpdate);     
     }
   }
 }
@@ -258,7 +241,7 @@ window.addEventListener("load", async (e) => {
     buttonAddOption.innerHTML = "Add Option";
     buttonAddOption.name = "operationtype";
     buttonAddOption.classList.add("btn", "btn-outline-success");
-    form.appendChild(buttonAddOption);
+    form.appendChild(buttonAddOption);    
 
     let inputID = document.createElement("input");
     inputID.type = "text";
@@ -266,6 +249,27 @@ window.addEventListener("load", async (e) => {
     inputID.hidden = true;
     inputID.value = product["id"];
     form.appendChild(inputID);
+    
+    form = document.createElement("form");
+    form.action = "./update_inventory.php";
+    form.method = "post";
+    form.classList.add("col-sm-6");
+    row.appendChild(form);
+    
+    inputID = document.createElement("input");
+    inputID.type = "text";
+    inputID.name = "id";
+    inputID.hidden = true;
+    inputID.value = product["id"];
+    form.appendChild(inputID);
+
+    let btnDelete = document.createElement("button");
+    btnDelete.type = "submit";
+    btnDelete.name = "operationtype";
+    btnDelete.value = "delete";
+    btnDelete.innerHTML = "Delete";
+    btnDelete.classList.add("btn", "btn-outline-danger");
+    form.appendChild(btnDelete);
 
     let parent = [{ "id": product["id"] }];
 
