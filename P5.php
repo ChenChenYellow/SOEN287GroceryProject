@@ -1,3 +1,31 @@
+<?php
+
+if(isset$_POST['Submit'])
+$email=$_POST['userEmail'];
+$password=$_POST['userPassword'];
+ //Create DOMDocument & LOAD
+ $dom = new DOMDocument();
+ $dom->load('./Data/Users.xml');
+ $users = $dom->getElementsByTagName('user');
+ foreach($users as $user){
+     if ($user->getElementsByTagName('email')->item(0)->nodeValue == $email){
+         // Email exists
+         if($password==$user->getElementsByTagName('password')->item(0)->nodeValue){
+             
+                 session_start();
+                 $_SESSION['user']=$user->getElementsByTagName('firstname')->item(0)->nodeValue." ".$user->getElementsByTagName('lastname')->item(0)->nodeValue;
+                 header('Location: ./P1_index.php');
+                 die;
+     
+             }
+
+         }
+     }
+     }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +49,7 @@
   <body>
     <header-component></header-component>
     <div class="container-fluid bg-light">
-      <form action="/index.html" method="post">
+      <form method="post">
         <div class="container">
           <div class="row">
             <h1 class="text-center col-lg-12">Sign In</h1>
@@ -31,7 +59,7 @@
               <label>Email</label>
             </div>
             <div class="col-lg-6">
-              <input type="email" id="inputEmail" />
+              <input type="email" name="userEmail"  id="inputEmail" />
             </div>
           </div>
           <div class="row">
@@ -39,13 +67,14 @@
               <label>Password</label>
             </div>
             <div class="col-lg-6">
-              <input type="password" id="inputPassword" />
+              <input type="password" name='userPassword' id="inputPassword" />
             </div>
           </div>
           <div class="row">
             <button
               class="btn btn-outline-success"
               type="submit"
+              name="Submit"
             >
               Submit
             </button>
