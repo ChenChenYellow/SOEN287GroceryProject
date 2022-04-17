@@ -156,6 +156,26 @@ if (isset($_POST["operationtype"])) {
         $dom->save($path);
         header($returnToBackStore);
         exit();
+    } else if ($operationType == "delete") {
+        $dom = new DOMDocument();
+        $dom->load($path);
+        $root = $dom->documentElement;
+        $products = $root->getElementsByTagName('product');
+
+        $id = $_POST["id"];
+
+        $productToDelete = new DOMElement("null");
+        foreach ($products as $product) {
+            if ($product->getElementsByTagName("id")->item(0)->nodeValue == $id) {
+                $productToDelete = $product;
+                break;
+            }
+        }
+        $productToDelete->parentNode->removeChild($productToDelete);
+
+        $dom->save($path);
+        header($returnToBackStore);
+        exit();
     } else if ($operationType == "cancel") {
         header($returnToBackStore);
         exit();
