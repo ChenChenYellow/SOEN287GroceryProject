@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title id="title"></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="Script/BackStoreHeader.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script src="./Script/ShowOrder.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <header-component></header-component>
+    <div class="container">
+      <form action="./update_order.php" method="post">
+        <h2 id="textTitleUpdate" class="text-center my-4" hidden>
+          Update Order
+        </h2>
+        <h2 id="textTitleAdd" class="text-center my-4" hidden>Add Order</h2>
+
+        <div class="container-fluid">
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <label for="inputID" class="border-bottom">ID</label>
+            </div>
+            <div class="col-sm-6">
+              <h6 id="textID"></h6>
+              <input hidden type="text" name="id" id="inputID" />
+            </div>
+          </div>
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <label for="inputUserID" class="border-bottom">User ID</label>
+            </div>
+            <div class="col-sm-6">
+              <h6 id="textUserID"></h6>
+              <input hidden type="text" name="userid" id="inputUserID" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid" id="containerItems">
+          <input id="inputCount" name="numberofitem" type="number" hidden />
+          <div class="row">
+            <hr style="background-color: black;width: 96%;display: block;"/>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row my-2">
+            <div class="col-sm-2">
+              <button
+                type="button"
+                id="buttonPlus"
+                class="btn btn-outline-success"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col-sm-6">
+              <button
+                id="btnUpdate"
+                type="submit"
+                value="update"
+                name="operationtype"
+                class="btn btn-outline-warning"
+                hidden
+              >
+                Update
+              </button>
+              <button
+                id="btnAdd"
+                type="submit"
+                value="add"
+                name="operationtype"
+                class="btn btn-outline-success"
+                hidden
+              >
+                Add
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button
+                id="btnCancel"
+                type="submit"
+                value="cancel"
+                name="operationtype"
+                class="btn btn-outline-dark"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
