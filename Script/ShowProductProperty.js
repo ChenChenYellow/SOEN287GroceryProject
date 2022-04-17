@@ -13,7 +13,11 @@ async function readInventoryXML() {
 
   console.log("operation type is");
   console.log(operationType);
-  if (operationType == "add") {
+  if (operationType == "addnewproduct") {
+    console.log("add new product");
+    const last = inventory["product"][inventory.product.length - 1];
+    const ret = parseInt(last["id"]) + 1;
+    return ret;
   } else if (operationType == "update") {
     console.log("is update");
     const id = urlParams.get("id");
@@ -53,18 +57,135 @@ async function readInventoryXML() {
   }
 }
 
+function fillHtmlElement(container, labels, names) {
+  for (let i = 0; i < labels.length; i++) {
+    let row = document.createElement("div");
+    row.classList.add("row", "my-2");
+    container.appendChild(row);
+
+    let col = document.createElement("div");
+    col.classList.add("col-sm-6");
+    row.appendChild(col);
+
+    let label = document.createElement("label");
+    label.innerHTML = labels[i];
+    label.classList.add("border-bottom");
+    col.appendChild(label);
+
+    col = document.createElement("div");
+    col.classList.add("col-sm-6");
+    row.appendChild(col);
+
+    let input = document.createElement("input");
+    input.type = "text";
+    input.name = names[i];
+    input.placeholder = labels[i];
+    col.appendChild(input);
+  }
+}
+
 window.addEventListener("load", async (event) => {
   let inventoryInfo = await readInventoryXML();
   console.log(inventoryInfo);
   if (Number.isInteger(inventoryInfo)) {
     // Add new product
+    console.log("Add new product");
+    let container = document.getElementById("containerProperty");
+
+    let btnAddNewProduct = document.getElementById("btnAddNewProduct");
+    btnAddNewProduct.hidden = false;
+
+    let textTitleAddNewProduct = document.getElementById("textTitleAddNewProduct");
+    textTitleAddNewProduct.hidden = false;
+
+    let inputID = document.getElementById("inputID");
+    inputID.value = inventoryInfo;
+
+    let textID = document.getElementById("textID");
+    textID.innerHTML = inventoryInfo;
+
+    let labels = [
+      "Name",
+      "Aisle",
+      "Main Image",
+      "Description",
+      "More Description",
+    ];
+    let names = [
+      "name",
+      "aisle",
+      "mainimage",
+      "description",
+      "moredescription",
+    ];
+
+    fillHtmlElement(container, labels, names);
+
+    let rowProperties = document.createElement("div");
+    rowProperties.classList.add("row");
+    container.appendChild(rowProperties);
+
+    let row = document.createElement("div");
+    row.classList.add("row");
+    container.appendChild(row);
+
+    let col = document.createElement("div");
+    col.classList.add("col-sm-2");
+    row.appendChild(col);
+
+    let buttonAddProperty = document.createElement("button");
+    buttonAddProperty.innerHTML = "+";
+    buttonAddProperty.classList.add("btn", "btn-outline-success");
+    buttonAddProperty.type = "button";
+    col.appendChild(buttonAddProperty);
+
+    let inputNumberOfOption = document.createElement("input");
+    inputNumberOfOption.name = "numberofoption";
+    inputNumberOfOption.hidden = true;
+    inputNumberOfOption.type = "number";
+    inputNumberOfOption.value = 0;
+    col.appendChild(inputNumberOfOption);
+
+    let counter = 0;
+    buttonAddProperty.addEventListener("click", (e) => {
+      counter++;
+      console.log("counter " + counter);
+      let labelPlaceholder = "Option Name " + counter;
+      let valuePlaceholder = "Value " + counter;
+      inputNumberOfOption.value = counter;
+
+      col = document.createElement("div");
+      col.classList.add("col-sm-6", "my-2");
+      rowProperties.appendChild(col);
+
+      let inputLabel = document.createElement("input");
+      inputLabel.type = "text";
+      inputLabel.placeholder = labelPlaceholder;
+      inputLabel.name = "label" + counter;
+      inputLabel.classList.add("border-bottom", "border-top", "border-right");
+      col.appendChild(inputLabel);
+
+      col = document.createElement("div");
+      col.classList.add("col-sm-6", "my-2");
+      rowProperties.appendChild(col);
+
+      let inputValue = document.createElement("input");
+      inputValue.type = "text";
+      inputValue.placeholder = valuePlaceholder;
+      inputValue.name = "value" + counter;
+      inputValue.classList.add("border-left", "border-top", "border-right");
+      col.appendChild(inputValue);
+    });
   } else if (Array.isArray(inventoryInfo)) {
     // Update product
     let container = document.getElementById("containerProperty");
 
+    let textTitleUpdate = document.getElementById("textTitleUpdate");
+    textTitleUpdate.hidden = false;
+
     let btnUpdate = document.getElementById("btnUpdate");
     btnUpdate.hidden = false;
-	
+
     inventoryInfo.forEach((property) => {
       if (property.hasOwnProperty("label")) {
         let row = document.createElement("div");
@@ -110,6 +231,9 @@ window.addEventListener("load", async (event) => {
   } else if (inventoryInfo != null) {
     console.log("not null");
     let container = document.getElementById("containerProperty");
+
+    let textTitleAddOption = document.getElementById("textTitleAddOption");
+    textTitleAddOption.hidden = false;
 
     let btnAddOption = document.getElementById("btnAddOption");
     btnAddOption.hidden = false;

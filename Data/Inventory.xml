@@ -15,7 +15,7 @@
                     <label>size</label>
                     <option>
                         <description>235g bag</description>
-                        <price>8.5</price>
+                        <price>6.5</price>
                         <image>lays_original_235.jpg</image>
                     </option>
                     <option>
@@ -571,7 +571,7 @@
     </product>
     <product>
         <aisle>drinks</aisle>
-        <id>26</id>
+        <id>27</id>
         <name>7Up</name>
         <image>7up.jpg</image>
         <description>770 ml bottle</description>

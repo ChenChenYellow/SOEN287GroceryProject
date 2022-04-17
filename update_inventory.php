@@ -107,6 +107,55 @@ if (isset($_POST["operationtype"])) {
         $dom->save($path);
         header($returnToBackStore);
         exit();
+    } else if ($operationType == "addnewproduct") {
+        $dom = new DOMDocument();
+        $dom->load($path);
+        $root = $dom->documentElement;
+
+        $id = $_POST["id"];
+        $aisle = $_POST["aisle"];
+        $name = $_POST["name"];
+        $mainImage = $_POST["mainimage"];
+        $description = $_POST["description"];
+        $moreDescription = $_POST["moredescription"];
+
+        $numberOfOption = $_POST["numberofoption"];
+        if ($numberOfOption < 1) {
+            echo "We have a problem";
+        }
+
+        $product = new DOMElement("product");
+        $root->appendChild($product);
+
+        $product->appendChild(new DOMElement("aisle", $aisle));
+        $product->appendChild(new DOMElement("id", $id));
+        $product->appendChild(new DOMElement("name", $name));
+        $product->appendChild(new DOMElement("image", $mainImage));
+        $product->appendChild(new DOMElement("description", $description));
+        $product->appendChild(new DOMElement("moredescription", $moreDescription));
+
+        for ($i = 1; $i <= $numberOfOption; $i++) {
+            $options = new DOMElement("options");
+            $product->appendChild($options);
+
+            $options->appendChild(new DOMElement("label", $_POST["label" . $i]));
+
+            $option = new DOMElement("option");
+            $options->appendChild($option);
+
+            $option->appendChild(new DOMElement("description", $_POST["value" . $i]));
+
+            $product = $option;
+        }
+
+        $price = $_POST["price"];
+        $image = $_POST["image"];
+        $product->appendChild(new DOMElement("price", $price));
+        $product->appendChild(new DOMElement("image", $image));
+
+        $dom->save($path);
+        header($returnToBackStore);
+        exit();
     } else if ($operationType == "cancel") {
         header($returnToBackStore);
         exit();

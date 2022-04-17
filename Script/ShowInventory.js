@@ -121,7 +121,6 @@ function loadOptions(container, product, parentPropertyList) {
       let row = document.createElement("div");
       row.classList.add("row");
       collapse.appendChild(row);
-	  
       let labels = ["Price", "Image"];
       let keys = ["price", "image"];
 

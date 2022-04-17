@@ -29,12 +29,13 @@
         <h2 id="textTitleUpdate" class="text-center my-4" hidden>
           Update Inventory
         </h2>
-        <h2 id="textTitleAdd" class="text-center my-4" hidden>Add Product</h2>
+        <h2 id="textTitleAddNewProduct" class="text-center my-4" hidden>Add New Product</h2>
+        <h2 id="textTitleAddOption" class="text-center my-4" hidden>Add Option</h2>
 
         <div class="container-fluid" id="containerProperty">
           <div class="row my-2">
             <div class="col-sm-6">
-              <label for="inputID">ID</label>
+              <label for="inputID" class="border-bottom">ID</label>
             </div>
             <div class="col-sm-6">
               <h6 id="textID"></h6>
@@ -46,7 +47,7 @@
         <div class="container-fluid">
           <div class="row my-2">
             <div class="col-sm-6">
-              <label for="inputImage">Image</label>
+              <label for="inputImage" class="border-bottom">Image</label>
             </div>
             <div class="col-sm-6">
               <input type="text" id="inputImage" name="image" />
@@ -55,7 +56,7 @@
 
           <div class="row my-2">
             <div class="col-sm-6">
-              <label for="inputPrice">Price</label>
+              <label for="inputPrice" class="border-bottom">Price</label>
             </div>
             <div class="col-sm-6">
               <input type="number" step="0.01" id="inputPrice" name="price" />
@@ -83,6 +84,16 @@
                 hidden
               >
                 Add Option
+              </button>
+              <button
+                id="btnAddNewProduct"
+                type="submit"
+                value="addnewproduct"
+                name="operationtype"
+                class="btn btn-outline-success"
+                hidden
+              >
+                Add New Product
               </button>
             </div>
             <div class="col-sm-6">
