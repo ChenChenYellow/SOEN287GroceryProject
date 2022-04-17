@@ -2,7 +2,12 @@
 Class project, front end web
 https://chenchenyellow.github.io/SOEN287GroceryProject/
 
-Style Consistency is done for index_phase_ii.html and all pages linked to it.
-The criteria of evaluation grid is done on the index_phase_ii.html
-However we have a newer style design in index.html, the pages are more beautiful but some functionality are not implemented.
+We did not finish the project, there are several entry points:
+https://chenchenyellow.github.io/SOEN287GroceryProject/P1_index.php (for login/sign up)
+https://chenchenyellow.github.io/SOEN287GroceryProject/index_phase_II.html (for aisle, product information, shopping cart)
+https://chenchenyellow.github.io/SOEN287GroceryProject/manage_users.html (for backstore)
+
+We ran out of time
+
+
 
