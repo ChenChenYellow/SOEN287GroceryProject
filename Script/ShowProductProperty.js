@@ -20,14 +20,14 @@ async function readInventoryXML() {
     let properties = inventory["product"].filter((x) => {
       return x["id"] == id;
     })[0];
-    let ret = [{ id: id }];
+    let ret = [{ "id": id }];
     while (properties.hasOwnProperty("options")) {
       let options = properties["options"];
       let label = options["label"];
       const value = urlParams
         .get(label.replaceAll(" ", "-"))
         .replaceAll("-", " ");
-      ret.push({ label: label, value: value });
+      ret.push({ "label": label, "value": value });
       let optionList = options["option"];
       if (!Array.isArray(optionList)) {
         optionList = [optionList];
@@ -39,8 +39,8 @@ async function readInventoryXML() {
         }
       }
     }
-    ret.push({ image: properties["image"] });
-    ret.push({ price: properties["price"] });
+    ret.push({ "image": properties["image"] });
+    ret.push({ "price": properties["price"] });
     return ret;
   } else if (operationType == "addoption") {
     const id = urlParams.get("id");

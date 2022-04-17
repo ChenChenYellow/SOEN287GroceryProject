@@ -7,7 +7,6 @@ async function readInventoryXML() {
   let xmlDoc = parser.parseFromString(data, "text/xml");
   let ret = xml2json(xmlDoc, "    ");
   return ret["inventory"];
-}
 
 function fillFormWithHiddenInput(form, propertyList) {
   for (let k = 0; k < propertyList.length; k++) {
@@ -109,8 +108,8 @@ function loadOptions(container, product, parentPropertyList) {
 
     let propertyList = JSON.parse(JSON.stringify(parentPropertyList)); // clone parent
     propertyList.push({
-      label: options["label"].replaceAll(" ", "-"),
-      value: option["description"].replaceAll(" ", "-"),
+      "label": options["label"].replaceAll(" ", "-"),
+      "value": option["description"].replaceAll(" ", "-"),
     });
     //console.log(propertyList);
     if (option.hasOwnProperty("options")) {
@@ -268,7 +267,7 @@ window.addEventListener("load", async (e) => {
     inputID.value = product["id"];
     form.appendChild(inputID);
 
-    let parent = [{ id: product["id"] }];
+    let parent = [{ "id": product["id"] }];
 
     if (product.hasOwnProperty("options")) {
       loadOptions(collapse, product, parent);
