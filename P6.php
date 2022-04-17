@@ -5,7 +5,8 @@ if (isset($_POST['submit'])) {
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    
+    $cardnum = $_POST['cardnumber'];
+    $address = $_POST['address'];
     $type = "normal";
 
    
@@ -16,7 +17,7 @@ if (isset($_POST['submit'])) {
         $users = $dom->getElementsByTagName('user');
         foreach ($users as $user) {
             // User exists- we shouldn't add- make user edit instead!
-            if (strcmp($user->getElementsByTagName('Email')->item(0)->nodeValue, $email) == 0) {
+            if (strcmp($user->getElementsByTagName('email')->item(0)->nodeValue, $email) == 0) {
                 $userExists = true;
 
             } else {
@@ -29,30 +30,29 @@ if (isset($_POST['submit'])) {
             $mainUsersTag->formatOutput = true;
 
             $root = $mainUsersTag->appendChild($dom->createElement('user'));
-            $root->appendChild($dom->createElement('Name', $name));
-            $root->appendChild($dom->createElement('Password', password_hash($password,PASSWORD_DEFAULT))); //Put a hashed password
-            $root->appendChild($dom->createElement('Email', $email));
-            $root->appendChild($dom->createElement('StaffStatus', $staffStatus));
+            $root->appendChild($dom->createElement('firstname', $firstname));
+            $root->appendChild($dom->createElement('lastname', $lastname));
+            $root->appendChild($dom->createElement('cardnumber', $cardnum));
+            $root->appendChild($dom->createElement('address', $address));
+            $root->appendChild($dom->createElement('password', $password));
+            $root->appendChild($dom->createElement('email', $email));
+            $root->appendChild($dom->createElement('type', $type));
             $dom->formatOutput = true;
-            $dom->save('../users.xml') or die('XML Create Error');
+            $dom->save('./Data/Users.xml') or die('XML Create Error');
             session_destroy();
             session_start();
-            $_SESSION['user']= $name;
-            header('Location: ../index.php');
+            $_SESSION['user']=$user->getElementsByTagName('firstname')->item(0)->nodeValue." ".$user->getElementsByTagName('lastname')->item(0)->nodeValue;
+            header('Location: ./P1_index.php');
             die;
         }
         else{
-            echo '<div class="alert alert-danger" role="alert">
-        Account already exists!
-        </div>';
+          echo '<script>alert("Error")</script>';
+    
+       
 
         }
     }
-    else{
-        echo '<div class="alert alert-danger" role="alert">
-    Passwords do not match!
-    </div>';
-    }
+
 
 }
 
