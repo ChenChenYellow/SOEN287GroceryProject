@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="welcome.php" method="post">
+    <form action="admin.php" method="post">
         <h1>Login</h1>
         <h2>Enter your credentials to access the backstore functions of the grocery store</h2>
         <label for="username">Username:</label>

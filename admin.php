@@ -11,7 +11,7 @@ if (isset($_SESSION['username'])) {
 } else {
     if ($_POST['username'] == $username && $_POST['password'] == $password) {
         $_SESSION['username'] = $username;
-        echo "<script>location.href='welcome.php'</script>";
+        echo "<script>location.href='admin.php'</script>";
     } else {
         echo "<script>alert('Wrong credentials')</script>";
         echo "<script>location.href='login.php'</script>";
