@@ -62,6 +62,9 @@ window.addEventListener("load", async (event) => {
     // Update product
     let container = document.getElementById("containerProperty");
 
+    let btnUpdate = document.getElementById("btnUpdate");
+    btnUpdate.hidden = false;
+	
     inventoryInfo.forEach((property) => {
       if (property.hasOwnProperty("label")) {
         let row = document.createElement("div");
@@ -106,6 +109,47 @@ window.addEventListener("load", async (event) => {
     });
   } else if (inventoryInfo != null) {
     console.log("not null");
+    let container = document.getElementById("containerProperty");
+
+    let btnAddOption = document.getElementById("btnAddOption");
+    btnAddOption.hidden = false;
+
+    let inputID = document.getElementById("inputID");
+    inputID.value = inventoryInfo["id"];
+
+    let textID = document.getElementById("textID");
+    textID.innerHTML = inventoryInfo["id"];
+
+    while (inventoryInfo.hasOwnProperty("options")) {
+      let options = inventoryInfo["options"];
+      let label = options["label"];
+
+      let row = document.createElement("div");
+      row.classList.add("row", "my-2");
+      container.appendChild(row);
+
+      let col = document.createElement("div");
+      col.classList.add("col-sm-6");
+      row.appendChild(col);
+
+      let textLabel = document.createElement("label");
+      textLabel.innerHTML = label;
+      col.appendChild(textLabel);
+
+      col = document.createElement("div");
+      col.classList.add("col-sm-6");
+      row.appendChild(col);
+
+      let input = document.createElement("input");
+      input.type = "text";
+      input.name = label;
+      col.appendChild(input);
+      let optionList = options["option"];
+      if (!Array.isArray(optionList)) {
+        optionList = [optionList];
+      }
+      inventoryInfo = optionList[0];
+    }
   } else {
     // We have a problem
     console.log("We have a problem");

@@ -7,6 +7,7 @@ async function readInventoryXML() {
   let xmlDoc = parser.parseFromString(data, "text/xml");
   let ret = xml2json(xmlDoc, "    ");
   return ret["inventory"];
+}
 
 function fillFormWithHiddenInput(form, propertyList) {
   for (let k = 0; k < propertyList.length; k++) {
@@ -120,9 +121,9 @@ function loadOptions(container, product, parentPropertyList) {
       let row = document.createElement("div");
       row.classList.add("row");
       collapse.appendChild(row);
-
-      let labels = ["Description", "Price", "Image"];
-      let keys = ["description", "price", "image"];
+	  
+      let labels = ["Price", "Image"];
+      let keys = ["price", "image"];
 
       loadTable(row, labels, keys, option);
 
