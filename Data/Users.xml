@@ -43,4 +43,4 @@
         <address>27 CLub</address>
         <type>normal</type>
     </user>
-<user><id>14</id><email>bobDylan@gmail.com</email><firstname>Bob</firstname><lastname>Dylan</lastname><password>bdbd</password><cardnumber>4444 5555 6666 7777</cardnumber><address/><type>admin</type></user></users>
+<user><id>14</id><email>bobDylan@gmail.com</email><firstname>Bob</firstname><lastname>Dylan</lastname><password>bdbd</password><cardnumber>4444 5555 6666 7777</cardnumber><address/><type>admin</type></user><user><id>15</id><email>admin</email><firstname>admin</firstname><lastname>admin</lastname><password>admin</password><cardnumber>admin</cardnumber><address>admin</address><type>admin</type></user></users>

@@ -6,8 +6,8 @@ function readUserXML() {
       return response.text();
     })
     .then(function (data) {
-      let parser = new DOMParser(),
-        xmlDoc = parser.parseFromString(data, "text/xml");
+      let parser = new DOMParser();
+      let xmlDoc = parser.parseFromString(data, "text/xml");
       let ret = xml2json(xmlDoc, "    ");
       return ret["users"];
     });
@@ -87,17 +87,13 @@ window.addEventListener("load", async (event) => {
     buttonView.classList.add("btn", "btn-outline-info");
     buttonView.setAttribute("data-toggle", "collapse");
     buttonView.setAttribute("data-target", "#collapse" + i);
-    buttonView.setAttribute("aria-expanded", "true");
-    buttonView.setAttribute("aria-controls", "collapse" + i);
     buttonView.innerHTML = "View";
     cardHeader.appendChild(buttonView);
 
-    
     let collapse = document.createElement("div");
     card.appendChild(collapse);
     collapse.id = "collapse" + i;
     collapse.classList.add("collapse", "hide");
-    collapse.setAttribute("aria-labelledby", "cardheader" + i);
     collapse.setAttribute("data-parent", "#accordion" + i);
 
     cardBody = document.createElement("div");
@@ -117,7 +113,7 @@ window.addEventListener("load", async (event) => {
       cardBodyContainerRow.appendChild(fieldName);
       fieldName.classList.add("col-lg-6", "border-left");
       fieldName.innerHTML = labels[j];
-      
+
       let fieldValue = document.createElement("p");
       cardBodyContainerRow.appendChild(fieldValue);
       fieldValue.classList.add("col-lg-6");

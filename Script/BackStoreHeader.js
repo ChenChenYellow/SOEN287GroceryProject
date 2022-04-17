@@ -15,7 +15,7 @@ class BackStoreHeader extends HTMLElement {
                 <a class="nav-link" href="./manage_inventory.html">Inventory</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Orders</a>
+                <a class="nav-link" href="./manage_orders.html">Orders</a>
               </li>
             </ul>
         </nav>`
